@@ -334,6 +334,34 @@
 
 	}
 	}
+
+	&__btn-head{
+		@extend .btn;
+		@extend .btn-outline-primary;
+		border-radius: 100px;
+		font-size: rem(15);
+		padding-top: rem(6px);
+		padding-bottom: rem(6px);
+		margin-bottom: 5px;
+		padding-left: rem(11px);
+		padding-right: rem(11px);
+		&:not(:hover) span{
+
+			color: $body-color;
+		}
+		.icon{
+			// color: $primary;
+			font-size: 1em;
+			margin-right: .5em;
+		}
+		> span{
+			
+			position: relative;
+			top: rem(-2);
+		}
+	}
+
+
 	@include media-breakpoint-up(lg) {
 		padding-top: 85px;
 	 
@@ -445,6 +473,7 @@
 		background-color: #f5f5f5;
 		@include mt;
 	}
+	&__compare,
 	&__like{
 		position: absolute;
 		width: 40px;
@@ -475,6 +504,9 @@
 
 
 		}
+	}
+	&__compare{
+		top: 70px;
 	}
 	&__status-wrap{
 		position: absolute;

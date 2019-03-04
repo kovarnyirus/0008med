@@ -494,3 +494,17 @@ a{
 .strike{
 	text-decoration: line-through;
 }
+
+.compare-link{
+	position: relative;
+	@extend .text-body;
+	display: inline-block;
+	margin-bottom: .5rem;
+	.icon{
+		font-size: 1.2em;
+		margin-right: .5em;
+		color: $primary;
+		position: relative;
+		top: em(2);
+	}
+}
