@@ -661,4 +661,8 @@ jQuery(document).ready(function ($) {
 		placement: 'top', 
 	})
 
+		$(".s-basket-order__toggle-link--js").click(function(e){
+			e.preventDefault();
+			$('s-basket-order__item:nth-child(n + 3)').slideToggle();
+		})
 });
