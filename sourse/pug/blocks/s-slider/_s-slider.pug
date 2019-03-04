@@ -1,0 +1,15 @@
+mixin s-slider()
+	// start s-slider
+	+b.s-slider-wrap
+		+e.wrap
+			.container
+		+b.s-slider
+			mixin sl()
+				+e.slide(href="#" style="background-color: #F9D908; ")
+					//- .container
+					img(src="img/banner.jpg", alt="")
+				// / +e.slide(style="background-color: #F9D908;")
+			+sl("Расшифровка заголовка с возможностью перейти на большую статью при помощи кнопки")
+			+sl("Расшифровка заголовка с возможностью перейти на большую статью при помощи кнопки")
+			+sl("Расшифровка заголовка с возможностью перейти на большую статью при помощи кнопки заголовка с возможностью перейти на большую статью при помощи кнопки")
+	// end s-slider

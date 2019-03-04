@@ -1,0 +1,26 @@
+mixin s-category()
+	// start s-category
+	+b.s-category
+		.container
+			.row
+				mixin item(i,t)
+					+e.col.col-lg-3.col-md-4.col-6
+						// переделал
+						+e.item(href="#" )
+							+e.img-wrap.img-bg(style=`background-image: url(img/category-${i}.jpg);`)
+								img(src=`img/category-${i}.jpg`, alt="")
+							div.h5= t
+						// /переделал
+					// +e.col.col-lg-3.col-md-4.col-6
+				+item("1","Электроды")
+
+
+ 
+
+
+
+				+item("2","Текстильные шлемы Текстильные шлемы Текстильные шлемы")
+				+item("2","Текстильные шлемы Текстильные шлемы Текстильные шлемы Текстильные шлемы Текстильные шлемы")
+				+item("3","Адаптеры")
+				+item("4","Гель и аксессуары")
+	// end s-category

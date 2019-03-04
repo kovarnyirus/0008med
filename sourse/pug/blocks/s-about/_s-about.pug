@@ -1,0 +1,27 @@
+mixin s-about()
+	// start s-about
+	+b.s-about.section#s-about
+		.container
+			+b.section-title
+				.h2.fw-900.text-gray.ttu О производителе
+				
+			.row
+				.col-lg-7.mb-3
+					+e.text.small С 1993 года OOO «Медицинские компьютерные системы» (МКС) специализируется в разработке и производстве высокотехнологичных медицинских изделий. Наши проекты охватывают широкий спектр диагностического и терапевтического оборудования: электрокардиографы, электроэнцефалографы, автоматические дефибрилляторы, реанимационные массажеры, ЭЭГ электроды и шлемы, приборы для биофизических исследований.
+					a.small(href="#") Узнать больше
+				.col-lg-5
+					+e.img-wrap
+						span: img.res-i(src="img/logo-1.png", alt="")
+						span: img.res-i(src="img/logo-2.png", alt="")
+				.col-lg-7.order-lg-0.order-last
+					img.w-100.res-i(src="img/about-img.jpg", alt="")
+				.col-lg-5
+					+e.video
+						.row
+							.col-auto
+								+e.play(href="#") 
+									+icon("play")
+							.col-auto
+								+e.title Видео о нашей  продукции
+								a.small(href="#") Перейти
+	// end s-about

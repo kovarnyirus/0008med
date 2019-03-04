@@ -1,0 +1,70 @@
+include ../mixin-wrap/mixin-wrap.pug
+mixin kart-body()
+	// start kart-body
+	+b.kart-body
+		.container
+			+b.tabs
+				+e.caption
+					+e.btn: span Обзор
+					+e.btn.active: span Характеристики
+					+e.btn: span Состав комплекта
+					+e.btn: span Размеры шлемов 
+					+e.btn: span Совместимость с ЭГ усилителями 
+				+e.wrap 
+					+e.content
+						.row
+							.col-lg-7
+								+e.text
+									.strong Шлем SLEEP – это текстильный шлем с предустановленными Ag/AgCl sintered электродами MCScap-T и общим разъемом DB25М. 
+									.p Тонкие электроды и выход электродного шлейфа на макушке головы обеспечивают комфорт пациента при длительном ЭЭГ мониторинге в положении лежа и во время сна, а также подходят для регистрации ЭЭГ у маленьких деток и новорожденных. 
+
+									.p Электроды имеют дополнительную маркировку, что позволяет легко сменить текстильную основу при ее износе. 
+									.p Область применения: рутинная ЭЭГ, ЭЭГ сна, ТМС-ЭЭГ
+							.col-lg-5
+								+b.A.video-play.popup-youtube(href="http://www.youtube.com/watch?v=0O2aH4XLbto" style="background-image: url(img/prod-1.png);")
+									+icon("play")
+									+e.title Шлем SLEEP 
+					mixin tab()
+						+e.content
+							.row
+								.col-lg-7
+									+e.text
+										.strong Шлем SLEEP – это текстильный шлем с предустановленными Ag/AgCl sintered электродами MCScap-T и общим разъемом DB25М. 
+										.p Тонкие электроды и выход электродного шлейфа на макушке головы обеспечивают комфорт пациента при длительном ЭЭГ мониторинге в положении лежа и во время сна, а также подходят для регистрации ЭЭГ у маленьких деток и новорожденных. 
+
+										.p Электроды имеют дополнительную маркировку, что позволяет легко сменить текстильную основу при ее износе. 
+										.p Область применения: рутинная ЭЭГ, ЭЭГ сна, ТМС-ЭЭГ
+								.col-lg-5
+									+b.A.video-play.popup-youtube(href="http://www.youtube.com/watch?v=0O2aH4XLbto" style="background-image: url(img/prod-1.png);")
+										+icon("play")
+										+e.title Шлем SLEEP 
+					+e.content.active
+						mixin tr(t1, t2)
+							tr
+								td= t1
+								td= t2
+						+e.table-wrap
+							+e.table-title Характеристики
+							+e.TABLE.table  
+								+tr("Максимальная разность потенциалов","не более 50 мВ")
+								+tr("Сопротивление изоляции электродов","не менее 1000 МОм")
+								+tr("Максимальная разность потенциалов","не более 50 мВ")
+								+tr("Сопротивление изоляции электродов","не менее 1000 МОм")
+						+e.table-wrap
+							+e.table-title Характеристики
+							+e.TABLE.table
+								thead
+									tr
+										th Размер
+										th Вес и габариты ШхВхГ, мм
+								tbody
+									+tr("S/XS","280 гр,  100 х 250 х 55")
+									+tr("Inf I","280 гр,  100 х 250 х 55")
+									+tr("Inf II","280 гр,  1000 х 250 х 55")
+									+tr("Inf III","280 гр,  100 х 250 х 55")
+					+tab()
+					+tab()
+					+tab()
+					+tab()
+					
+	// end kart-body

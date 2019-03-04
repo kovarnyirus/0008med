@@ -1,0 +1,185 @@
+extends layout/main.pug
+
+
+include ../blocks/s-content/_s-content.pug
+//- include ../blocks/s-logo/_s-logo.pug
+include ../blocks/s-patner/_s-patner.pug
+//- include ../blocks/s-contact/_s-contact.pug
+
+//- include ../blocks/s-slider/_s-slider.pug
+//- include ../blocks/s-catalog/_s-catalog.pug
+//- include ../blocks/s-pick-up/_s-pick-up.pug
+//- include ../blocks/s-download/_s-download.pug
+//- include ../blocks/s-about/_s-about.pug
+//- include ../blocks/prod-head/_prod-head.pug
+//- include ../blocks/kart-body/_kart-body.pug
+
+block title
+	title Контакты
+
+block pagecontent
+	+mob-mnu()
+	+header()
+		//- +top-line()
+		+top-nav()
+		
+	.page-border-top
+
+	.container
+		+breadcrumb("Контакты", "Главная")
+		.page-title
+			.h2.text-gray.fw-900.ttu Контакты
+	+b.s-contact.section.mt-0
+		.container
+			.row
+				.col-lg-4.mb-4
+					.mb-3 
+						.small.strong Полное наименование:  
+
+						.mb-3 Общество с ограниченной ответственностью "Медицинские Компьютерные Системы"
+					
+					.mb-3
+						.small.strong Офис:
+
+						.mb-3 124460, Москва, Зеленоград, проезд 4922, дом 4, стр. 2
+					
+					.mb-3
+						.small.strong Почтовый адрес:
+						.mb-3 124460, Россия, Москва, а/я 58
+					
+					.mb-3
+						.small.strong E-mail:
+						.mb-3
+							a.text-body(href="mailto:mks@mks.ru") mks@mks.ru
+					
+				.col-lg-8.mb-4
+					+e.map
+						<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A5e55a2640eaa957b552dbdb18dcae6e5264ccc4e60cb8f7cef6b0a2b7e172835&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=false"></script>
+				.col-12
+					.small.strong.mb-2 Телефоны:
+					+e.group
+						.row
+							.col Отдел продаж (система Кардиовизор, АПК «Здоровье-Экспресс», анализатор-монитор Нейровизор БММ)
+							.col-md-auto 
+								a.text-body(href="tel:+7(495)913-31-94") +7 (495) 913-31-94
+								|,  
+								| 
+								a.text-body(href="tel:913-31-95") 913-31-95
+								|, доб. 12
+					// +e.group
+					
+					+e.group
+						.row
+							.col Отдел продаж ЭЭГ аксессуаров
+							.col-md-auto 
+								a.text-body(href="tel:+7(495)913-31-94") +7 (495) 913-31-94
+								|,  
+								| 
+								a.text-body(href="tel:913-31-95") 913-31-95
+								|, доб. 16
+					// +e.group
+					+e.group
+						.row
+							.col Финансовый отдел
+							.col-md-auto 
+								a.text-body(href="tel:+7(495)913-31-94") +7 (495) 913-31-94
+								|,  
+								| 
+								a.text-body(href="tel:913-31-95") 913-31-95
+								|, доб. 02
+					// +e.group
+					+e.group
+						.row
+							.col Отдел снабжения
+							.col-md-auto 
+								a.text-body(href="tel:+7(495)913-31-94") +7 (495) 913-31-94
+								|,  
+								| 
+								a.text-body(href="tel:913-31-95") 913-31-95
+								|, доб. 14
+					// +e.group
+					+e.group
+						.row
+							.col Отдел сервиса
+							.col-md-auto 
+								a.text-body(href="tel:+7(495)913-31-94") +7 (495) 913-31-94
+								|,  
+								| 
+								a.text-body(href="tel:913-31-95") 913-31-95
+								|, доб. 04
+					// +e.group
+					+e.group
+						.row
+							.col Мобильный телефон
+							.col-md-auto 
+								a.text-body(href="tel:+7(985)820-69-60") +7 (985) 820-69-60
+					// +e.group
+
+	.s-content
+		+b.tabs-contact.container
+			+e.caption.row.row--small.mb-4.align-items-center
+				.col-md-auto
+					.h5.fw-900  Схема проезда:
+				.col
+					+e.btn.btn.btn-outline-primary.active.mb-1(type="button") Общественным транспортом
+					+e.btn.btn.btn-outline-primary.mb-1(type="button") Личным транспортом
+			+e.wrap
+				+e.content.active
+					ul
+						li 
+							.strong.mb-2 От станции метро «Комсомольская» (с Ленинградского ж/д вокзала) или от станции метро «Петровско-Разумовская» (платформа «Петровско-Разумовская»)
+							|
+							.mb-2 До Зеленограда можно добраться на любом пригородном электропоезде, доехав до станции «Крюково». Время пути от Ленинградского вокзала 35-50 минут (в зависимости от количества остановок поезда).
+							.mb-2 От станции «Крюково» автобусами №№ 2, 9, 11 до остановки «МИЭТ».
+						
+						li 
+							.strong.mb-2 От метро «Речной вокзал»
+							|
+							.mb-2 От станции метро «Речной вокзал» можно доехать на автобусе №№ 400, 400 (экспресс). Чтобы удобнее добраться от метро до остановки автотранспорта, выходите на сторону ближнюю к первому вагону метро, по направлению из центра. Из метро - налево, мимо торгового центра.
+							.mb-2.text-gray Выбирая этот способ добраться до города, учтите, что на Ленинградском шоссе, по которому вам нужно будет проехать в сторону Санкт-Петербурга около 30 км, вы наверняка попадёте в пробку. Но если движение не затруднено, можно добраться до города за 30-40 минут.
+							.mb-2 Выход на остановке «Кинотеатр Электрон», перейти на противоположную сторону, автобусы №№ 3, 8, 11 и до ост. «МИЭТ» (6-я остановка, 15 мин). Перейти на противоположную сторону.
+						
+						li 
+							.strong.mb-2 От станции метро «Сходненская»
+							|
+							.mb-2 На автобусе №400К до ост. «Поликлиника». Перейти дорогу и ехать автобусом 19 до остановки «МИЭТ».
+						
+						li 
+							.strong.mb-2 От станции метро «Сходненская»
+							|
+							.mb-2 На автобусе №400К до ост. «Поликлиника». Перейти дорогу и ехать автобусом 19 до остановки «МИЭТ».
+						
+						
+						li 
+							.strong.mb-2 От метро «Митино»
+							|
+							.mb-2 От станции метро «Митино» можно доехать на автобусе №400К (до ост. «Поликлиника»). Перейти дорогу и ехать автобусом 19 до остановки «МИЭТ».
+						
+						li 
+							.strong.mb-2 От остановки «МИЭТ» (со стороны завода «Ангстрем»)
+							|
+							.mb-2 Идти прямо по ходу движения транспорта, обойти с левой стороны два высотных здания синего цвета. Прямо будет четыре квадратных корпуса. Зайти в стеклянную проходную в первом корпусе и позвонить по телефону - (495) 913-31-94.
+				// +e.content.active
+				+e.content
+					ul
+						li 
+							.strong.mb-2 По Ленинградскому шоссе
+							.mb-2 Въезды в Зеленоград находятся на 38-м и на 41-м километрах Ленинградского шоссе (около 20 км от МКАД).
+						
+						li 
+							.strong.mb-2 По Пятницкому шоссе
+							.mb-2 По Пятницкому шоссе через Митино ехать до поворота на Кутузовское шоссе, поворот находится за деревней Брёхово, надо свернуть направо. По Кутузовскому шоссе - прямо, на кольце - прямо. Далее через мост и направо на Солнечную аллею. При выезде на Центральный проспект первый поворот направо (перед мостом) и далее до 4-х корпусов индустриального парка ОАО «ЭЛМА».
+					+e.map--2
+						<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A5e55a2640eaa957b552dbdb18dcae6e5264ccc4e60cb8f7cef6b0a2b7e172835&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=false"></script>	
+				// +e.content
+
+
+
+	//- +prod-head()
+	//- +kart-body()
+	+b.s-content
+		.container
+			  
+	+footer()
+	
+	

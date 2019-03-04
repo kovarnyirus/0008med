@@ -1,0 +1,79 @@
+extends layout/main.pug
+
+
+include ../blocks/s-content/_s-content.pug
+include ../blocks/s-contact/_s-contact.pug
+
+//- include ../blocks/s-slider/_s-slider.pug
+//- include ../blocks/s-catalog/_s-catalog.pug
+//- include ../blocks/s-pick-up/_s-pick-up.pug
+//- include ../blocks/s-download/_s-download.pug
+//- include ../blocks/s-about/_s-about.pug
+//- include ../blocks/prod-head/_prod-head.pug
+//- include ../blocks/kart-body/_kart-body.pug
+//- include ../blocks/s-order/_s-order.pug
+include ../blocks/aside/_aside.pug
+include ../blocks/s-po/_s-po.pug
+
+block title
+	title Личный кабинет 1
+
+block pagecontent
+	+mob-mnu()
+	+header()
+		//- +top-line()
+		+top-nav()
+		
+	.page-border-top
+	.container
+		+breadcrumb("Личный кабинет", "Главная" )
+		.page-title
+			.h2.text-gray.fw-900.ttu Личный кабинет 
+	//- +prod-head()
+	//- +kart-body()
+
+	+b.s-po
+		.container
+			.row
+				.col-lg-3
+					+aside
+				.col
+					+b.form-wrap
+						.border.border-light
+							.row.no-gutters
+								+e.col-white.col-md-6: +e.block
+									+input("text","Фамилия")(required pattern=".{3,}") 
+									+input("text","Имя")(required pattern=".{3,}") 
+									+input("email","E-mail")(required pattern=".{3,}") 
+									+input("tel","Номер телефона")(required pattern=".{3,}") 
+								.col: +e.block.bg-secondary.h-100
+									.row.row--md
+										.col-6.my-2
+											+in-rad('face')(class="face-input ")
+												+e.SPAN.text Юридическое лицо
+										
+										.col-6.my-2
+											+in-rad('face')(class="face-input fiz-input")
+												+e.SPAN.text Физическое лицо 
+									.toggle-block
+										+input("text","Название организации")(required pattern=".{3,}") 
+										.row.row--md
+											.col-6
+												+input("text","ИНН")(required pattern=".{3,}") 
+											
+											.col-6
+												+input("text","КПП")(required pattern=".{3,}") 
+										+input("text","Юридический адрес компании")(required pattern=".{3,}") 
+										.mb-3  Адрес для доставки
+									+input("text","Улица и номер дома")(required pattern=".{3,}") 
+									+input("text","Город")(required pattern=".{3,}") 
+									+input("text","Индекс")(required pattern=".{3,}") 
+						+e.btn-wrap
+							.row
+								.col-sm-auto.col-6
+									+e.A.btn--edit.btn-outline-primary(href="#") Отменить
+								.col-sm-auto.col-6
+									+e.A.btn--edit(href="#") Сохранить
+	+footer()
+	
+	

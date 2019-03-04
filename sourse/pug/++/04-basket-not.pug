@@ -1,0 +1,42 @@
+extends layout/main.pug
+
+
+include ../blocks/s-content/_s-content.pug
+include ../blocks/s-contact/_s-contact.pug
+
+//- include ../blocks/s-slider/_s-slider.pug
+//- include ../blocks/s-catalog/_s-catalog.pug
+//- include ../blocks/s-pick-up/_s-pick-up.pug
+include ../blocks/s-download/_s-download.pug
+//- include ../blocks/s-about/_s-about.pug
+//- include ../blocks/prod-head/_prod-head.pug
+//- include ../blocks/kart-body/_kart-body.pug
+include ../blocks/s-basket/_s-basket.pug
+
+block title
+	title КОРЗИНА
+
+block pagecontent
+	+mob-mnu()
+	+header()
+		//- +top-line()
+		+top-nav()
+		
+	.page-border-top
+	.container
+		+breadcrumb("Корзина", "Главная" )
+		.page-title
+			.row
+				.col
+					.h2.text-gray.fw-900.ttu КОРЗИНА
+				.col-auto
+					button.btn-reset-basket(type="button") Очистить корзину
+	//- +prod-head()
+	//- +kart-body()
+	+s-basket-not
+	+s-download()
+	//- +s-form()
+	//- +s-contact()
+	+footer()
+	
+	
