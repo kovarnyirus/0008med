@@ -660,7 +660,7 @@ jQuery(document).ready(function ($) {
 		// html: true,
 		placement: 'top', 
 	})
-
+		// show all  item in order in basket
 		$(".s-basket-order__toggle-link--js").click(function(e){
 			e.preventDefault();
 			$('.s-basket-order__item:nth-child(n + 3)').slideToggle();
