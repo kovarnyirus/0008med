@@ -1,0 +1,68 @@
+include ../mixin-wrap/mixin-wrap.pug
+mixin footer()
+	+b.FOOTER.footer
+		.container
+			.row
+				.col
+					+e.title.strong.ttu КАТАЛОГИ
+					.mb-2: +e.A.link.tdu.text-primary-l(href="#") Каталог "MCScap ЭЭГ аксcесуары" 
+					.mb-2: +e.A.link.tdu.text-primary-l(href="#") Брошюра "MCScap ЭЭГ аксессуары: готовые решения для ЭЭГ"
+					.mb-2: +e.A.link.tdu.text-primary-l(href="#") Брошюра "Мобильная система для регистрации ЭЭГ NeoRecСap"
+					+e.row.row.d-md-flex.d-none
+						.col-auto
+							+e.A.logo(href="#")
+								img(src="img/logo-foot.svg", alt="")
+						.col-auto
+							.text-gray.mb-1 © МКС. Все права защищены
+							.mb-1: a.text-gray.tdu(href="#") Пользовательское соглашение
+							.mb-1: a.text-gray.tdu(href="#") Политика конфиденциальности
+						.col-auto
+							+e.A.youtube-link(href="#")
+								img(src="img/youtube.svg", alt="")
+				.col-md-3
+					+e.title.strong.ttu КлиенТАМ
+					+e.list
+						+e.item.mb-2: a.text-white(href="#") Разрешительные документы
+
+						+e.item.mb-2: a.text-white(href="#") Список продукции
+
+						+e.item.mb-2: a.text-white(href="#") О продукции
+						+e.item.mb-2: a.text-white(href="#") О компании        
+						+e.item.mb-2: a.text-white(href="#") Статьи        
+						+e.item.mb-2: a.text-white(href="#") Как сделать заказ        
+						+e.item.mb-2: a.text-white(href="#") Контакты
+
+				.col-lg-3
+					+e.title.strong.ttu Контакты
+					+e.list
+						+e.item.mb-2: a.text-white(href="tel:+7499404-31-41")
+							+icon("phone-call")
+							| +7 499 404-31-41
+
+						+e.item.mb-2:  .text-white
+							+icon("watch")
+							| Пн—Пт 9:00—17:00
+
+						+e.item.mb-2: a.text-white(href="mailto:shop@mcscap.ru")
+							+icon("message")
+							|  shop@mcscap.ru
+
+						+e.item.mb-2: a.text-white(href="#")
+							+icon("message")
+							|  Написать нам
+			+e.row.row.d-md-none
+				.col-auto
+					+e.A.logo(href="#")
+						img(src="img/logo-foot.svg", alt="")
+				.col-auto
+					.text-gray.mb-1 © МКС. Все права защищены
+					.mb-1: a.text-gray.tdu(href="#") Пользовательское соглашение
+					.mb-1: a.text-gray.tdu(href="#") Политика конфиденциальности
+				.col-auto
+					+e.A.youtube-link(href="#")
+						img(src="img/youtube.svg", alt="")
+		+e.A.btn.btn.btn-danger.popup-with-move-anim(href="#modal-reg") регистрация
+		//- +e.A.btn.btn.btn-danger.popup-with-move-anim(href="#modal-password-recovery") Забыли пароль?  
+		//- +e.A.btn.btn.btn-danger.popup-with-move-anim(href="#modal-password-recovery-2") Забыли пароль?   2
+		//- +e.A.btn.btn.btn-danger.popup-with-move-anim(href="#modal-thanks") modal-thanks
+		+e.A.btn.btn.btn-danger.popup-with-move-anim(href="#modal-hello") #modal-hello

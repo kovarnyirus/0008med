@@ -1,0 +1,248 @@
+include ../mixin-wrap/mixin-wrap.pug
+
+
+																		 
+mixin mob-mnu()
+	+b.trop.main-mnu.hidden-mnu.hidden-lg.landingMenu2.d-lg-none
+		.wrapp-hidden
+			.container
+				+b.top-nav 
+					.row.align-items-center
+						.col-auto 
+							.toggle-mnu.toggle-mnu-1
+								span
+						.col
+							.h6 МЕНЮ 
+						.col-auto
+							+e.A.logo(href="#")
+								img(src="img/logo.png", alt="")
+				
+			 
+				+mnu-mob()
+	//  мобильное меню
+mixin top-nav() 
+	// start top-nav
+	+b.top-nav
+		.container
+			+b.search-block
+				form
+					+e.btn--search(type="button")
+						+icon("search")
+					+e.INPUT.input(type="text" placeholder="Поиск по сайту")
+					+e.btn--close(type="button")
+						+icon("close")
+				+b.basket-dropdown(class="dropdown-menu" )
+					.arrow
+					+e.inner
+						- for (var x = 0; x < 6; x++)
+							+e.item
+								.row
+									.col-auto
+										+e.img-wrap(href="#")
+											img.res-i(src="img/prod-1.png", alt="")
+									.col
+										+e.small.text-gray.mb-1 Цветной текстильный 
+											|
+											span.text-primary шлем  
+											| 
+											| с предустановленными Ag/AgCl электродами MCScap-C и общим разъемом DB25М 
+										.text-primary 15 000 Р  
+						+e.A.btn-more(href="#") Показать все результаты
+			.row.align-items-center
+				.col-auto.d-lg-none
+					.toggle-mnu.toggle-mnu-1.d-lg-none
+						span
+				.col-sm-auto.col
+					+e.A.logo(href="#")
+						img(src="img/logo.png", alt="")
+				
+				.col.d-none.d-lg-block
+					+mnu()
+				.col-auto.order-sm-last
+					+b.lang-block.dropdown
+						a.dropdown-toggle(href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") RU
+						+e.dropdown.dropdown-menu
+							.arrow
+							+e.A.item--active(href="#" ) RU
+							+e.A.item(href="#") EN
+							+e.A.item(href="#") GE
+							+e.A.item(href="#") IT
+							+e.A.item(href="#") SP
+				+e.cont-col.col-lg-auto.col-sm.col-12.order-sm-0.order-last
+					.row.justify-content-center
+						.col-sm-12.col-auto
+							+e.A.tel(href="tel:+7499404-31-41") +7 499 404 - 31 - 41
+						.col-sm-12.col-auto
+							+e.A.mail(href="mailto:shop@mcscap.ru") shop@mcscap.ru
+				.col-auto
+					+e.A.btn--search(href="#")
+						+icon("search")
+				
+				.col-auto
+					+e.A.btn--profile.popup-with-move-anim(href="#modal-inner")
+						+icon("user")
+				
+				.col-auto
+					.dropdown
+						+e.A.btn--basket(href="#" role="button"  aria-haspopup="true" aria-expanded="false")
+							+icon("basket")
+							+e.count 5
+						+b.basket-dropdown(class="dropdown-menu" )
+							// добавил обертку
+							+e.items--js
+								- for (var x = 0; x < 6; x++)
+									+e.item
+										.row
+
+											.col-auto
+												+e.img-wrap(href="#")
+													img.res-i(src="img/prod-1.png", alt="")
+											.col
+												// переделал
+												.row
+													.col
+														+e.title(href="#") SLEEP
+													.col-auto
+														+b.block-add
+															+e.btn--minus
+															input(type="text" value="1")
+															+e.btn--plus
+												+e.small.text-gray Текстильный шлем с предустановленными Ag/AgCl ...
+												+e.small-row.row.align-items-center.justify-content-between
+													.col-auto
+														+e.price.text-primary 15 000 Р 
+													.col-auto
+														+e.label Inf II
+													.col-auto
+														+e.delete
+															+icon("delete-basket")
+															| Удалить
+												// /переделал
+												
+												
+							+e.total
+								.row
+									.col
+										+e.result.text-primary 
+											+e.small итого:
+											| 25 000 Р
+									.col-auto
+										+e.A.btn(href="#") Оформить заказ
+							+e.foot
+								div: a(href="#") 
+									+icon("basket")
+									| Корзина
+								
+								div: a(href="#") 
+									+icon("menu")
+									| Сравнение
+
+
+
+								div: a(href="#")  
+									+icon("like")
+									| Избранное
+				
+	// end top-nav
+
+mixin top-nav-b() 
+	// start top-nav
+	+b.top-nav
+		.container
+			+b.search-block
+				form
+					+e.btn--search(type="button")
+						+icon("search")
+					+e.INPUT.input(type="text" placeholder="Поиск по сайту")
+					+e.btn--close(type="button")
+						+icon("close")
+				+b.basket-dropdown(class="dropdown-menu" )
+					.arrow
+					+e.inner
+						- for (var x = 0; x < 6; x++)
+							+e.item
+								.row
+									.col-auto
+										+e.img-wrap(href="#")
+											img.res-i(src="img/prod-1.png", alt="")
+									.col
+										+e.small.text-gray.mb-1 Цветной текстильный 
+											|
+											span.text-primary шлем  
+											| 
+											| с предустановленными Ag/AgCl электродами MCScap-C и общим разъемом DB25М 
+										.text-primary 15 000 Р  
+						+e.A.btn-more(href="#") Показать все результаты
+			.row.align-items-center
+				.col-auto.d-lg-none
+					.toggle-mnu.toggle-mnu-1.d-lg-none
+						span
+				.col-sm-auto.col
+					+e.A.logo(href="#")
+						img(src="img/logo.png", alt="")
+				
+				.col.d-none.d-lg-block
+					+mnu()
+				.col-auto.order-sm-last
+					+b.lang-block.dropdown
+						a.dropdown-toggle(href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") RU
+						+e.dropdown.dropdown-menu
+							.arrow
+							+e.A.item--active(href="#" ) RU
+							+e.A.item(href="#") EN
+							+e.A.item(href="#") GE
+							+e.A.item(href="#") IT
+							+e.A.item(href="#") SP
+				+e.cont-col.col-lg-auto.col-sm.col-12.order-sm-0.order-last
+					.row.justify-content-center
+						.col-sm-12.col-auto
+							+e.A.tel(href="tel:+7499404-31-41") +7 499 404 - 31 - 41
+						.col-sm-12.col-auto
+							+e.A.mail(href="mailto:shop@mcscap.ru") shop@mcscap.ru
+				.col-auto
+					+e.A.btn--search(href="#")
+						+icon("search")
+				
+				.col-auto
+					+e.A.btn--profile.popup-with-move-anim(href="#modal-inner")
+						+icon("user")
+				
+				.col-auto
+					.dropdown
+						+e.A.btn--basket(href="#" role="button"  aria-haspopup="true" aria-expanded="false")
+							+icon("basket")
+							+e.count 5
+						+b.basket-dropdown(class="dropdown-menu" )
+							// добавил обертку
+							+e.items--js 
+								+e.item
+									// add 
+									.text-center.text-primary.ttu.py-3 ВАША КОРЗИНА ПУСТА
+									// /add 
+							+e.total
+								.row
+									// rebuild 
+									.col
+										+e.result.text-primary 
+											+e.small итого:
+											| 0 Р
+									.col-auto
+										+e.A.btn.disabled(href="#" disabled) Оформить заказ
+									// /rebuild 
+							+e.foot
+								div: a(href="#") 
+									+icon("basket")
+									| Корзина
+								
+								div: a(href="#") 
+									+icon("menu")
+									| Сравнение
+
+
+
+								div: a(href="#")  
+									+icon("like")
+									| Избранное
+				
+	// end top-nav
+

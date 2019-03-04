@@ -1,0 +1,97 @@
+mixin aside()
+	// start aside
+	+b.aside
+		+e.BUTTON.btn--js.btn.btn-block.btn-primary.btn-lg.d-lg-none(type="button") Меню личного кабинета 
+		+e.nav--js.d-lg-block
+			+e.item.small: +e.A.link--active(href="#") Профиль
+			+e.item.small: +e.A.link(href="#") Мои заказы
+			+e.item.small: +e.A.link(href="#") Избранное
+	// end aside
+
+mixin aside-06()
+	// start aside
+	+b.aside
+		+e.BUTTON.btn--js.btn.btn-block.btn-info.d-lg-none.ttu(type="button") Фильтр товаров
+		+b.aside-filter--js.d-lg-block
+			+e.main-title.h4 Подобрать товар
+			+e.A.reset.text-primary.small(href="#")
+				+icon('close')
+				| Сбросить фильтр
+			mixin group(t)
+				+e.group.hover-block&attributes(attributes)
+					+e.title.small.showhide&attributes(attributes)= t
+					.showhide-all
+						block
+				// +e.group
+			+group('Цена, р')(class="active")
+				+e.rang-wrap.slider-rang-wrap
+					.row
+						.col-auto
+							+e.LABEL.input-wrap  
+								+e.input.__input-minus.input-slider-range
+									input.minus(type='text' value="1" ) 
+						.col-auto
+							+e.LABEL.input-wrap 
+								+e.input.__input-plus.input-slider-range
+									
+									input.plus(type='text' value="1000" )
+					+e.range--1.slider-range.filter__
+						input.range-slider(type="text"  )
+			+group('Объем')
+				+e.rang-wrap.slider-rang-wrap
+					.row
+						.col-auto
+							+e.LABEL.input-wrap  
+								+e.input.__input-minus.input-slider-range
+									input.minus(type='text' value="1" ) 
+						.col-auto
+							+e.LABEL.input-wrap 
+								+e.input.__input-plus.input-slider-range
+									
+									input.plus(type='text' value="1000" )
+					+e.range--1.slider-range.filter__
+						input.range-slider(type="text"  )
+			+group('Тип продукта')
+				div
+					+in-ch(class="aside-popover-toggle" data-toggle="popover"   data-content="Показать 25 товаров")
+						+e.SPAN.text Молочко
+				div: +in-ch()
+					+e.SPAN.text Набор
+				div: +in-ch()
+					+e.SPAN.text Спрей
+				div: +in-ch()
+					+e.SPAN.text Шампунь
+			+group('Бренд')
+				div: +in-ch()
+					+e.SPAN.text 	A-DERMA
+				
+				div: +in-ch()
+					+e.SPAN.text AHAVA
+				
+				div: +in-ch()
+					+e.SPAN.text AMERICAN CREW
+				
+				div: +in-ch()
+					+e.SPAN.text ARAVIA PROFESSIONAL
+				
+				div: +in-ch()
+					+e.SPAN.text AVENE
+				
+				div: +in-ch()
+					+e.SPAN.text BATISTE
+				
+				div: +in-ch()
+					+e.SPAN.text Be Hair
+				
+				div: +in-ch()
+					+e.SPAN.text BIODERMA
+		
+			+group('Применение')
+				div: +in-ch()
+					+e.SPAN.text 	A-DERMA
+				
+				div: +in-ch()
+					+e.SPAN.text AHAVA
+		//- +in-ch("Avene")
+	// end aside
+

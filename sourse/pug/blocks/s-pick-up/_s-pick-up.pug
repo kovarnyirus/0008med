@@ -1,0 +1,14 @@
+mixin s-pick-up()
+	// start s-pick-up
+	+b.s-pick-up
+		.container
+			.row
+				.col.order-md-last
+					+e.img-wrap
+						span: img.res-i(src="img/type-prod.png", alt="")
+				.col-xl-6.col-lg-7.col-md-8
+					+e.text-block
+						+e.title Вы также можете подобрать  нашу продукцию по типу Вашего усилителя и дальше текст по теме в три строки
+						+e.text Расшифровка заголовка с возможностью перейти на большую статью при помощи кнопки
+						+e.A.btn(href="#") Подобрать
+	// end s-pick-up

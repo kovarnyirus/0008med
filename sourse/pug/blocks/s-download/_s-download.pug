@@ -1,0 +1,14 @@
+mixin s-download()
+	// start s-download
+	+b.s-download.section#s-download
+		.container
+			+e.inner
+				.row
+					.col
+						+e.text-block
+							+e.title Скачайте наш новый каталог MCScap!
+							+e.A.btn(href="#") Скачать
+					.col-xl-7.col-lg-6.col-md-5.align-self-end.order-md-first
+						+e.img-wrap
+							span: img.res-i(src="img/download.png", alt="")
+	// end s-download

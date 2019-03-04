@@ -1,0 +1,73 @@
+extends layout/main.pug
+
+
+include ../blocks/s-content/_s-content.pug
+include ../blocks/s-contact/_s-contact.pug
+
+//- include ../blocks/s-slider/_s-slider.pug
+//- include ../blocks/s-catalog/_s-catalog.pug
+//- include ../blocks/s-pick-up/_s-pick-up.pug
+//- include ../blocks/s-download/_s-download.pug
+//- include ../blocks/s-about/_s-about.pug
+//- include ../blocks/prod-head/_prod-head.pug
+//- include ../blocks/kart-body/_kart-body.pug
+//- include ../blocks/s-order/_s-order.pug
+include ../blocks/aside/_aside.pug
+include ../blocks/s-po/_s-po.pug
+
+block title
+	title Личный кабинет 1
+
+block pagecontent
+	+mob-mnu()
+	+header()
+		//- +top-line()
+		+top-nav()
+		
+	.page-border-top
+	.container
+		+breadcrumb("Личный кабинет", "Главная" )
+		.page-title
+			.h2.text-gray.fw-900.ttu Личный кабинет 
+	//- +prod-head()
+	//- +kart-body()
+
+	+b.s-po
+		.container
+			.row
+				.col-lg-3
+					+aside
+				.col
+					+b.form-wrap.section.pt-0
+						.border.border-light
+							+e.block
+								mixin tr(t1,t2)
+									.row.mt-1.mb-2
+										.col-xl-5.col-md-6.my-1: .text-gray= t1
+										.col.my-1
+											block
+								+tr("ФИО","")
+									.text-body Викторов Олег 
+								+tr("Телефон","")
+									a.text-body(href="tel:+79856698899") +7 985 669 88 99
+								+tr("e-mail (Кликабелен)","")
+									a.text-body(href="mailto:sample@sample.com") sample@sample.com
+								+tr("Тип клиента","")
+									.text-body Юридическое лицо
+								+tr("Компания","")
+									.text-body ООО “Медицинские иследования”
+								+tr("ИНН","")
+									.text-body 565999886
+								+tr("КПП","")
+									.text-body 4564666
+								+tr("Юридический ад","")
+									.text-body 1235663г. Москва, ул. Андропова 25
+						+e.btn-wrap
+							.row.row--small
+								.col-sm-auto.col-6
+									+e.A.btn--edit(href="#") Сменить пароль
+								.col-sm-auto.col-6
+									+e.A.btn--edit(href="#") Редактировать
+	+footer()
+	
+	

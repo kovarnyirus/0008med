@@ -1,0 +1,230 @@
+ 
+	  
+.soc{
+	margin: 0 -5px;
+	&__item{
+		display: inline-block;
+		text-decoration: none !important;
+		margin: 0 5px;
+		vertical-align: middle;
+		@include mt;
+		&:hover{
+		 	// box-shadow: 0 0 33px 0px rgba(255, 83, 0, 0.16);
+			opacity: .6 ;
+		}
+	}
+	svg{
+		width: 31px;
+		height: 31px;
+	}
+	 
+
+}
+ 
+
+.jq-selectbox{
+	max-width: 100%;
+	margin: auto;
+	display: block !important;
+ // height: auto;
+	&__select{
+		// background-color: transparent;
+		 
+		box-shadow: none !important; 
+		background-image: none !important;
+		text-shadow: none;
+		font-family: $default-font;
+		font-size: rem(14); 
+		text-align: left;
+		border: 1px solid #dadada;
+		background-color: #fff;
+		padding-top: rem(12);
+		padding-bottom: rem(12);
+		height: auto;
+		border-radius: rem(6);
+		@include mt;
+		&:hover{
+		 
+		}
+		&-text{
+			// width: 100% !important;
+			line-height: 1;
+		}
+	}	
+	&__select:hover &__trigger{
+		 
+	}
+	&__trigger{
+		border: none;
+		background-color: #dadada; 
+		height: 100%;
+		width: 40px;
+		border-radius: rem(6);
+		text-align: center;
+		background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAYCAYAAAAVibZIAAAA40lEQVRIS9XVXRXCMAwF4HsVgARQABLAATgAZeAAHIAEJIADUFBOdtqdwdKk7OeBPa7pl61JW8J5QghLAKcYtiV58+bQCojgBcA0xj0BrD04iypgyu/CKmqARXALLQBd+AP9ATThGg0h7AAcvMoq4601rtAeYDPHnuRRXnAgMOEVLKg086LDb2tTHiRnZvN3TfRH6MBreic5H6f6o/RpqnCPfn0B2JC8Jkvb+zI4KWwnAVff52vulCqBVbDaptoXxdPKgrNgFo3Fk7tJg03QRDOwC7poAz7HZZIq97tNCzugFfYGUK5wGWWE5JYAAAAASUVORK5CYII=);
+		background-position: center;
+		background-repeat: no-repeat;
+		@include mt;
+		&:hover{
+			
+
+		}
+	}
+	&__trigger-arrow { 
+		border: none;
+    
+}
+li{
+	font-size: rem(16);
+	padding: em(10px) 10px em(10px);
+	&:hover {
+     
+    color: #fff;
+}
+}
+}
+
+
+.custom-input{
+	display: block;
+	margin: auto;
+	 
+	margin-bottom: rem(20);
+	cursor: pointer;
+	position: relative;
+	padding-left: 30px;
+	display: inline-block;
+	&__input{
+		position: absolute;
+		opacity: 0;
+	}
+	&__input[type="checkbox"] + &__lab{
+		left: 0;
+		display: block;
+		top: 3px;
+		// display: inline-block;
+		width: $h5-font-size;
+		height: $h5-font-size;
+		border-radius: 5px;
+		border: 1px solid #c4c4c4;
+		@include mt;
+		position: absolute; 
+		margin-right: 10px;
+		&::after{ 
+			@include far("\f00c");
+			position: absolute;
+			@include a-cent;
+			color: #000;
+			opacity: 0;
+		}
+	}
+	&__input[type="radio"] + &__lab{
+		left: 0;
+		display: block;
+		top: 3px;
+		// display: inline-block;
+		width: $h6-font-size;
+		height: $h6-font-size;
+		border: 1px solid $gray;
+		// background-color: $primary;
+		@include mt;
+		position: absolute; 
+		margin-right: 5px;
+		border-radius: 50%;
+		&::after{ 
+			content: '';
+			position: absolute;
+			@include a-cent;
+			background-color: $primary;
+			opacity: 0;
+			width: 6px;
+			height: 6px;
+			border-radius: 50%;
+		}
+	}
+
+	&__input[type="checkbox"]:checked + &__lab{
+		// background-color: $success;
+		 
+	}
+	&__input:checked ~ &__text--title{
+			border-color:  $primary;
+	}
+	&__text--title{
+		border-bottom: 4px solid transparent;
+		display: inline-block;
+		position: relative;
+		margin-bottom: em(5);
+		// display: flex;
+		// justify-content: space-between;
+		// max-width: 370px;
+		// margin-right: 15px;
+		// padding-right: 55px;
+		img{
+			// position: absolute;
+			// right: 0;
+			margin-left: 10px;
+			// top: 0;
+			// margin-top: -3px;
+		}
+	}
+	&__input:checked + &__lab{ 
+		&::after{
+
+			opacity: 1;
+		}
+	}
+	@include media-breakpoint-up(sm) {
+
+		font-size: 15px;
+	}
+	font-size: 13px;
+	&__text{
+		// line-height: .8;
+	}
+}
+
+
+
+.counter{
+	counter-reset: num;
+	&__item {
+		position: relative; 
+		&::before {
+			content: counter(num);
+			counter-increment: num;
+		}
+	}
+}
+
+
+.select2-container--default{
+	display: block;
+	outline: 0 !important; 
+	.select2-selection--single{
+		border-radius: 0;
+		border: none;
+		border-bottom: solid 1px ;
+		height: auto;
+		font-size: rem(24px);
+		outline: 0 !important; 
+		.select2-selection__arrow b{
+				border-color: $success transparent transparent transparent;
+			  border-style: solid;
+			  border-width: 7px 7px 0 7px;
+		}
+		.select2-selection__rendered{
+			white-space: normal;
+			 color: $def;
+			 padding-left: 0;
+			 padding-bottom: 5px;
+		}
+	}
+} 
+.select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b{
+	border-color: transparent transparent $success transparent;
+  border-width: 0 7px 7px 7px;
+}
+.select2-container--default .select2-results__option--highlighted[aria-selected]{
+	background-color: $success;
+}

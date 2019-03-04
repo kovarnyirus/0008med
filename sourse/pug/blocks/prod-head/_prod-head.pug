@@ -1,0 +1,122 @@
+mixin prod-head()
+	// start prod-head
+	+b.prod-head
+		.container
+			// добавил
+			.d-lg-none
+				+e.head-row.row.align-items-center.text-gray 
+					.col
+						.h2.fw-900.ttu SLEEP
+					//- .col-auto
+						
+			.row
+				// переделал классы
+				.col-xl-7.col-lg-6
+					+e.sliders
+						mixin sliders(...items)
+							+e.small-row.row
+								// переделал классы
+								.col-xl-auto.col-md-3.col-12.order-md-0.order-last
+									+e.slider-small
+										each item in items
+											+e.DIV.slide--small
+												+e.img-wrap--small( )
+													img.res-i(src="#" data-lazy=`img/${item}.png`, alt="")
+								// переделал классы
+								.col-xl.col-lg-9.col-12
+									+e.slider-big 
+										each item in items
+											+e.slide--big
+												+e.A.img-wrap(href=`img/${item}.png` data-fancybox="images" )
+													img.res-i(src=`img/${item}.png`, alt="")
+
+
+						+sliders("prod-1","prod-1","prod-1","prod-1","prod-1","prod-1","prod-1","prod-1","prod-1")
+				.col
+					.d-none.d-lg-block
+						+e.head-row.row.align-items-center.text-gray 
+							.col
+								.h2.fw-900.ttu SLEEP
+							//- .col-auto
+								//- +b.availability
+								//- 	+e.circle(style="background-color: #42d76b;")
+								//- 	| В наличии 
+					+e.artical 
+						small.text-gray Артикул: 
+						| m4568 988-65
+					+e.caption.text-gray Текстильный шлем с предустановленными Ag/AgCl sintered электродами MCScap-T и общим разъемом DB25М
+					+b.size-block
+						.small.text-gray Размер:
+						+e.btn-wrap
+							mixin in-ch( n, t)
+								+b.LABEL.btn-input
+									+e.INPUT.input(type="radio" name= n)
+									+e.SPAN.text= t
+									//- block 
+							+in-ch("size-prod","XL")
+							+in-ch("size-prod","XL/L")
+							+in-ch("size-prod","L")
+							+in-ch("size-prod","L/M")
+							+in-ch("size-prod","M")
+							+in-ch("size-prod","M/S")
+							+in-ch("size-prod","S")
+							+in-ch("size-prod","S/XS")
+							+in-ch("size-prod","XS")
+							+in-ch("size-prod","Inf I")
+							+in-ch("size-prod","Inf II")
+							+in-ch("size-prod","Inf III")
+					
+					+b.size-block
+						.small.text-gray Размер шлема № 2:
+						+e.btn-wrap
+							mixin in-ch( n, t)
+								+b.LABEL.btn-input
+									+e.INPUT.input(type="radio" name= n)
+									+e.SPAN.text= t
+									//- block 
+							+in-ch("size-prod","XL")
+							+in-ch("size-prod","XL/L")
+							+in-ch("size-prod","L")
+							+in-ch("size-prod","L/M")
+							+in-ch("size-prod","M")
+							+in-ch("size-prod","M/S")
+							+in-ch("size-prod","S")
+							+in-ch("size-prod","S/XS")
+							+in-ch("size-prod","XS")
+							+in-ch("size-prod","Inf I")
+							+in-ch("size-prod","Inf II")
+							+in-ch("size-prod","Inf III")
+					// добавил 24.02
+					+b.availability.text-primary  В наличии 
+					+b.availability.text-danger  Под заказ 
+					// /добавил 24.02
+					+e.price-block
+
+						.small.text-gray Цена:
+						+e.price 
+							span.h2.text-primary.fw-900 12 415  
+							span.text-gray.ttu.small руб
+						.small.text-gray.mb-2 Количество
+						.row.row--small
+							.col-auto
+								+b.block-add
+									+e.btn--minus
+									input.form-control(type="text" value="25")
+									+e.btn--plus.btn
+							.col-sm-auto.col
+								+e.btn-wrap
+									+b.availability.text-danger.text-center  Выберите размер
+									+e.A.btn.btn(href="#")
+										+icon("basket")
+										| В корзину
+								// внизу вид кнопки при добавлении товара в корзину
+								
+								// +e.A.btn.btn.active.btn-primary(href="#")
+										+icon("basket")
+										| В корзине
+						 
+					// +e.price-block
+	  
+
+			 
+	// end prod-head

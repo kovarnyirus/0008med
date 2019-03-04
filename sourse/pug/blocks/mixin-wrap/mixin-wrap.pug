@@ -1,0 +1,125 @@
+mixin icon(name,mod)
+	- mod = mod || ''
+	svg(class="icon icon-" + name + ' ' + mod)
+		use(xlink:href="img/svg/sprite.svg#" + name)
+
+
+mixin breadcrumb(act, ...items)
+	nav.breadcrumb
+		each item in items
+			a.breadcrumb-item(href='#')= item 
+		span.breadcrumb-item.active= act
+		
+mixin pugin()
+	nav(aria-label='...')
+		ul.pagination.justify-content-center
+			li.page-item.disabled
+				a.page-link(href='#', tabindex='-1') 
+					i(class="fas fa-chevron-left")
+			li.page-item.disabled
+				a.page-link.d-none.d-md-block(href='#', tabindex='-1') Назад
+
+			li.page-item
+				a.page-link(href='#') 1
+			li.page-item.active
+				a.page-link(href='#')
+					| 2 
+					span.sr-only (current)
+			li.page-item
+				a.page-link.page-link-more(href='#') ...
+			li.page-item
+				a.page-link(href='#') 3
+
+			li.page-item
+				a.page-link.d-none.d-md-block(href='#') Дальше
+			li.page-item
+				a.page-link(href='#') 
+					i(class="fas fa-chevron-right")
+//- h2.yel(class="  wow fadeInUp animated " data-wow-offset="120" data-wow-duration="1.2s")  
+mixin arrow()
+	.swiper-button-hand.swiper-button-hand-next.swiper-button-next
+		+icon('chevron-right')
+	.swiper-button-hand.swiper-button-hand-prev.swiper-button-prev
+		+icon('chevron-left')
+		
+mixin polite()
+	.politic Отправляя заявку Вы даете
+		|
+		|
+		+e.A.link(href="Soglasie.pdf" target="_blank")  согласие
+		|
+		|
+		| на&#160;обработку персональных данных
+
+
+
+mixin soc()
+	+b.soc
+		mixin item()
+			+e.A.item(href="" target="_blank"): i(class="fab")&attributes(attributes)
+		+item()(class="fa-twitter")
+		+item()(class=" fa-facebook")
+		+item()(class="fa-google-plus") 
+mixin mnu()
+	- var nav= {"Юр.Лицам":"#","Как заказать":"#","Контакты ":"#"}
+	+e.nav
+		+e.item
+			+b.dropdown-cat
+				+e.link--toggle-js(href="#") Продукция 
+				+e.menu
+					.d-none.d-lg-block
+						- var nav2= {"Электронные шлемы MCScap":"#","Электроды, гель и аксессуары":"#","Электроды":"#","Текстильные шлемы":"#","Адаптеры":"#","Гель и аксессуары":"#","Мобильная система NeoRecCap":"#"}
+						+b.dropdown-cat-has-children.custom-scroll-js 
+							each linkPatch, linkName in nav2
+								+e.item--js
+									+e.item-inner
+										+e.A.link(href= linkPatch)= linkName
+									+b.dropdown-cat-sub-wrap.custom-scroll-js
+										.row
+											.col-7
+												+e.text-block
+													+e.title= linkName
+													+e.text Краткое описание текстильный шлем с предустановленными Ag/AgCl электродами MCScap-C и общим разъемом DB25М
+													+e.A.btn(href="#") В раздел
+
+											.col
+												img.res-i(src="img/nav-img.png", alt="")
+							+e.A.btn(href="#") Создать свой MCScap 
+					
+		each linkPatch, linkName in nav
+			+e.item: +e.A.link(href= linkPatch)= linkName
+mixin mnu-mob()
+	- var nav= {"Юр.Лицам":"#","Как заказать":"#","Контакты ":"#"}
+	+e.nav
+		+e.item
+			+b.dropdown-cat
+				+e.link--toggle-js Продукция 
+				+e.menu
+					
+					- var nav2= {"Электронные шлемы MCScap":"#","Электроды, гель и аксессуары":"#","Электроды":"#","Текстильные шлемы":"#","Адаптеры":"#","Гель и аксессуары":"#","Мобильная система NeoRecCap":"#"}
+					+b.dropdown-cat-has-children.custom-scroll-js 
+						each linkPatch, linkName in nav2
+							+e.item--js 
+								+e.A.link(href= linkPatch)= linkName 
+					
+		each linkPatch, linkName in nav
+			+e.item: +e.A.link(href= linkPatch)= linkName
+		+e.A.btn(href="#") Создать свой MCScap
+
+mixin ci()
+	+b.LABEL.custom-input
+		+e.INPUT.input(type="checkbox")
+		+e.SPAN.lab
+		| 
+mixin in-rad(n)
+	+b.LABEL.custom-input
+		+e.INPUT.input(type="radio" name= n)&attributes(attributes)
+		+e.SPAN.lab
+		block 
+	// +b.LABEL.custom-input
+	
+mixin check(n)
+	+b.LABEL.custom-input
+		+e.INPUT.input(type="checkbox" name= n)&attributes(attributes)
+		+e.SPAN.lab
+		block 

@@ -1,0 +1,130 @@
+.form-wrap{
+	&__captcha{
+		margin-bottom: 20px;
+	}
+	&__title{
+		padding-bottom: 1em;
+	}
+ 	&__input-wrap{
+		margin-bottom: 15px;
+ 		// max-width: 466px;
+ 	}
+ 	&__input{
+		//  outline: 0 !important;
+		 resize: none;
+		 
+ 	}
+ 	&__btn{
+		 cursor: pointer;
+		 padding-top: rem(8);
+		 padding-bottom: rem(8);
+ 	}
+ 	label{
+ 		width: 100%;
+ 		display: block;position: relative;
+	 }
+	 &__title-label{
+		color: $gray;
+		@include mt(.1);
+		cursor: text;
+		position: absolute;
+		left: em(15px);
+		z-index: 2;
+		top: em(-10);
+		background-color: #ffffff;
+		font-size: $small;
+		padding-left: 2px;
+		padding-right: 2px;
+		border-radius: 5px;
+	 }
+	 .empty &__input{
+		background-color: transparent;
+	 }
+	 .empty &__title-label{
+		top: em(12px);
+		font-size: 1em;
+		// transform: translateY(rem(-12px));
+		background-color: transparent;
+	 }
+	 &__input:focus ~  &__title-label{
+		top: em(-10);
+		background-color: #ffffff;
+		font-size: $small;
+	 }
+
+	 .bx-sls .dropdown-block{
+		 padding-top: .525rem;
+		 padding-bottom: .525rem;
+		 border-radius: .3125rem;
+		 
+	 }
+	 .bx-sls .dropdown-icon {
+		 top: 15px;
+	 }
+	 .bx-sls .bx-ui-sls-clear{
+		 top: 5px;
+	 }
+	 .bx-sls .bx-ui-sls-fake, .bx-sls .bx-ui-sls-route{
+		 height: 100%;
+	 }
+}
+
+
+.parsley-error{
+	border-image: none;
+	border: 2px solid  red !important;
+	color: red;
+	outline: 0 !important;
+	 
+}
+.parsley-success{
+	border: 2px solid  #00d600 !important;
+
+}
+.parsley-errors-list{
+	color: red;
+}
+
+// 
+@include media-breakpoint-up(xl) {}
+
+@include media-breakpoint-up(lg) {}
+
+@include media-breakpoint-up(md) {}
+
+@include media-breakpoint-up(sm) {}
+
+@include media-breakpoint-up(xs) {}
+
+// 
+@include media-breakpoint-between(md, xl) {}
+
+// 
+@include media-breakpoint-only(xs) {}
+
+@include media-breakpoint-only(sm) {}
+
+@include media-breakpoint-only(md) {}
+
+@include media-breakpoint-only(lg) {}
+
+@include media-breakpoint-only(xl) {}
+
+// 
+@include media-breakpoint-down(xl) {}
+
+@include media-breakpoint-down(lg) {}
+
+@include media-breakpoint-down(md) {}
+
+@include media-breakpoint-down(sm) {}
+
+@include media-breakpoint-down(xs) {}
+
+
+.bg-secondary{
+	.form-wrap__input:focus ~  .form-wrap__title-label,
+	.form-wrap__title-label{
+		background: #F5F5F5;
+	}
+}

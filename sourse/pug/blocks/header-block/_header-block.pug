@@ -1,0 +1,22 @@
+mixin header-block()
+	// start header-block
+	+b.header-block#header-block
+		.container
+			+e.nav.d-none.d-md-flex
+				+e.link--dropdown
+					a(href="#") Электродные шлемы MCScap 
+					+e.dropdown-menu 
+						+e.dropdown-menu-inner
+							a(href="#") Электронные шлемы MCScap
+							a(href="#") Электроды, гель и аксессуары
+							a(href="#") Электроды
+							a(href="#") Текстильные шлемы
+							a(href="#") Адаптеры
+							a(href="#") Гель и аксессуары
+							a(href="#") Мобильная система NeoRecCap
+				+e.link(href="#") Электроды, гель и аксессуары
+				+e.link(href="#") Мобильная система NeoRecCap
+			h1 Официальный интернет-магазин ЭЭГ аксессуаров MCScap
+			+e.img-wrap
+				img.res-i(src="img/head-img.png", alt="")
+	// end header-block
