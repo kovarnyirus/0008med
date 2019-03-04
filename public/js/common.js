@@ -663,6 +663,6 @@ jQuery(document).ready(function ($) {
 
 		$(".s-basket-order__toggle-link--js").click(function(e){
 			e.preventDefault();
-			$('s-basket-order__item:nth-child(n + 3)').slideToggle();
+			$('.s-basket-order__item:nth-child(n + 3)').slideToggle();
 		})
 });
