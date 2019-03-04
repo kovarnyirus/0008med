@@ -485,6 +485,23 @@
 .form-wrap.bg-secondary{
 	.custom-input{
 		padding-left: 0;
+		&__text--title{
+			span{
+				position: relative;
+				&::before{
+					content: '';
+					position: absolute;
+					top: 100%;
+					left: 0;
+					width: 0;
+					// width: 100% ;
+					@include mt;
+					height: 4px;
+					display: block;
+					background-color: $primary ;
+				}
+			}
+		}
 		&__lab{
 			top: rem(24px);
 			@include media-breakpoint-down(md) {
@@ -507,6 +524,14 @@
 			background-color: #ffffff;
 			box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.16);
 		}
+			input:checked ~ .row  .custom-input__text--title{
+				span{
+					&::before{
+
+						width: 100%;
+					}
+				}
+			}
 	}
 }
 
