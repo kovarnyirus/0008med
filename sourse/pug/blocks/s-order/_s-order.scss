@@ -1,4 +1,14 @@
 .s-order {
+	@include media-breakpoint-down(xs) {
+		.col-lg-9{
+			padding-left: 0;
+			padding-right: 0;
+		}
+		&__aside{
+			display: none;
+		}
+		padding-top: 0 !important;
+	}
 	&__avatar {
 		border-radius: 100%;
 		width: 40px;
@@ -151,7 +161,7 @@
 			width: 25%;
 		}
 
-		width: 140px;
+		width: (100vw / 3);
 
 		// width: (870px / 4);
 		@include media-breakpoint-up(md) {
@@ -204,7 +214,7 @@
 	&__btn {
 
 		@extend .btn;
-		@extend .btn-primary-l;
+		@extend .btn-primary;
 		&--finish{
 			@include media-breakpoint-up(sm) {
 				
