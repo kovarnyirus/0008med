@@ -439,14 +439,20 @@
 	@include mt;
 	z-index: 20;
 	position: relative;
-	&:not(.item-prod--gorizontal){
+
+	&:not(.item-prod--gorizontal),
+	&:not(.item-prod--compare) {
 
 		min-height: 400px;
+	}
+	&--compare{
+		min-height: 1px !important;
 	}
 	&:hover{
 		z-index: 44;
 	}
 	// @include mt;
+	&:not(.item-prod--compare ):hover  &__caption,
 	&:not(.item-prod--gorizontal):hover  &__caption{
 
 		background-color: #ffffff;

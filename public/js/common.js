@@ -665,4 +665,44 @@ jQuery(document).ready(function ($) {
 			e.preventDefault();
 			$('.s-basket-order__item:nth-child(n + 3)').slideToggle();
 		})
+
+
+			//  слайдер сравнения
+	$('.s-compare__slider--js').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		variableWidth: true,
+		speed: 450,
+		infinite: false,
+		dots: false,
+		useTransform: false,
+		arrows: false,
+		touchMove: false,
+		// swipe: false,
+	 
+		asNavFor: '.s-compare__slider--js'
+		// centerMode: true,
+		// focusOnSelect: true ,
+		// variableWidth: true,
+		// prevArrow: arrr2,
+		// nextArrow: arrl2,
+	});
+
+	$(".s-compare__slider-wrap").stick_in_parent({
+		parent: '.s-compare',
+		offset_top: 56,
+		recalc_every: 1,
+	});
+
+		// подсветка при наведении пуктов в сравнении
+		// $('.s-compare__group--js').hover(function () {
+		// 	var theq = $(this).index();
+		 
+		// 	// $(this).toggleClass('hover');
+		// 	$(".s-compare__slide").each(function () {
+		// 		$(this).find('.s-compare__group--js').eq(theq).toggleClass('hover');
+		// 	})
+	
+		// })
+	
 });

@@ -11,10 +11,10 @@ include ../blocks/s-contact/_s-contact.pug
 //- include ../blocks/s-about/_s-about.pug
 //- include ../blocks/prod-head/_prod-head.pug
 //- include ../blocks/kart-body/_kart-body.pug
-include ../blocks/s-order/_s-order.pug
+include ../blocks/s-compare/_s-compare.pug
 
 block title
-	title СПАСИБО!
+	title Сравнение товаров
 
 block pagecontent
 	+mob-mnu()
@@ -24,11 +24,12 @@ block pagecontent
 		
 	.page-border-top
 	.container
-		+breadcrumb("СПАСИБО!", "Главная" ) 
-			
+		+breadcrumb("Сравнение товаров", "Главная" ) 
+		.page-title
+			.h2.text-gray.fw-900.ttu Сравнение товаров
 	//- +prod-head()
 	//- +kart-body()
-	+s-order-5-3
+	+s-compare
 	//- +s-form()
 	//- +s-contact()
 	+footer()

@@ -154,17 +154,17 @@
 	&__foot {
 		margin-top: 22px;
 		padding-bottom: 60px;
-		.form-wrap{
-			&__input{
+		// .form-wrap{
+		// 	// &__input{
 
-			}
+		// 	// }
 
-		}
+		// }
 			
 
-		.row {
-			// justify-content: space-between;
-		}
+		// .row {
+		// 	// justify-content: space-between;
+		// }
 
 		.form-wrap {
 			@include media-breakpoint-up(lg) {
@@ -359,10 +359,10 @@
 				width: calc(100% - 80px);
 			}
 
-			td:nth-child(3) {
-				// order: 13;
-				// width: 100%;
-			}
+			// td:nth-child(3) {
+			// 	// order: 13;
+			// 	// width: 100%;
+			// }
 
 			td:nth-child(4) {
 				text-align: right;
@@ -413,8 +413,7 @@
 
 			input {
 				border: none;
-				display: inline;
-				width: auto;
+				display: inline; 
 				width: 26px;
 				font-size: 14px;
 				text-align: center;
