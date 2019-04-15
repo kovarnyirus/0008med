@@ -276,7 +276,7 @@ jQuery(document).ready(function ($) {
 	$('.s-slider').slick({
 		slidesToShow: 1,
 		slidesToScroll: 1,
-		dots: false,
+		dots: true,
 		speed: 450,
 		infinite: true,
 		loop: true,
@@ -641,7 +641,7 @@ jQuery(document).ready(function ($) {
 	$('.aside-slider').slick({
 		slidesToShow: 1,
 		slidesToScroll: 1,
-		dots: false,
+		dots: true,
 		speed: 450,
 		infinite: true,
 		loop: true,
