@@ -7,9 +7,9 @@ mixin prod-item-sls(x,t,p)
 						block
 					+e.like
 						// заменил название иконки
-					
+
 						+icon('star')
-					
+
 					+e.compare.active
 						+icon('compare')
 
@@ -18,7 +18,7 @@ mixin prod-item-sls(x,t,p)
 					+e.btn-fast.popup-with-move-anim(href="#modal-prod") Быстрый просмотр
 					// /add btn
 					+e.img-wrap(href="#")
-						span: img.res-img(src="#" data-lazy=`img/prod-${x}.png`, alt="")
+						span: img.res-img(src="img/prod-1.png" data-lazy=`img/prod-${x}.png`, alt="")
 				// /add wrapper
 				+e.caption
 					+e.title--js.h2(href="#")= t
@@ -29,11 +29,11 @@ mixin prod-item-sls(x,t,p)
 							+e.btn-wrap
 								mixin in-ch( n, t)
 									// переделал
-									
+
 									+b.LABEL.btn-input(data-toggle="popover" data-trigger="hover" data-content='<div class="pb-1"><span class="text-gray">Обхват головы: </span> <strong class="display-inline-block">24-28 см </strong></div><div class="pb-1"><span class="text-gray">Рекомендовано:  </span> <strong class="display-inline-block">новорожденным, недоношенным</strong></div>')
 										+e.INPUT.input(type="radio" name= n)
-										+e.SPAN.text= t 
-										 
+										+e.SPAN.text= t
+
 									// /переделал
 								+in-ch("size-prod","XL")
 								+in-ch("size-prod","XL/L")
@@ -48,18 +48,22 @@ mixin prod-item-sls(x,t,p)
 								+in-ch("size-prod","Inf II")
 								+in-ch("size-prod","Inf III")
 					.row
-						.col-12
+						.col-12.d-none.d-sm-block
 							// добавил 24.02
-							.small.pb-1.text-primary  В наличии 
-							.small.pb-1.text-danger  Под заказ 
+							.small.pb-1.text-primary  В наличии
+							.small.pb-1.text-danger  Под заказ
 							// /добавил 24.02
-						.col-auto
+						.col-6.col-md-auto
 							.h5.text-primary  15 000 Р
-						.col-auto
+						.col-6.col-md-auto
 							// добавил 24.02
-							+e.btn-wrap
+							+e.btn-wrap.d-none.d-sm-block
 								.smallest.text-danger.text-center  Выберите размер
-								+e.A.btn.popup-with-move-anim(href="#modal-prod")  В корзину 
+								+e.A.btn.popup-with-move-anim(href="#modal-prod")  В корзину
+							+e.btn-wrap.d-sm-none
+								+e.A.btn.popup-with-move-anim.pl-0.pr-0(href="#modal-prod")
+									+icon("basket")
+										| Корзина
 	// .item-prod
 
 mixin prod-item-sl(x,t,p)
@@ -69,9 +73,9 @@ mixin prod-item-sl(x,t,p)
 					block
 				+e.like
 						// заменил название иконки
-					
+
 						+icon('star')
-					
+
 				+e.compare.active
 					+icon('compare')
 				+e.img-wrap(href="#")
@@ -86,7 +90,7 @@ mixin prod-item-sl(x,t,p)
 								mixin in-ch( n, t)
 									+b.LABEL.btn-input
 										+e.INPUT.input(type="radio" name= n)
-										+e.SPAN.text= t 
+										+e.SPAN.text= t
 								+in-ch("size-prod","XL")
 								+in-ch("size-prod","XL/L")
 								+in-ch("size-prod","L")
@@ -103,21 +107,21 @@ mixin prod-item-sl(x,t,p)
 						.col-auto
 							.h5.text-primary  15 000 Р
 						.col-auto
-							+e.A.btn.popup-with-move-anim(href="#modal-prod")  В корзину 
+							+e.A.btn.popup-with-move-anim(href="#modal-prod")  В корзину
 	// .item-prod
 mixin prod-item-gor(x,t,p)
 	+b.item-prod--gorizontal
-			+e.inner 
+			+e.inner
 				.row.no-gutters.my-0
 					.col-sm-auto
 						+e.status-wrap
 							block
 						+e.like
 							// заменил название иконки
-					
+
 							+icon('star')
-						
-						 
+
+
 						+e.img-wrap--gorizontal(href="#")
 							span: img.res-img(src=`img/prod-${x}.png`, alt="")
 					.col
@@ -132,7 +136,7 @@ mixin prod-item-gor(x,t,p)
 									+icon('compare')
 									| Убрать из сравнения
 							.row.my-0
-							 
+
 								.col
 									+e.text.small.text-gray= p
 								.col-md-auto
@@ -140,16 +144,16 @@ mixin prod-item-gor(x,t,p)
 	// .item-prod
 mixin prod-item-gor-sm(x,t,p)
 	+b.item-prod--gorizontal
-			+e.inner 
+			+e.inner
 				.row.no-gutters.my-0
 					.col-sm-auto
 						+e.status-wrap
-							+e.video-yes 
+							+e.video-yes
 								+icon("video")
 								|Есть  видео
 						+e.like
 							// заменил название иконки
-					
+
 							+icon('star')
 						+e.img-wrap--gorizontal.--sm(href="#")
 							span: img.res-img(src=`img/prod-${x}.png`, alt="")
@@ -165,7 +169,7 @@ mixin prod-item-gor-sm(x,t,p)
 									+icon('compare')
 									| Убрать из сравнения
 							.row.my-0
-							 
+
 								.col
 									+e.text.small.text-gray= p
 								.col-md-auto
@@ -182,28 +186,28 @@ mixin s-catalog()
 						.h2.text-gray.fw-900 РЕКОМЕНДУЕМЫЕ ТОВАРЫ
 					.col-auto.d-none.d-md-block
 						a.small(href="#") Смотреть все
-				
-			+e.slider
+
+			+e.slider--mobile
 				- for (var x = 0; x < 2; x++)
-					+e.slide
+					+e.slide--mobile
 						+prod-item-sls("1","CLINIC","Цветной текстильный шлем с предустановленными Ag/AgCl электродами MCScap-C и общим разъемом DB25М")
 							+e.status(style=" background-color: #42d76b;")
-							+e.video-yes 
+							+e.video-yes
 								+icon("video")
 								|Есть  видео
-					+e.slide
+					+e.slide--mobile
 						+prod-item-sls("1","SLEEP","Текстильный шлем с предустановленными Ag/AgCl ")
-							+e.video-yes 
+							+e.video-yes
 								+icon("video")
 								|Есть  видео
 
-					+e.slide
+					+e.slide--mobile
 						+prod-item-sls("1","PROFESSIONAL","Цветной текстильный шлем с предустановленными Ag/AgCl электродами MCScap-C и общим разъемом DB25М")
 		.container.container-foot
 			+e.A.btn-foot(href="#")
 				+icon("make")
 				| Создать свой MCScap
-					
+
 	// end s-catalog
 
 
@@ -217,29 +221,29 @@ mixin s-catalog-3()
 						.h2.text-gray.fw-900 С ЭТИМ ТОВАРОМ ТАКЖЕ ПОКУПАЮТ
 					.col-auto.d-none.d-md-block
 						//- a.small(href="#") Смотреть все
-				
+
 			+e.slider
 				- for (var x = 0; x < 2; x++)
 					+e.slide
 						+prod-item-sls("2","CLINIC","Цветной текстильный шлем с предустановленными Ag/AgCl электродами MCScap-C и общим разъемом DB25М")
 							+e.status(style=" background-color: #42d76b;")
-					
+
 					+e.slide
 						+prod-item-sls("2","SLEEP","Текстильный шлем с предустановленными Ag/AgCl ")
-							+e.video-yes 
+							+e.video-yes
 								+icon("video")
 								|Есть  видео
 
 					+e.slide
-						+prod-item-sls("2","PROFESSIONAL","Цветной текстильный шлем с предустановленными Ag/AgCl электродами MCScap-C и общим разъемом DB25М") 
-					
+						+prod-item-sls("2","PROFESSIONAL","Цветной текстильный шлем с предустановленными Ag/AgCl электродами MCScap-C и общим разъемом DB25М")
+
 	// end s-catalog
 
 mixin s-catalog-4()
 	// start s-catalog
 	+b.s-catalog.pt-0.section
 		.container
-			
+
 			+e.head.small
 				.row.align-items-center
 					.col-sm.col
@@ -251,22 +255,22 @@ mixin s-catalog-4()
 									+e.d-none
 										div: a(href="#") ↑ Цена
 										div: a(href="#") ↓ Цена
-									
+
 										div: a(href="#") ↑ Отзывы
 										div: a(href="#") ↓ Отзывы
 										div: a(href="#") ↑ Дата
-										div: a(href="#") ↓ Дата 
+										div: a(href="#") ↓ Дата
 							.col-auto
 								a.tdu.text-body(href="#") Новинки
-								
+
 					//- .col-auto
 					.col-auto.text-md-left.text-right
 						// edit block
 						+e.btn-head(href="#")
 							+icon('compare')
-							span 
-								span.d-none.d-sm-inline Сравнение 
-								| 
+							span
+								span.d-none.d-sm-inline Сравнение
+								|
 								| (2)
 						.d-none.d-sm-inline-block
 							.variant
@@ -281,44 +285,44 @@ mixin s-catalog-4()
 					+e.col.col-lg-4.col-md-6
 						+prod-item-sl("2","CLINIC","Цветной текстильный шлем с предустановленными Ag/AgCl электродами MCScap-C и общим разъемом DB25М")
 							+e.status(style=" background-color: #42d76b;")
-					
+
 					+e.col.col-lg-4.col-md-6
 						+prod-item-sl("2","SLEEP","Текстильный шлем с предустановленными Ag/AgCl ")
-							+e.video-yes 
+							+e.video-yes
 								+icon("video")
 								|Есть  видео
 
 					+e.col.col-lg-4.col-md-6
-						+prod-item-sl("2","PROFESSIONAL","Цветной текстильный шлем с предустановленными Ag/AgCl электродами MCScap-C и общим разъемом DB25М") 
-					
+						+prod-item-sl("2","PROFESSIONAL","Цветной текстильный шлем с предустановленными Ag/AgCl электродами MCScap-C и общим разъемом DB25М")
+
 	// end s-catalog
 
 mixin s-catalog-6()
 	// start s-catalog
 	+b.s-catalog.pt-0.section
-		.container 
+		.container
 			+e.row.row
 				- for (var x = 0; x < 1; x++)
 					+e.col.col-lg-4.col-md-6
 						+prod-item-sl("2","CLINIC","Цветной текстильный шлем с предустановленными Ag/AgCl электродами MCScap-C и общим разъемом DB25М")
 							+e.status(style=" background-color: #42d76b;")
-					
+
 					+e.col.col-lg-4.col-md-6
 						+prod-item-sl("2","SLEEP","Текстильный шлем с предустановленными Ag/AgCl ")
-							+e.video-yes 
+							+e.video-yes
 								+icon("video")
 								|Есть  видео
 
 					+e.col.col-lg-4.col-md-6
-						+prod-item-sl("2","PROFESSIONAL","Цветной текстильный шлем с предустановленными Ag/AgCl электродами MCScap-C и общим разъемом DB25М") 
-					
+						+prod-item-sl("2","PROFESSIONAL","Цветной текстильный шлем с предустановленными Ag/AgCl электродами MCScap-C и общим разъемом DB25М")
+
 	// end s-catalog
 
 mixin s-catalog-4-1()
 	// start s-catalog
 	+b.s-catalog.pt-0.section
 		.container
-			
+
 			+e.head.small
 				.row.align-items-center
 					.col-sm.col
@@ -330,22 +334,22 @@ mixin s-catalog-4-1()
 									+e.d-none
 										div: a(href="#") ↑ Цена
 										div: a(href="#") ↓ Цена
-									
+
 										div: a(href="#") ↑ Отзывы
 										div: a(href="#") ↓ Отзывы
 										div: a(href="#") ↑ Дата
-										div: a(href="#") ↓ Дата 
+										div: a(href="#") ↓ Дата
 							.col-auto
 								a.tdu.text-body(href="#") Новинки
-								
+
 					//- .col-auto
 					.col-auto.text-md-left.text-right
 						// edit block
 						+e.btn-head(href="#")
 							+icon('compare')
-							span 
-								span.d-none.d-sm-inline Сравнение 
-								| 
+							span
+								span.d-none.d-sm-inline Сравнение
+								|
 								| (2)
 						.d-none.d-sm-inline-block
 							.variant
@@ -360,16 +364,16 @@ mixin s-catalog-4-1()
 					+e.col.col-12
 						+prod-item-gor("2","CLINIC","Цветной текстильный шлем с предустановленными Ag/AgCl электродами MCScap-C и общим разъемом DB25М")
 							+e.status(style=" background-color: #42d76b;")
-					
+
 					+e.col.col-12
 						+prod-item-gor("2","SLEEP","Текстильный шлем с предустановленными Ag/AgCl ")
-							+e.video-yes 
+							+e.video-yes
 								+icon("video")
 								|Есть  видео
 
 				- for (var x = 0; x < 2; x++)
 					+e.col.col-12
-						+prod-item-gor-sm("2","PROFESSIONAL","Цветной текстильный шлем с предустановленными Ag/AgCl электродами MCScap-C и общим разъемом DB25М") 
+						+prod-item-gor-sm("2","PROFESSIONAL","Цветной текстильный шлем с предустановленными Ag/AgCl электродами MCScap-C и общим разъемом DB25М")
 							+icon("video")
 								|Есть  видео
 	// end s-catalog
@@ -380,23 +384,23 @@ mixin s-catalog-11()
 		.container
 			+b.section-title
 				.h2.text-gray.fw-900.ttu Вы недавно смотрели
-				
+
 			+e.slider
 				- for (var x = 0; x < 2; x++)
 					+e.slide
 						+prod-item-sls("1","CLINIC","Цветной текстильный шлем с предустановленными Ag/AgCl электродами MCScap-C и общим разъемом DB25М")
 							+e.status(style=" background-color: #42d76b;")
-							+e.video-yes 
+							+e.video-yes
 								+icon("video")
 								|Есть  видео
 					+e.slide
 						+prod-item-sls("1","SLEEP","Текстильный шлем с предустановленными Ag/AgCl ")
-							+e.video-yes 
+							+e.video-yes
 								+icon("video")
 								|Есть  видео
 
 					+e.slide
 						+prod-item-sls("1","PROFESSIONAL","Цветной текстильный шлем с предустановленными Ag/AgCl электродами MCScap-C и общим разъемом DB25М")
 
-					
+
 	// end s-catalog

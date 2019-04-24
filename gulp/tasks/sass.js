@@ -1,7 +1,7 @@
 module.exports = function (){
 	$.gulp.task('sass', function() {
 	return $.gulp.src('sourse/sass/main.scss')
-	 
+
 	.pipe($.gp.sass({
 		includePaths: $.bourbon.includePaths
 	}).on("error", $.gp.notify.onError()))
@@ -13,6 +13,6 @@ module.exports = function (){
 	.pipe($.gulp.dest('public/css'))
 	//.on('end', browserSync.stream());
 	.pipe($.browserSync.stream());
-}); 
-  
+});
+
 }

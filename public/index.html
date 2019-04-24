@@ -432,8 +432,8 @@
               <div class="col-auto d-none d-md-block"><a class="small" href="#">Смотреть все</a></div>
             </div>
           </div>
-          <div class="s-catalog__slider">
-            <div class="s-catalog__slide">
+          <div class="s-catalog__slider s-catalog__slider--mobile">
+            <div class="s-catalog__slide s-catalog__slide--mobile">
               <div class="item-prod item-prod--js">
                 <div class="item-prod__inner item-prod__inner--js">
                   <!-- add wrapper-->
@@ -441,7 +441,7 @@
                     <div class="item-prod__status-wrap">
                       <div class="item-prod__status" style=" background-color: #42d76b;">
                       </div>
-                      <div class="item-prod__video-yes"> 
+                      <div class="item-prod__video-yes">
                         <svg class="icon icon-video ">
                           <use xlink:href="img/svg/sprite.svg#video"></use>
                         </svg>Есть  видео
@@ -459,7 +459,7 @@
                       </svg>
                     </div>
                     <!-- add btn--><a class="item-prod__btn-fast popup-with-move-anim" href="#modal-prod">Быстрый просмотр</a>
-                    <!-- /add btn--><a class="item-prod__img-wrap" href="#"><span><img class="res-img" src="#" data-lazy="img/prod-1.png" alt=""/></span></a>
+                    <!-- /add btn--><a class="item-prod__img-wrap" href="#"><span><img class="res-img" src="img/prod-1.png" data-lazy="img/prod-1.png" alt=""/></span></a>
                   </div>
                   <!-- /add wrapper-->
                   <div class="item-prod__caption"><a class="item-prod__title item-prod__title--js h2" href="#">CLINIC</a>
@@ -521,19 +521,24 @@
                       </div>
                     </div>
                     <div class="row">
-                      <div class="col-12">
+                      <div class="col-12 d-none d-sm-block">
                         <!-- добавил 24.02-->
-                        <div class="small pb-1 text-primary"> В наличии </div>
-                        <div class="small pb-1 text-danger"> Под заказ </div>
+                        <div class="small pb-1 text-primary"> В наличии</div>
+                        <div class="small pb-1 text-danger"> Под заказ</div>
                         <!-- /добавил 24.02-->
                       </div>
-                      <div class="col-auto">
+                      <div class="col-6 col-md-auto">
                         <div class="h5 text-primary"> 15 000 Р</div>
                       </div>
-                      <div class="col-auto">
+                      <div class="col-6 col-md-auto">
                         <!-- добавил 24.02-->
-                        <div class="item-prod__btn-wrap">
-                          <div class="smallest text-danger text-center"> Выберите размер</div><a class="item-prod__btn popup-with-move-anim" href="#modal-prod"> В корзину </a>
+                        <div class="item-prod__btn-wrap d-none d-sm-block">
+                          <div class="smallest text-danger text-center"> Выберите размер</div><a class="item-prod__btn popup-with-move-anim" href="#modal-prod"> В корзину</a>
+                        </div>
+                        <div class="item-prod__btn-wrap d-sm-none"><a class="item-prod__btn popup-with-move-anim pl-0 pr-0" href="#modal-prod">
+                          <svg class="icon icon-basket ">
+                            <use xlink:href="img/svg/sprite.svg#basket"></use>
+                          </svg></a>
                         </div>
                       </div>
                     </div>
@@ -542,13 +547,13 @@
               </div>
               <!-- .item-prod-->
             </div>
-            <div class="s-catalog__slide">
+            <div class="s-catalog__slide s-catalog__slide--mobile">
               <div class="item-prod item-prod--js">
                 <div class="item-prod__inner item-prod__inner--js">
                   <!-- add wrapper-->
                   <div class="item-prod__head">
                     <div class="item-prod__status-wrap">
-                      <div class="item-prod__video-yes"> 
+                      <div class="item-prod__video-yes">
                         <svg class="icon icon-video ">
                           <use xlink:href="img/svg/sprite.svg#video"></use>
                         </svg>Есть  видео
@@ -566,7 +571,7 @@
                       </svg>
                     </div>
                     <!-- add btn--><a class="item-prod__btn-fast popup-with-move-anim" href="#modal-prod">Быстрый просмотр</a>
-                    <!-- /add btn--><a class="item-prod__img-wrap" href="#"><span><img class="res-img" src="#" data-lazy="img/prod-1.png" alt=""/></span></a>
+                    <!-- /add btn--><a class="item-prod__img-wrap" href="#"><span><img class="res-img" src="img/prod-1.png" data-lazy="img/prod-1.png" alt=""/></span></a>
                   </div>
                   <!-- /add wrapper-->
                   <div class="item-prod__caption"><a class="item-prod__title item-prod__title--js h2" href="#">SLEEP</a>
@@ -628,19 +633,24 @@
                       </div>
                     </div>
                     <div class="row">
-                      <div class="col-12">
+                      <div class="col-12 d-none d-sm-block">
                         <!-- добавил 24.02-->
-                        <div class="small pb-1 text-primary"> В наличии </div>
-                        <div class="small pb-1 text-danger"> Под заказ </div>
+                        <div class="small pb-1 text-primary"> В наличии</div>
+                        <div class="small pb-1 text-danger"> Под заказ</div>
                         <!-- /добавил 24.02-->
                       </div>
-                      <div class="col-auto">
+                      <div class="col-6 col-md-auto">
                         <div class="h5 text-primary"> 15 000 Р</div>
                       </div>
-                      <div class="col-auto">
+                      <div class="col-6 col-md-auto">
                         <!-- добавил 24.02-->
-                        <div class="item-prod__btn-wrap">
-                          <div class="smallest text-danger text-center"> Выберите размер</div><a class="item-prod__btn popup-with-move-anim" href="#modal-prod"> В корзину </a>
+                        <div class="item-prod__btn-wrap d-none d-sm-block">
+                          <div class="smallest text-danger text-center"> Выберите размер</div><a class="item-prod__btn popup-with-move-anim" href="#modal-prod"> В корзину</a>
+                        </div>
+                        <div class="item-prod__btn-wrap d-sm-none"><a class="item-prod__btn popup-with-move-anim pl-0 pr-0" href="#modal-prod">
+                          <svg class="icon icon-basket ">
+                            <use xlink:href="img/svg/sprite.svg#basket"></use>
+                          </svg></a>
                         </div>
                       </div>
                     </div>
@@ -649,7 +659,7 @@
               </div>
               <!-- .item-prod-->
             </div>
-            <div class="s-catalog__slide">
+            <div class="s-catalog__slide s-catalog__slide--mobile">
               <div class="item-prod item-prod--js">
                 <div class="item-prod__inner item-prod__inner--js">
                   <!-- add wrapper-->
@@ -668,7 +678,7 @@
                       </svg>
                     </div>
                     <!-- add btn--><a class="item-prod__btn-fast popup-with-move-anim" href="#modal-prod">Быстрый просмотр</a>
-                    <!-- /add btn--><a class="item-prod__img-wrap" href="#"><span><img class="res-img" src="#" data-lazy="img/prod-1.png" alt=""/></span></a>
+                    <!-- /add btn--><a class="item-prod__img-wrap" href="#"><span><img class="res-img" src="img/prod-1.png" data-lazy="img/prod-1.png" alt=""/></span></a>
                   </div>
                   <!-- /add wrapper-->
                   <div class="item-prod__caption"><a class="item-prod__title item-prod__title--js h2" href="#">PROFESSIONAL</a>
@@ -730,19 +740,24 @@
                       </div>
                     </div>
                     <div class="row">
-                      <div class="col-12">
+                      <div class="col-12 d-none d-sm-block">
                         <!-- добавил 24.02-->
-                        <div class="small pb-1 text-primary"> В наличии </div>
-                        <div class="small pb-1 text-danger"> Под заказ </div>
+                        <div class="small pb-1 text-primary"> В наличии</div>
+                        <div class="small pb-1 text-danger"> Под заказ</div>
                         <!-- /добавил 24.02-->
                       </div>
-                      <div class="col-auto">
+                      <div class="col-6 col-md-auto">
                         <div class="h5 text-primary"> 15 000 Р</div>
                       </div>
-                      <div class="col-auto">
+                      <div class="col-6 col-md-auto">
                         <!-- добавил 24.02-->
-                        <div class="item-prod__btn-wrap">
-                          <div class="smallest text-danger text-center"> Выберите размер</div><a class="item-prod__btn popup-with-move-anim" href="#modal-prod"> В корзину </a>
+                        <div class="item-prod__btn-wrap d-none d-sm-block">
+                          <div class="smallest text-danger text-center"> Выберите размер</div><a class="item-prod__btn popup-with-move-anim" href="#modal-prod"> В корзину</a>
+                        </div>
+                        <div class="item-prod__btn-wrap d-sm-none"><a class="item-prod__btn popup-with-move-anim pl-0 pr-0" href="#modal-prod">
+                          <svg class="icon icon-basket ">
+                            <use xlink:href="img/svg/sprite.svg#basket"></use>
+                          </svg></a>
                         </div>
                       </div>
                     </div>
@@ -751,7 +766,7 @@
               </div>
               <!-- .item-prod-->
             </div>
-            <div class="s-catalog__slide">
+            <div class="s-catalog__slide s-catalog__slide--mobile">
               <div class="item-prod item-prod--js">
                 <div class="item-prod__inner item-prod__inner--js">
                   <!-- add wrapper-->
@@ -759,7 +774,7 @@
                     <div class="item-prod__status-wrap">
                       <div class="item-prod__status" style=" background-color: #42d76b;">
                       </div>
-                      <div class="item-prod__video-yes"> 
+                      <div class="item-prod__video-yes">
                         <svg class="icon icon-video ">
                           <use xlink:href="img/svg/sprite.svg#video"></use>
                         </svg>Есть  видео
@@ -777,7 +792,7 @@
                       </svg>
                     </div>
                     <!-- add btn--><a class="item-prod__btn-fast popup-with-move-anim" href="#modal-prod">Быстрый просмотр</a>
-                    <!-- /add btn--><a class="item-prod__img-wrap" href="#"><span><img class="res-img" src="#" data-lazy="img/prod-1.png" alt=""/></span></a>
+                    <!-- /add btn--><a class="item-prod__img-wrap" href="#"><span><img class="res-img" src="img/prod-1.png" data-lazy="img/prod-1.png" alt=""/></span></a>
                   </div>
                   <!-- /add wrapper-->
                   <div class="item-prod__caption"><a class="item-prod__title item-prod__title--js h2" href="#">CLINIC</a>
@@ -839,19 +854,24 @@
                       </div>
                     </div>
                     <div class="row">
-                      <div class="col-12">
+                      <div class="col-12 d-none d-sm-block">
                         <!-- добавил 24.02-->
-                        <div class="small pb-1 text-primary"> В наличии </div>
-                        <div class="small pb-1 text-danger"> Под заказ </div>
+                        <div class="small pb-1 text-primary"> В наличии</div>
+                        <div class="small pb-1 text-danger"> Под заказ</div>
                         <!-- /добавил 24.02-->
                       </div>
-                      <div class="col-auto">
+                      <div class="col-6 col-md-auto">
                         <div class="h5 text-primary"> 15 000 Р</div>
                       </div>
-                      <div class="col-auto">
+                      <div class="col-6 col-md-auto">
                         <!-- добавил 24.02-->
-                        <div class="item-prod__btn-wrap">
-                          <div class="smallest text-danger text-center"> Выберите размер</div><a class="item-prod__btn popup-with-move-anim" href="#modal-prod"> В корзину </a>
+                        <div class="item-prod__btn-wrap d-none d-sm-block">
+                          <div class="smallest text-danger text-center"> Выберите размер</div><a class="item-prod__btn popup-with-move-anim" href="#modal-prod"> В корзину</a>
+                        </div>
+                        <div class="item-prod__btn-wrap d-sm-none"><a class="item-prod__btn popup-with-move-anim pl-0 pr-0" href="#modal-prod">
+                          <svg class="icon icon-basket ">
+                            <use xlink:href="img/svg/sprite.svg#basket"></use>
+                          </svg></a>
                         </div>
                       </div>
                     </div>
@@ -860,13 +880,13 @@
               </div>
               <!-- .item-prod-->
             </div>
-            <div class="s-catalog__slide">
+            <div class="s-catalog__slide s-catalog__slide--mobile">
               <div class="item-prod item-prod--js">
                 <div class="item-prod__inner item-prod__inner--js">
                   <!-- add wrapper-->
                   <div class="item-prod__head">
                     <div class="item-prod__status-wrap">
-                      <div class="item-prod__video-yes"> 
+                      <div class="item-prod__video-yes">
                         <svg class="icon icon-video ">
                           <use xlink:href="img/svg/sprite.svg#video"></use>
                         </svg>Есть  видео
@@ -884,7 +904,7 @@
                       </svg>
                     </div>
                     <!-- add btn--><a class="item-prod__btn-fast popup-with-move-anim" href="#modal-prod">Быстрый просмотр</a>
-                    <!-- /add btn--><a class="item-prod__img-wrap" href="#"><span><img class="res-img" src="#" data-lazy="img/prod-1.png" alt=""/></span></a>
+                    <!-- /add btn--><a class="item-prod__img-wrap" href="#"><span><img class="res-img" src="img/prod-1.png" data-lazy="img/prod-1.png" alt=""/></span></a>
                   </div>
                   <!-- /add wrapper-->
                   <div class="item-prod__caption"><a class="item-prod__title item-prod__title--js h2" href="#">SLEEP</a>
@@ -946,19 +966,24 @@
                       </div>
                     </div>
                     <div class="row">
-                      <div class="col-12">
+                      <div class="col-12 d-none d-sm-block">
                         <!-- добавил 24.02-->
-                        <div class="small pb-1 text-primary"> В наличии </div>
-                        <div class="small pb-1 text-danger"> Под заказ </div>
+                        <div class="small pb-1 text-primary"> В наличии</div>
+                        <div class="small pb-1 text-danger"> Под заказ</div>
                         <!-- /добавил 24.02-->
                       </div>
-                      <div class="col-auto">
+                      <div class="col-6 col-md-auto">
                         <div class="h5 text-primary"> 15 000 Р</div>
                       </div>
-                      <div class="col-auto">
+                      <div class="col-6 col-md-auto">
                         <!-- добавил 24.02-->
-                        <div class="item-prod__btn-wrap">
-                          <div class="smallest text-danger text-center"> Выберите размер</div><a class="item-prod__btn popup-with-move-anim" href="#modal-prod"> В корзину </a>
+                        <div class="item-prod__btn-wrap d-none d-sm-block">
+                          <div class="smallest text-danger text-center"> Выберите размер</div><a class="item-prod__btn popup-with-move-anim" href="#modal-prod"> В корзину</a>
+                        </div>
+                        <div class="item-prod__btn-wrap d-sm-none"><a class="item-prod__btn popup-with-move-anim pl-0 pr-0" href="#modal-prod">
+                          <svg class="icon icon-basket ">
+                            <use xlink:href="img/svg/sprite.svg#basket"></use>
+                          </svg></a>
                         </div>
                       </div>
                     </div>
@@ -967,7 +992,7 @@
               </div>
               <!-- .item-prod-->
             </div>
-            <div class="s-catalog__slide">
+            <div class="s-catalog__slide s-catalog__slide--mobile">
               <div class="item-prod item-prod--js">
                 <div class="item-prod__inner item-prod__inner--js">
                   <!-- add wrapper-->
@@ -986,7 +1011,7 @@
                       </svg>
                     </div>
                     <!-- add btn--><a class="item-prod__btn-fast popup-with-move-anim" href="#modal-prod">Быстрый просмотр</a>
-                    <!-- /add btn--><a class="item-prod__img-wrap" href="#"><span><img class="res-img" src="#" data-lazy="img/prod-1.png" alt=""/></span></a>
+                    <!-- /add btn--><a class="item-prod__img-wrap" href="#"><span><img class="res-img" src="img/prod-1.png" data-lazy="img/prod-1.png" alt=""/></span></a>
                   </div>
                   <!-- /add wrapper-->
                   <div class="item-prod__caption"><a class="item-prod__title item-prod__title--js h2" href="#">PROFESSIONAL</a>
@@ -1048,19 +1073,24 @@
                       </div>
                     </div>
                     <div class="row">
-                      <div class="col-12">
+                      <div class="col-12 d-none d-sm-block">
                         <!-- добавил 24.02-->
-                        <div class="small pb-1 text-primary"> В наличии </div>
-                        <div class="small pb-1 text-danger"> Под заказ </div>
+                        <div class="small pb-1 text-primary"> В наличии</div>
+                        <div class="small pb-1 text-danger"> Под заказ</div>
                         <!-- /добавил 24.02-->
                       </div>
-                      <div class="col-auto">
+                      <div class="col-6 col-md-auto">
                         <div class="h5 text-primary"> 15 000 Р</div>
                       </div>
-                      <div class="col-auto">
+                      <div class="col-6 col-md-auto">
                         <!-- добавил 24.02-->
-                        <div class="item-prod__btn-wrap">
-                          <div class="smallest text-danger text-center"> Выберите размер</div><a class="item-prod__btn popup-with-move-anim" href="#modal-prod"> В корзину </a>
+                        <div class="item-prod__btn-wrap d-none d-sm-block">
+                          <div class="smallest text-danger text-center"> Выберите размер</div><a class="item-prod__btn popup-with-move-anim" href="#modal-prod"> В корзину</a>
+                        </div>
+                        <div class="item-prod__btn-wrap d-sm-none"><a class="item-prod__btn popup-with-move-anim pl-0 pr-0" href="#modal-prod">
+                          <svg class="icon icon-basket ">
+                            <use xlink:href="img/svg/sprite.svg#basket"></use>
+                          </svg></a>
                         </div>
                       </div>
                     </div>

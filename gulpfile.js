@@ -1,11 +1,11 @@
 'use strict';
 
 global.$ = {
-	gulp: require('gulp'), 
+	gulp: require('gulp'),
 
 	bourbon: require('node-bourbon'),
 	cleanCSS: require('gulp-clean-css'),
-	gulpif: require('gulp-if'), 
+	gulpif: require('gulp-if'),
 	envDev: false,
 	gp: require('gulp-load-plugins' )(),
 	browserSync: require('browser-sync').create(),
@@ -17,9 +17,9 @@ global.$ = {
 $.path.tasks.forEach(function (taskPath){
 		require(taskPath)();
 	});
-		
-		 
+
+
 $.gulp.task('default', $.gulp.series(
-	$.gulp.parallel('svg','pug','scripts:lib','scripts'),
+	$.gulp.parallel('svg','pug','scripts'),
 	$.gulp.parallel('sass','watch','serv')
 	));

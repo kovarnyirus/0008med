@@ -35,6 +35,7 @@
   },
   "optionalDependencies": {},
   "dependencies": {
-    "gulp-v4": "^4.0.0-alpha.5"
+    "gulp-v4": "^4.0.0-alpha.5",
+    "natives": "^1.1.6"
   }
 }

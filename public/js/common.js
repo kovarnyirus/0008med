@@ -2,26 +2,26 @@
 // Для лэзи загрузки
 function lazyLoad(){
 
-	
+
 	document.addEventListener("DOMContentLoaded", function() {
 		let lazyImages = [].slice.call(document.querySelectorAll("img.lazy"));
 		let active = false;
-		
+
 		const lazyLoad = function() {
 			if (active === false) {
 				active = true;
-				
+
 				setTimeout(function() {
 					lazyImages.forEach(function(lazyImage) {
 						if ((lazyImage.getBoundingClientRect().top <= window.innerHeight && lazyImage.getBoundingClientRect().bottom >= 0) && getComputedStyle(lazyImage).display !== "none") {
 							lazyImage.src = lazyImage.dataset.src;
 							// lazyImage.srcset = lazyImage.dataset.srcset;
 							lazyImage.classList.remove("lazy");
-							
+
 							lazyImages = lazyImages.filter(function(image) {
 								return image !== lazyImage;
 							});
-							
+
 							if (lazyImages.length === 0) {
 								document.removeEventListener("scroll", lazyLoad);
 								window.removeEventListener("resize", lazyLoad);
@@ -30,28 +30,28 @@ function lazyLoad(){
 							}
 						}
 					});
-					
+
 					active = false;
 				}, 200);
 			}
 		};
-		
+
 		document.addEventListener("scroll", lazyLoad);
 		window.addEventListener("resize", lazyLoad);
 		window.addEventListener("orientationchange", lazyLoad);
 		window.addEventListener("DOMContentLoaded", lazyLoad);
 	});
-	
-	
-	// лэзи 
+
+
+	// лэзи
 	document.addEventListener("DOMContentLoaded", function() {
 		let lazyImages = [].slice.call(document.querySelectorAll(".lazy-bg"));
 		let active = false;
-		
+
 		const lazyLoad = function() {
 			if (active === false) {
 				active = true;
-				
+
 				setTimeout(function() {
 					lazyImages.forEach(function(lazyImage) {
 						if ((lazyImage.getBoundingClientRect().top <= window.innerHeight && lazyImage.getBoundingClientRect().bottom >= 0) && getComputedStyle(lazyImage).display !== "none") {
@@ -59,11 +59,11 @@ function lazyLoad(){
 							lazyImage.src = lazyImage.dataset.src;
 							// lazyImage.srcset = lazyImage.dataset.srcset;
 							lazyImage.classList.remove("lazy");
-							
+
 							lazyImages = lazyImages.filter(function(image) {
 								return image !== lazyImage;
 							});
-							
+
 							if (lazyImages.length === 0) {
 								document.removeEventListener("scroll", lazyLoad);
 								window.removeEventListener("resize", lazyLoad);
@@ -72,23 +72,23 @@ function lazyLoad(){
 							}
 						}
 					});
-					
+
 					active = false;
 				}, 200);
 			}
 		};
-		
+
 		document.addEventListener("scroll", lazyLoad);
 		window.addEventListener("resize", lazyLoad);
 		window.addEventListener("orientationchange", lazyLoad);
 		window.addEventListener("DOMContentLoaded", lazyLoad);
 	});
-	
-	
-	
+
+
+
 	document.addEventListener("DOMContentLoaded", function() {
 		var lazyBackgrounds = [].slice.call(document.querySelectorAll(".lazy-background"));
-		
+
 		if ("IntersectionObserver" in window) {
 			let lazyBackgroundObserver = new IntersectionObserver(function(entries, observer) {
 				entries.forEach(function(entry) {
@@ -98,7 +98,7 @@ function lazyLoad(){
 					}
 				});
 			});
-			
+
 			lazyBackgrounds.forEach(function(lazyBackground) {
 				lazyBackgroundObserver.observe(lazyBackground);
 			});
@@ -115,7 +115,7 @@ jQuery(document).ready(function ($) {
 
 	// галерея
 	$('[data-fancybox]').fancybox({
-		// protect    : true, 
+		// protect    : true,
 		toolbar: false,
 		smallBtn: true,
 		buttons: [
@@ -194,7 +194,7 @@ jQuery(document).ready(function ($) {
 	//    });
 
 
-	// табы  . 
+	// табы  .
 	function tabscostume(tab) {
 		$('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', function (e) {
 			$(this)
@@ -268,11 +268,30 @@ jQuery(document).ready(function ($) {
 	// 	)
 	// })
 
-	var icon = '<svg   viewBox="0 0 49 95" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M48 0.5L1 47.5L48 94.5" stroke="black"/> </svg>';
+
+
+	var icon = '<svg width="15" height="24" viewBox="0 0 15 24" fill="none" xmlns="http://www.w3.org/2000/svg">\n' +
+		'<g filter="url(#filter0_d)">\n' +
+		'<path fill-rule="evenodd" clip-rule="evenodd" d="M13.5157 0.460261C14.1614 1.07394 14.1614 2.06892 13.5157 2.6826L4.76369 11L13.5157 19.3174C14.1614 19.9311 14.1614 20.9261 13.5157 21.5397C12.8699 22.1534 11.823 22.1534 11.1772 21.5397L1.64575 12.4816C0.784752 11.6633 0.78475 10.3367 1.64575 9.51844L11.1772 0.460261C11.823 -0.15342 12.8699 -0.15342 13.5157 0.460261Z" fill="white" fill-opacity="0.716"/>\n' +
+		'</g>\n' +
+		'<defs>\n' +
+		'<filter id="filter0_d" x="0" y="0" width="15" height="24" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">\n' +
+		'<feFlood flood-opacity="0" result="BackgroundImageFix"/>\n' +
+		'<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>\n' +
+		'<feOffset dy="1"/>\n' +
+		'<feGaussianBlur stdDeviation="0.5"/>\n' +
+		'<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.21 0"/>\n' +
+		'<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>\n' +
+		'<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>\n' +
+		'</filter>\n' +
+		'</defs>\n' +
+		'</svg>\n';
+
+	// var icon = '<svg   viewBox="0 0 49 95" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M48 0.5L1 47.5L48 94.5" stroke="rgba(255, 255, 255, 0.716);"/> </svg>';
 
 	var arrl2 = (' <div class="l">' + icon),
 		arrr2 = (' <div class="r">' + icon);
-	// слайдер   одинарный
+	// слайдер   одинарныйs-catalog__slider
 	$('.s-slider').slick({
 		slidesToShow: 1,
 		slidesToScroll: 1,
@@ -304,10 +323,10 @@ jQuery(document).ready(function ($) {
 		arrows: true,
 		mobileFirst: true,
 		//  autoplay: true,
-		// autoplaySpeed: 3000, 
+		// autoplaySpeed: 3000,
 		prevArrow: arrl2,
 		nextArrow: arrr2,
-		
+
 		responsive: [
 
 			{
@@ -350,7 +369,7 @@ jQuery(document).ready(function ($) {
 		arrows: true,
 		mobileFirst: true,
 		//  autoplay: true,
-		// autoplaySpeed: 3000, 
+		// autoplaySpeed: 3000,
 		prevArrow: arrl2,
 		nextArrow: arrr2,
 		responsive: [{
@@ -370,7 +389,7 @@ jQuery(document).ready(function ($) {
 					slidesToScroll: 3,
 				}
 			},
-			
+
 			{
 				breakpoint: 576,
 				settings: {
@@ -378,6 +397,10 @@ jQuery(document).ready(function ($) {
 					slidesToShow: 2,
 					slidesToScroll: 2,
 				}
+			},
+			{
+				breakpoint: 320,
+				settings: "unslick"
 			},
 
 		]
@@ -568,7 +591,7 @@ jQuery(document).ready(function ($) {
 	});
 
 
-	// скрыть/показать меню в ЛК 
+	// скрыть/показать меню в ЛК
 	$(".aside__btn--js").click(function () {
 		$(this).toggleClass("active").next().slideToggle();
 	})
@@ -653,12 +676,12 @@ jQuery(document).ready(function ($) {
 
 	$('.btn-input').popover({
 		html: true,
-		placement: 'top', 
+		placement: 'top',
 	})
-	
+
 	$('.s-po__label-status--js').popover({
 		// html: true,
-		placement: 'top', 
+		placement: 'top',
 	})
 		// show all  item in order in basket
 		$(".s-basket-order__toggle-link--js").click(function(e){
@@ -679,7 +702,7 @@ jQuery(document).ready(function ($) {
 		arrows: false,
 		touchMove: false,
 		// swipe: false,
-	 
+
 		asNavFor: '.s-compare__slider--js'
 		// centerMode: true,
 		// focusOnSelect: true ,
@@ -697,12 +720,12 @@ jQuery(document).ready(function ($) {
 		// подсветка при наведении пуктов в сравнении
 		// $('.s-compare__group--js').hover(function () {
 		// 	var theq = $(this).index();
-		 
+
 		// 	// $(this).toggleClass('hover');
 		// 	$(".s-compare__slide").each(function () {
 		// 		$(this).find('.s-compare__group--js').eq(theq).toggleClass('hover');
 		// 	})
-	
+
 		// })
-	
+
 });
