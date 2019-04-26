@@ -6,9 +6,11 @@ mixin s-pick-up()
 				.col.order-md-last
 					+e.img-wrap
 						span: img.res-i(src="img/type-prod.png", alt="")
-				.col-xl-6.col-lg-7.col-md-8
+				.col-xl-6.col-lg-7.col-md-8.d-none.d-sm-block
 					+e.text-block
 						+e.title Вы также можете подобрать  нашу продукцию по типу Вашего усилителя и дальше текст по теме в три строки
 						+e.text Расшифровка заголовка с возможностью перейти на большую статью при помощи кнопки
 						+e.A.btn(href="#") Подобрать
+				.container.container-foot.d-sm-none
+					+e.btn-foot(href="#") Подобрать электродный шлем под ЭЭГ-усилитель
 	// end s-pick-up

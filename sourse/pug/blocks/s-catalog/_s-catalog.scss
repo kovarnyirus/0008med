@@ -153,7 +153,6 @@
 				// display: none !important;
 		}
 		@include media-breakpoint-up(md) {
-
 			width: 41px;
 			height: 41px;
 			background-color: $primary;
@@ -169,7 +168,7 @@
 					stroke: #fff !important;
 				}
 				stroke:$primary !important;
-				stroke-width: 4px;
+				stroke-width: 2px;
 			}
 		}
 		&.l{
@@ -529,6 +528,7 @@
 		@include media-breakpoint-down(sm){
 			width: 26px;
 			height: 26px;
+			display: none;
 		}
 
 		z-index: 4;
