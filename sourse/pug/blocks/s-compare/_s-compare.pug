@@ -5,15 +5,8 @@ mixin s-compare()
 			+e.btn-head--active(type="button") Шлемы
 			+e.btn-head(type="button") Гели
 		+e.head
-			.container.d-lg-block
-				+e.btn-delete-all.btn(type="button")
-					+icon('close')
-					| Очистить список
-				+e.body-btn
-					+e.btn-body--active(type="button") Все характеристики
-					+e.btn-body(type="button") Различающиеся характеристики
 			+e.slider-wrap
-				.container 
+				.container
 					.row.no-gutters
 						.col.d-none.d-lg-block
 							+e.btn-delete-all.btn(type="button")
@@ -21,93 +14,93 @@ mixin s-compare()
 								| Очистить список
 						.col-lg-8
 								+e.slider--js.--head-js
-									- for (var x = 0; x < 6; x++)
+									- for (var x = 0; x < 4; x++)
 										+e.slide
 											+e.item--compare
 												+b.item-prod--compare.--compare-js.--head
 													+e.title: a(href="#") MCScap 10-20  c кольцами
 													+e.btn-delete.btn(type="button")
 														+icon('close')
-			.container 
+			.container
 				.row.no-gutters
 					.col.d-none.d-lg-block
 					.col-lg-8
 						+e.slider--js.--head-js
-							- for (var x = 0; x < 6; x++)
+							- for (var x = 0; x < 4; x++)
 								+e.slide
 									+e.item--compare
 										+b.item-prod--compare.--compare-js
 											+e.img-wrap
 												a.link-modal(href="#")
-													img.res-i(src="img/prod-2.png", alt="") 
+													img.res-i(src="img/prod-2.png", alt="")
 											.mb-2
-												span.text-gray  Арт.: 
-												| 
+												span.text-gray  Арт.:
+												|
 												| m4568 988-65
 											+e.price-wrap
-												.strong 33 593 р. 
+												.strong 33 593 р.
 		.container
 			+e.body-btn.d-none.d-lg-block
 				+e.btn-body--active(type="button") Все характеристики
 				+e.btn-body(type="button") Различающиеся характеристики
 			.row.no-gutters
 				.col.d-none.d-lg-block
-					+e.body 
+					+e.body
 						div
 							+e.group--js
-								.small.text-gray Диаметр токосъемной поверхности электрода 
+								.small.text-gray Диаметр токосъемной поверхности электрода
 							+e.group--js
-								.small.text-gray Максимальная разность потенциалов 
-							
+								.small.text-gray Максимальная разность потенциалов
+
 							+e.group--js
-								.small.text-gray Полное сопротивление электрода  
-							
+								.small.text-gray Полное сопротивление электрода
+
 							+e.group--js
-								.small.text-gray Гарантийный срок 
+								.small.text-gray Гарантийный срок
 							+e.foot
 				.col-lg-8
 					+e.slider--js.--foot-js
 						mixin item-f()
 							+e.slide
 								+e.item--compare
-									+e.body 
+									+e.body
 										+e.group--js
 											.small.text-gray.d-lg-none Диаметр токосъемной поверхности электрода
 											div 0,83 мм
-										
+
 										+e.group--js
 											.small.text-gray.d-lg-none Максимальная разность потенциалов
 											div 1,25 > 0.21 s
-										
+
 										+e.group--js
 											.small.text-gray.d-lg-none Полное сопротивление электрода
 											div 52 Ом
-										
+
 										+e.group--js
 											.small.text-gray.d-lg-none Гарантийный срок
 											div 12 лет
-										
+
 									+e.foot
-										block  
-											
-						
+										block
+
+
 						mixin item()
 							+e.slide
 								+e.item--compare
-									+e.body 
+									+e.body
 										div
 											+e.group--js
 												.small.text-gray.d-lg-none Диаметр токосъемной поверхности электрода
 												div 0,83 мм
-											
+
 											+e.group--js
 												.small.text-gray.d-lg-none Максимальная разность потенциалов
 												div 1,25 > 0.21 s
-											
+
 											+e.group--js
 												.small.text-gray.d-lg-none Полное сопротивление электрода
 												div 52 Ом
-											
+
 											+e.group--js
 												.small.text-gray.d-lg-none Гарантийный срок
 												div 12 лет
@@ -121,9 +114,6 @@ mixin s-compare()
 						+item()
 							+e.A.btn.btn.btn-secondary.link-modal(href='#' data-src="#modal-notification") Уведомить о поступлении
 						+item()
-							+e.A.btn.btn.btn-secondary.link-modal(href='#' data-src="#modal-notification") Уведомить о поступлении
-						+item()
-							+e.A.btn.btn.btn-secondary.link-modal(href='#' data-src="#modal-notification") Уведомить о поступлении
-						+item()
-							+e.A.btn.btn.btn-secondary.link-modal(href='#' data-src="#modal-notification") Уведомить о поступлении
+							+e.A.btn.btn.btn-secondary.link-modal(href='#' data-src="#modal-notification") Уведомить о поступлени
+
 	// end s-compare

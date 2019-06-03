@@ -11,6 +11,9 @@
         padding-top: 30px;
 
     }
+    & .container{
+      position: relative;
+    }
 
     &__nav {
         display: flex;

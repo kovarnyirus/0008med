@@ -17,7 +17,7 @@
 	}
 	&__btn-body{
 		@extend .btn;
-		@extend .btn-outline-gray; 
+		@extend .btn-outline-gray;
 		@include media-breakpoint-down(xs) {
 			font-size: 10px;
 			padding: .21rem .25rem;
@@ -100,11 +100,11 @@
 	}
 	&__slider{
 		position: relative;
-		
+		display: flex;
 		overflow: inherit;
 		&::before{
 			content: '';
-			
+
 			width: 10000px;
 			// background-color: #ffffff;
 			right: 100%;
@@ -116,7 +116,7 @@
 	}
 	&__item{
 	}
-	
+
 	&__slide{
 		@include media-breakpoint-up(sm) {
 
@@ -124,8 +124,8 @@
 		}
 		width: 170px;
 
-	 
-	 background-color: #fff; 
+
+	 background-color: #fff;
 	}
 	.item-prod{
 			&__title{
@@ -137,28 +137,42 @@
 			}
 	}
 	&__group{
-		position: relative; 
+		position: relative;
 		// min-width: 56px;
-	 
+
 		@include media-breakpoint-up(lg){
 
 			align-items: center;
 			display: flex;
 		}
 		min-height: 58px;
-		&::before{
-			content: '';
-			position: absolute;
-			right: 99%;
-			width: 1000vw;
-			background-color: #f7f7f7;
-			height: calc(100% + 2px); 
-			z-index: -1;
-			top: -1px;
-			border-top: 1px solid rgba($color: #cbd7e5, $alpha: .5);
-			border-bottom: 1px solid rgba($color: #cbd7e5, $alpha: .5);
+		//&::before{
+		//	content: '';
+		//	position: absolute;
+		//	right: 99%;
+		//	width: 1000vw;
+		//	background-color: #f7f7f7;
+		//	height: calc(100% + 2px);
+		//	z-index: -1;
+		//	top: -1px;
+		//	border-top: 1px solid rgba($color: #cbd7e5, $alpha: .5);
+		//	border-bottom: 1px solid rgba($color: #cbd7e5, $alpha: .5);
+        //
+		//}
 
-		}
+        //&::after{
+        //  content: '';
+        //  position: absolute;
+        //  left: 99%;
+        //  width: 1000vw;
+        //  background-color: #f7f7f7;
+        //  height: calc(100% + 2px);
+        //  z-index: -1;
+        //  top: -1px;
+        //  border-top: 1px solid rgba($color: #cbd7e5, $alpha: .5);
+        //  border-bottom: 1px solid rgba($color: #cbd7e5, $alpha: .5);
+        //  z-index: -9999999;
+        //}
 		&:not(:first-child){
 
 			border-top: 1px solid rgba($color: #cbd7e5, $alpha: .5);
@@ -195,7 +209,7 @@
 	// }
 	.slick-list {
 		overflow: inherit;
-		
+
 	}
 
 	&__foot{
@@ -205,6 +219,8 @@
 	}
 	&__btn{
 		min-width: 126px;
+      margin-left: 5px;
+      margin-right: 5px;
 	}
 
 	.is_stuck{
@@ -215,7 +231,7 @@
 	.slick-arrow {
 		position: absolute;
 		top: -90px;
-	
+
 		// top: 20px;
 		// transform: none   !important;
 		// margin-right: 20px;
@@ -229,21 +245,21 @@
 
 		vertical-align: middle;
 		border-radius: 2px;
-		 
+
 		text-align: center;
 		border-radius: 50%;
-		  
+
 		&.l {
 			right: 0;
 		}
-	
+
 		&.r {
 			left: auto;
 			right: 0;
 			margin-right: 60px;
-	 
+
 		}
-	
+
 		svg {
 			width: 15px * 2;
 			height: 15px * 2;
@@ -256,18 +272,18 @@
 	@include media-breakpoint-up(md) {}
 	@include media-breakpoint-up(sm) {}
 	@include media-breakpoint-up(xs) {}
-	
+
 	//
 	@include media-breakpoint-between(md, xl) { }
-	
-	
+
+
 	//
 	@include media-breakpoint-only(xs) {}
 	@include media-breakpoint-only(sm) {}
 	@include media-breakpoint-only(md) {}
 	@include media-breakpoint-only(lg) {}
 	@include media-breakpoint-only(xl) {}
-	
+
 	//
 	@include media-breakpoint-down(xl) {}
 	@include media-breakpoint-down(lg) {}
@@ -277,7 +293,7 @@
 			display: none !important;
 		}
 	}
-	@include media-breakpoint-down(xs) {} 
+	@include media-breakpoint-down(xs) {}
 
 	&__slider--foot-js{
 
@@ -335,10 +351,10 @@
 
 }
 .item-prod{
- 
+
 		&__btn-delete{
-	
-			 
+
+
 				@include mt;
 				border: none;
 				background: none;
@@ -353,13 +369,13 @@
 				.icon{
 					font-size: 11px;
 				}
-			} 
-	
+			}
+
 	&--compare {
 		box-shadow: none  ;
 		border: none !important;
-		padding-left: 0; 
-		padding-bottom: 1rem; 
+		padding-left: 0;
+		padding-bottom: 1rem;
 		min-height: 1px;
 		background-color: #ffffff;
 		&:hover{
