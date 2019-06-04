@@ -46,6 +46,10 @@
       width: 13px;
       position: absolute;
       left: 0;
+      //&-house{
+      //  fill: transparent;
+      //  stroke: #52fff2;
+      //}
     }
   }
   &__list{
@@ -112,8 +116,9 @@
 }
 }
 
-
-#house{
-  fill: transparent;
-  stroke: #52fff2;
+.footer__item:last-child{
+  & .icon{
+    fill: transparent;
+    stroke: #52fff2;
+  }
 }
