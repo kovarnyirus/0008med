@@ -1,5 +1,5 @@
 .footer {
-	background-color: #282828;	
+	background-color: #282828;
   color: #ffffff;
   padding-top: 45px;
   padding-bottom: 45px;
@@ -46,10 +46,6 @@
       width: 13px;
       position: absolute;
       left: 0;
-      &-house{
-        fill: transparent;
-        stroke: #52fff2;
-      }
     }
   }
   &__list{
@@ -63,7 +59,7 @@
         vertical-align: top;
     }
   }
-// 
+//
 @include media-breakpoint-up(xl) {}
 
 @include media-breakpoint-up(lg) {}
@@ -75,11 +71,11 @@
 @include media-breakpoint-up(xs) {}
 
 
-// 
+//
 @include media-breakpoint-between(md, xl) {}
 
 
-// 
+//
 @include media-breakpoint-only(xs) {}
 
 @include media-breakpoint-only(sm) {}
@@ -91,7 +87,7 @@
 @include media-breakpoint-only(xl) {}
 
 
-// 
+//
 @include media-breakpoint-down(xl) {}
 
 @include media-breakpoint-down(lg) {}
@@ -114,4 +110,10 @@
     }
   }
 }
+}
+
+
+#house{
+  fill: transparent;
+  stroke: #52fff2;
 }
