@@ -5,6 +5,13 @@ mixin s-compare()
 			+e.btn-head--active(type="button") Шлемы
 			+e.btn-head(type="button") Гели
 		+e.head
+			.container.d-lg-none
+				+e.btn-delete-all.btn(type="button")
+					+icon('close')
+					| Очистить список
+				+e.body-btn
+					+e.btn-body--active(type="button") Все характеристики
+					+e.btn-body(type="button") Различающиеся характеристики
 			+e.slider-wrap
 				.container
 					.row.no-gutters
@@ -14,7 +21,7 @@ mixin s-compare()
 								| Очистить список
 						.col-lg-8
 								+e.slider--js.--head-js
-									- for (var x = 0; x < 4; x++)
+									- for (var x = 0; x < 6; x++)
 										+e.slide
 											+e.item--compare
 												+b.item-prod--compare.--compare-js.--head
@@ -26,7 +33,7 @@ mixin s-compare()
 					.col.d-none.d-lg-block
 					.col-lg-8
 						+e.slider--js.--head-js
-							- for (var x = 0; x < 4; x++)
+							- for (var x = 0; x < 6; x++)
 								+e.slide
 									+e.item--compare
 										+b.item-prod--compare.--compare-js
@@ -114,6 +121,9 @@ mixin s-compare()
 						+item()
 							+e.A.btn.btn.btn-secondary.link-modal(href='#' data-src="#modal-notification") Уведомить о поступлении
 						+item()
-							+e.A.btn.btn.btn-secondary.link-modal(href='#' data-src="#modal-notification") Уведомить о поступлени
-
+							+e.A.btn.btn.btn-secondary.link-modal(href='#' data-src="#modal-notification") Уведомить о поступлении
+						+item()
+							+e.A.btn.btn.btn-secondary.link-modal(href='#' data-src="#modal-notification") Уведомить о поступлении
+						+item()
+							+e.A.btn.btn.btn-secondary.link-modal(href='#' data-src="#modal-notification") Уведомить о поступлении
 	// end s-compare
