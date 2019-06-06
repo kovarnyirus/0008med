@@ -1,5 +1,8 @@
 .s-compare {
 	// position: relative;
+  &.section{
+    padding-right: 20px;
+  }
 	&__btn{
 		@include media-breakpoint-down(xs) {
 			// font-size: 10px;
@@ -58,8 +61,8 @@
 			width: 143px;
 		}
 		width: 120px;
-
-		height: 44px;
+        height: 60px;
+		//height: 44px;
 		border-radius: 5px 5px 0  0;
 		border: 1px solid #e1e1e1;
 		display: inline-flex;

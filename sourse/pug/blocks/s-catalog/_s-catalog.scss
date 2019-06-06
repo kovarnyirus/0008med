@@ -1,7 +1,7 @@
 .s-catalog {
 	.container{
 		position: relative;
-		overflow: hidden;
+		//overflow: hidden;
 	}
 	.container-foot{
 		// position: relative;
@@ -463,7 +463,7 @@
 		@include media-breakpoint-down(sm){
 			min-height: auto;
 		}
-		min-height: 400px;
+		min-height: 230px;
 	}
 	&--compare{
 		min-height: 1px !important;
@@ -514,9 +514,10 @@
 		position: absolute;
 		width: 40px;
 		height: 40px;
-		color: $gray;
+		color: #515151;
 		border: 1px solid ;
 		border-radius: 50%;
+        border-color: #515151;
 		right: 20px;
 		top: 20px;
 		display: flex;

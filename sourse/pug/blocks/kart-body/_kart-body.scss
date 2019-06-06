@@ -6,7 +6,7 @@
 			margin-right: -15px;
 			border-radius: 0;
 		}
-	} 
+	}
 	// margin-top: 25px;
 	margin-bottom: 25px;
 	&__caption{
@@ -15,10 +15,10 @@
 			border-bottom: 1px solid $gray;
 		}
 		.slick-track{
-			
+
 			// padding-bottom: 5px;
 			// margin-top: 5px;
-			
+
 			border-bottom: 1px solid $gray;
 			margin-bottom: -1px;
 			@include media-breakpoint-down(sm) {
@@ -32,11 +32,11 @@
 	}
  &__btn{
  	cursor: pointer;
- 	 
- 	text-align: center; 
- 	 
+
+ 	text-align: center;
+
 	 @include mt;
-	 color: $gray; 
+	 color: $gray;
 	 display: flex;
 	 height: 70px;
 	 line-height: 70px;
@@ -62,12 +62,12 @@
 			width: 0;
 			@include mt;
 		 }
-		 
+
 	}
 	 &:hover,
- 	&.active{ 
+ 	&.active{
 		}
-		
+
 		&.active{
 			@include media-breakpoint-up(lg) {
 
@@ -82,8 +82,8 @@
 			}
 		}
 
-  
-	} 
+
+	}
 			&__wrap{
 				padding-top: 40px;
 
@@ -112,7 +112,7 @@
 					&:nth-child(even){
 						background: #F3F3F3;
 					}
-					
+
 					&:nth-child(odd){
 						background: #F2F8F8;
 					}
@@ -130,12 +130,86 @@
 					@extend  .text-gray;
 					padding: 5px 0;
 				}
+              &--compatibility{
+                & thead{
+                 font-size: 11px;
+                  & .title{
+                    font-size: 15px;
+                    color: black;
+                    font-weight: bold;
+                    margin-bottom: 5px;
+                  }
+                  & span{
+                    display: block;
+                  }
+                  & .icon{
+                    font-size: 20px;
+                    color: black;
+                    margin-right: 10px;
+                  }
+                }
+                & th{
+                  width: 20%;
+                }
+                & tr{
+                  position: relative;
+                  &:before{
+                    display: block;
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    height: 1px;
+                    background-color: #D5D5D5;
+                    width: 100%;
+                    border: none;
+                  }
+                }
+                & td{
+                  width: 20%!important;
+                  background-color: #ffffff;
+                  font-size: 12px;
+                  line-height: 14px;
+                  color: #C4C4C4;
+                }
+                & tbody{
+                  & .text{
+                    font-size: 15px;
+                    line-height: 18px;
+                    color: #000000;
+                  }
+                  & .name{
+                    color: #1C9B91;
+                    font-size: 15px;
+                    line-height: 18px;
+                    display: block;
+                  }
+                  & .sub-name{
+                    font-size: 12px;
+                    line-height: 14px;
+                    color: #C4C4C4;
+                  }
+                  & .compatible{
+                    font-size: 20px;
+                    color: #1C9B91;
+                    & .icon{
+                      font-size: 20px;
+                    }
+                  }
+                  .not-compatible{
+                    display: block;
+                    width: 15px;
+                    height: 1px;
+                    background-color: black;
+                  }
+                }
+              }
 			}
 }
 
 .video-play{
 	@include block(471, 265);
-	color: #ffffff !important;	
+	color: #ffffff !important;
 	@include bgs;
 	border-radius: 5px;
 	// position: relative;
@@ -151,7 +225,7 @@
 		@include a-cent();
 		margin-top: 50px;
 		z-index: 2;
-	 
+
 	}
 	&::before{
 		content: '';

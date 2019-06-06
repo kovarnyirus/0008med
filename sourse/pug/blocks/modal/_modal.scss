@@ -1,7 +1,7 @@
 .modal-win {
 	display: block;
 	position: relative;
-	max-width: 368px; 
+	max-width: 368px;
 	.container{
 		padding: 0;
 	}
@@ -21,7 +21,7 @@
 		padding: 27px 25px;
 	}
 	padding: 20px 15px;
- 
+
 	.prod-head__slider-small{
 		width: calc(100% + 16px) !important;
 	}
@@ -39,7 +39,7 @@
 		.prod-head{
 			@include media-breakpoint-up(xl) {
 				.col-lg-6 {
-					
+
 					flex: 0 0 54%;
 					max-width: 54%;
 				}
@@ -50,9 +50,12 @@
 			margin-bottom: 2.15em;
 											}
 	}
- 
+
 }
 
+input[type="textarea"]{
+  min-height: 100px;
+}
 a {
 	outline: 0 !important;
 }
@@ -83,7 +86,7 @@ a {
 
 }
 
-@include media-breakpoint-up(sm) { 
+@include media-breakpoint-up(sm) {
 	.modal-text {
 		max-width: 1000px;
 	}
@@ -101,7 +104,7 @@ a {
 }
 
 
-// 
+//
 @include media-breakpoint-up(xl) {}
 
 @include media-breakpoint-up(lg) {}
@@ -112,10 +115,10 @@ a {
 
 @include media-breakpoint-up(xs) {}
 
-// 
+//
 @include media-breakpoint-between(md, xl) {}
 
-// 
+//
 @include media-breakpoint-only(xs) {}
 
 @include media-breakpoint-only(sm) {}
@@ -126,7 +129,7 @@ a {
 
 @include media-breakpoint-only(xl) {}
 
-// 
+//
 @include media-breakpoint-down(xl) {}
 
 @include media-breakpoint-down(lg) {}
