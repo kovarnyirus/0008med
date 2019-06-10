@@ -209,10 +209,13 @@ mixin modal()
 		//- +text( "Комментарий")
 		.form-group
 			label
-				//+e.SPAN.title-label Прикрепть фото
-				+e.INPUT.input.form-control(type = 'file' placeholder = 'Выберите фото')
+				.add-file-wrap
+					span.add-file-title Прикрепите изображение
+					+b.add-file-btn
+						+e.dot
+						+e.dot
+						+e.dot
+					+e.INPUT.input.add-file-input(type = 'file')
 
 		+e.BUTTON.btn.btn.btn-block.btn-primary.mb-4(type="submit" ) Отправить
-
-
 	// modal

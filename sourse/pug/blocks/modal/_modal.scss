@@ -182,3 +182,47 @@ a {
 		}
 	}
 }
+
+.add-file-wrap{
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  align-items: center;
+}
+
+.add-file-input{
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+.add-file-title{
+  font-size: 15px;
+  color: #000000;
+  cursor: pointer;
+}
+
+.add-file-btn{
+  border: 1px solid #C4C4C4;
+  box-sizing: border-box;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 15px;
+  cursor: pointer;
+  &__dot{
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    margin-right: 5px;
+    &:last-child{
+      margin-right: 0;
+    }
+  }
+}
+
+

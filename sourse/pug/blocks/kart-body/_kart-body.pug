@@ -67,7 +67,7 @@ mixin kart-body()
 					+tab()
 					+tab()
 					+e.content.active
-						+e.table-wrap
+						+e.table-wrap--compatibility
 							+e.TABLE.table--compatibility
 								thead
 									tr
@@ -92,7 +92,7 @@ mixin kart-body()
 											|	разъем D-SUB DB25 Male
 								tbody
 									tr
-										td
+										td(data-toggle="tooltip" data-placement="bottom" title="<img src='img/type-prod.png'/>" )
 											span.name NVX24
 											| ООО "МКС"
 										td
@@ -107,7 +107,7 @@ mixin kart-body()
 											span.compatible
 												+icon('check')
 									tr
-										td
+										td(data-toggle="tooltip" data-placement="bottom" title="<img src='img/type-prod.png'/>" )
 											span.name Мицар-ЭЭГ-03/35-201
 											| ООО "МКС"
 										td
@@ -120,7 +120,7 @@ mixin kart-body()
 										td
 											span.text Необходим адаптер TP2DB25F
 									tr
-										td
+										td(data-toggle="tooltip" data-placement="bottom" title="<img src='img/type-prod.png'/>" )
 											span.name Мицар-ЭЭГ-03/35-201
 											| ООО "МКС"
 										td
@@ -132,7 +132,7 @@ mixin kart-body()
 											span.text Необходим адаптер TP2DB25F
 										td
 											span.text Необходимы ушные электроды
-						p.text-secondary Не нашли свой усилитель?  Свяжитесь, пожалуйста, с нами: +7 499 404-31-41, shop@mcscap.ru или по форме обратной связи
+						p.text-primary Не нашли свой усилитель?  Свяжитесь, пожалуйста, с нами: +7 499 404-31-41, shop@mcscap.ru или по форме обратной связи
 
 
 

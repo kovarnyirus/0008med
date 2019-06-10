@@ -1,8 +1,8 @@
 extends layout/main.pug
 
 
-include ../blocks/s-content/_s-content.pug
-include ../blocks/s-contact/_s-contact.pug
+include ../blocks/s-content/_s-content
+include ../blocks/s-contact/_s-contact
 
 //- include ../blocks/s-slider/_s-slider.pug
 //- include ../blocks/s-catalog/_s-catalog.pug
@@ -12,8 +12,8 @@ include ../blocks/s-contact/_s-contact.pug
 //- include ../blocks/prod-head/_prod-head.pug
 //- include ../blocks/kart-body/_kart-body.pug
 //- include ../blocks/s-order/_s-order.pug
-include ../blocks/aside/_aside.pug
-include ../blocks/s-po/_s-po.pug
+include ../blocks/aside/_aside
+include ../blocks/s-po/_s-po
 
 block title
 	title Личный кабинет 1
@@ -23,12 +23,12 @@ block pagecontent
 	+header()
 		//- +top-line()
 		+top-nav()
-		
+
 	.page-border-top
 	.container
 		+breadcrumb("Личный кабинет", "Главная" )
 		.page-title
-			.h2.text-gray.fw-900.ttu Личный кабинет 
+			.h2.text-gray.fw-900.ttu Личный кабинет
 	//- +prod-head()
 	//- +kart-body()
 
@@ -47,7 +47,7 @@ block pagecontent
 										.col.my-1
 											block
 								+tr("ФИО","")
-									.text-body Викторов Олег 
+									.text-body Викторов Олег
 								+tr("Телефон","")
 									a.text-body(href="tel:+79856698899") +7 985 669 88 99
 								+tr("e-mail (Кликабелен)","")
@@ -64,10 +64,19 @@ block pagecontent
 									.text-body 1235663г. Москва, ул. Андропова 25
 						+e.btn-wrap
 							.row.row--small
+								.col-12
+									.policy-block.mb-0
+										label.custom-input
+											input.custom-input__input(type='checkbox', name='inner', checked='checked')
+											span.custom-input__lab
+											span.custom-input__text.small
+												| Согласен получать рассылки с сайта
+						+e.btn-wrap
+							.row.row--small
 								.col-sm-auto.col-6
 									+e.A.btn--edit(href="#") Сменить пароль
 								.col-sm-auto.col-6
 									+e.A.btn--edit(href="#") Редактировать
+
 	+footer()
-	
-	
+

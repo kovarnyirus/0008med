@@ -971,7 +971,7 @@
                 </div>
               </div>
               <div class="tabs__content active">
-                <div class="tabs__table-wrap">
+                <div class="tabs__table-wrap tabs__table-wrap--compatibility">
                   <table class="tabs__table tabs__table--compatibility">
                     <thead>
                       <tr>
@@ -987,7 +987,7 @@
                     </thead>
                     <tbody>
                       <tr>
-                        <td><span class="name">NVX24</span>ООО "МКС"</td>
+                        <td data-toggle="tooltip" data-placement="bottom" title="&lt;img src='img/type-prod.png'/&gt;"><span class="name">NVX24</span>ООО "МКС"</td>
                         <td><span class="compatible">
                             <svg class="icon icon-check ">
                               <use xlink:href="img/svg/sprite.svg#check"></use>
@@ -1003,7 +1003,7 @@
                             </svg></span></td>
                       </tr>
                       <tr>
-                        <td><span class="name">Мицар-ЭЭГ-03/35-201</span>ООО "МКС"</td>
+                        <td data-toggle="tooltip" data-placement="bottom" title="&lt;img src='img/type-prod.png'/&gt;"><span class="name">Мицар-ЭЭГ-03/35-201</span>ООО "МКС"</td>
                         <td><span class="compatible">
                             <svg class="icon icon-check ">
                               <use xlink:href="img/svg/sprite.svg#check"></use>
@@ -1013,7 +1013,7 @@
                         <td><span class="text">Необходим адаптер TP2DB25F</span></td>
                       </tr>
                       <tr>
-                        <td><span class="name">Мицар-ЭЭГ-03/35-201</span>ООО "МКС"</td>
+                        <td data-toggle="tooltip" data-placement="bottom" title="&lt;img src='img/type-prod.png'/&gt;"><span class="name">Мицар-ЭЭГ-03/35-201</span>ООО "МКС"</td>
                         <td><span class="compatible">
                             <svg class="icon icon-check ">
                               <use xlink:href="img/svg/sprite.svg#check"></use>
@@ -1025,7 +1025,7 @@
                     </tbody>
                   </table>
                 </div>
-                <p class="text-secondary">Не нашли свой усилитель?  Свяжитесь, пожалуйста, с нами: +7 499 404-31-41, shop@mcscap.ru или по форме обратной связи</p>
+                <p class="text-primary">Не нашли свой усилитель?  Свяжитесь, пожалуйста, с нами: +7 499 404-31-41, shop@mcscap.ru или по форме обратной связи</p>
               </div>
             </div>
           </div>
@@ -2158,7 +2158,16 @@
         <!-- +e.input-wrap-->
         <div class="form-group">
           <label>
-            <!--+e.SPAN.title-label Прикрепть фото--><input class="form-wrap__input form-control" type="file" placeholder="Выберите фото"/>
+            <div class="add-file-wrap"><span class="add-file-title">Прикрепите изображение</span>
+              <div class="add-file-btn">
+                <div class="add-file-btn__dot">
+                </div>
+                <div class="add-file-btn__dot">
+                </div>
+                <div class="add-file-btn__dot">
+                </div>
+              </div><input class="form-wrap__input add-file-input" type="file"/>
+            </div>
           </label>
         </div>
         <button class="form-wrap__btn btn btn-block btn-primary mb-4" type="submit">Отправить
