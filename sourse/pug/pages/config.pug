@@ -1,0 +1,43 @@
+extends layout/main.pug
+
+
+include ../blocks/s-content/_s-content.pug
+include ../blocks/s-contact/_s-contact.pug
+
+include ../blocks/s-slider/_s-slider.pug
+include ../blocks/s-catalog/_s-catalog.pug
+include ../blocks/s-pick-up/_s-pick-up.pug
+include ../blocks/s-download/_s-download.pug
+include ../blocks/s-about/_s-about.pug
+include ../blocks/aside/_aside
+
+block title
+	title Главная
+
+block pagecontent
+	+mob-mnu()
+	+header()
+		//- +top-line()
+		//- +top-nav()
+		+top-nav-b()
+
+	.container
+		+breadcrumb("Сравнение товаров", "Главная" )
+		.page-title
+			.h2.text-gray.fw-900.ttu СОВМЕСТИМОСТЬ C MCSCAP
+			.subtitle.text-gray Подобрать продукцию MCSсap под Ваш электроэнцефалограф или ЭЭГ-усилитель.
+		.row
+			.s-catalog__left-col.col-12.col-md-4
+				+aside-config()
+			.s-catalog__right-col.col-12.col-md-8
+				+s-catalog-config('Стандартные')
+				+s-catalog-config('Заказные')
+				+s-catalog-config('Комбинированые')
+
+
+	+s-download
+
+	//- +s-form()
+	//- +s-contact()
+	+footer()
+

@@ -211,6 +211,38 @@ mixin s-catalog()
 
 	// end s-catalog
 
+		// end s-catalog
+
+mixin s-catalog-config(title)
+	// start s-catalog
+	+b.s-catalog.section.s-catalog--config#s-catalog
+			+b.section-title
+				.row
+					.col
+						.h2.text-gray.fw-900= title
+					//.col-auto.d-none.d-md-block
+					//	a.small(href="#") Смотреть все
+					+e.subtitle.col-12 Подобрать продукцию MCSсap под Ваш электроэнцефалограф или ЭЭГ-усилитель.
+
+			+e.slider--mobile
+				- for (var x = 0; x < 2; x++)
+					+e.slide--mobile
+						+prod-item-sls("1","CLINIC","Цветной текстильный шлем с предустановленными Ag/AgCl электродами MCScap-C и общим разъемом DB25М")
+							+e.status(style=" background-color: #42d76b;")
+							+e.video-yes
+								+icon("video")
+								|Есть  видео
+					+e.slide--mobile
+						+prod-item-sls("1","SLEEP","Текстильный шлем с предустановленными Ag/AgCl ")
+							+e.video-yes
+								+icon("video")
+								|Есть  видео
+
+					+e.slide--mobile
+						+prod-item-sls("1","PROFESSIONAL","Цветной текстильный шлем с предустановленными Ag/AgCl электродами MCScap-C и общим разъемом DB25М")
+
+
+
 
 mixin s-catalog-3()
 	// start s-catalog

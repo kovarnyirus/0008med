@@ -1,7 +1,7 @@
 mixin aside()
 	// start aside
 	+b.aside
-		+e.BUTTON.btn--js.btn.btn-block.btn-primary.btn-lg.d-lg-none(type="button") Меню личного кабинета 
+		+e.BUTTON.btn--js.btn.btn-block.btn-primary.btn-lg.d-lg-none(type="button") Меню личного кабинета
 		+e.nav--js.d-lg-block
 			+e.item.small: +e.A.link--active(href="#") Профиль
 			+e.item.small: +e.A.link(href="#") Мои заказы
@@ -27,13 +27,13 @@ mixin aside-06()
 				+e.rang-wrap.slider-rang-wrap
 					.row
 						.col-auto
-							+e.LABEL.input-wrap  
+							+e.LABEL.input-wrap
 								+e.input.__input-minus.input-slider-range
-									input.minus(type='text' value="1" ) 
+									input.minus(type='text' value="1" )
 						.col-auto
-							+e.LABEL.input-wrap 
+							+e.LABEL.input-wrap
 								+e.input.__input-plus.input-slider-range
-									
+
 									input.plus(type='text' value="1000" )
 					+e.range--1.slider-range.filter__
 						input.range-slider(type="text"  )
@@ -41,13 +41,13 @@ mixin aside-06()
 				+e.rang-wrap.slider-rang-wrap
 					.row
 						.col-auto
-							+e.LABEL.input-wrap  
+							+e.LABEL.input-wrap
 								+e.input.__input-minus.input-slider-range
-									input.minus(type='text' value="1" ) 
+									input.minus(type='text' value="1" )
 						.col-auto
-							+e.LABEL.input-wrap 
+							+e.LABEL.input-wrap
 								+e.input.__input-plus.input-slider-range
-									
+
 									input.plus(type='text' value="1000" )
 					+e.range--1.slider-range.filter__
 						input.range-slider(type="text"  )
@@ -64,34 +64,69 @@ mixin aside-06()
 			+group('Бренд')
 				div: +in-ch()
 					+e.SPAN.text 	A-DERMA
-				
+
 				div: +in-ch()
 					+e.SPAN.text AHAVA
-				
+
 				div: +in-ch()
 					+e.SPAN.text AMERICAN CREW
-				
+
 				div: +in-ch()
 					+e.SPAN.text ARAVIA PROFESSIONAL
-				
+
 				div: +in-ch()
 					+e.SPAN.text AVENE
-				
+
 				div: +in-ch()
 					+e.SPAN.text BATISTE
-				
+
 				div: +in-ch()
 					+e.SPAN.text Be Hair
-				
+
 				div: +in-ch()
 					+e.SPAN.text BIODERMA
-		
+
 			+group('Применение')
 				div: +in-ch()
 					+e.SPAN.text 	A-DERMA
-				
+
 				div: +in-ch()
 					+e.SPAN.text AHAVA
 		//- +in-ch("Avene")
 	// end aside
+
+mixin aside-config()
+	+b.aside-config
+		+e.search-wrapper
+			+e.INPUT.search(type='text' placeholder='Производитель или модель усилителя')
+			+e.A.search-link(href='#')
+				+icon('search')
+		+e.reinforce-list
+				+e.reinforce-item(data-toggle="tooltip-configuration" data-placement="right" title="<img src='img/reinforce-big-img.png'/>")
+					.row
+						.col-4
+							+e.reinforce-img(src='img/reinforce-img.png')
+						.col-8
+							+e.reinforce-title Мицар-ЭЭГ-03/35-201
+							+e.reinforce-description Если нужно, краткое описание для раскрытия информации
+					+e.reinforce-btn-del
+				+e.reinforce-item(data-toggle="tooltip-configuration" data-placement="right" title="<img src='img/reinforce-big-img.png'/>")
+					.row
+						.col-4
+							+e.reinforce-img(src='img/reinforce-img.png')
+						.col-8
+							+e.reinforce-title Мицар-ЭЭГ-03/35-201
+							+e.reinforce-description Если нужно, краткое описание для раскрытия информации
+					+e.reinforce-btn-del
+				+e.reinforce-item(data-toggle="tooltip-configuration" data-placement="right" title="<img src='img/reinforce-big-img.png'/>")
+					.row
+						.col-4
+							+e.reinforce-img(src='img/reinforce-img.png')
+						.col-8
+							+e.reinforce-title Мицар-ЭЭГ-03/35-201
+							+e.reinforce-description Если нужно, краткое описание для раскрытия информации
+					+e.reinforce-btn-del
+		+e.callback Не нашли свой усилитель?  Свяжитесь, пожалуйста, с нами: +7 499 404-31-41, shop@mcscap.ru или по форме обратной связи
+
+
 

@@ -2,22 +2,22 @@ html {
 	-webkit-font-smoothing: antialiased;
 	-webkit-overflow-scrolling: touch;
 	background-position: center top;
-	background-repeat: no-repeat; 
+	background-repeat: no-repeat;
 	// background-size: 1900px;
 	// background-image: url(../screen/13.jpg);
-	
-} 
+
+}
 
 body {
 	// opacity: .7;
-	// min-height: 10000px; 
+	// min-height: 10000px;
 	background-color: transparent;
 }
 .row--small{
 	@include roww(5)
 }
 .row--md{
-	
+
 	@include roww(8)
 }
 .mono {
@@ -86,8 +86,14 @@ body {
 
 		@include media-breakpoint-up(md) {}
 	}
+  &__subtitle{
+    padding-bottom: 0;
+    font-size: 12px;
+    line-height: 14px;
+    color: #858585;
+  }
 }
- 
+
 body,
 html {
 	font-size: $em-base;
@@ -138,11 +144,11 @@ body {
 		padding-bottom: 326px ;
 		display: flex;
 		flex-direction: column;
-		
+
 	}
 				@include media-breakpoint-down(md) {
 	padding-bottom: 0 !important;
-	 
+
 }
 }
 
@@ -361,7 +367,7 @@ strong,
 	@include bgs();
 }
 
- 
+
 .tabs-contact,
 .tabs {
 	&__btn {
@@ -397,7 +403,7 @@ strong,
 				height: 100% !important;
 			}
 		box-shadow:inset 0 75px   104px $light;
-	 
+
 	}
 }
 
@@ -538,18 +544,18 @@ a{
 }
 .s-slider,
 .aside-slider{
-	 
+
 	&:not(:hover){
 		.slick-arrow{
 			opacity: 0;
 		}
 	}
-					
+
 		.slick-arrow{
 			@include mt;
 			opacity: 0.8;
 			&:hover{
 				opacity: 1;
 			}
-		} 
+		}
 }

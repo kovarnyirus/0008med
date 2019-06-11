@@ -103,12 +103,12 @@
 	}
 	&__slider{
 		position: relative;
-		display: flex;
+		//display: flex;
 		overflow: inherit;
 		&::before{
 			content: '';
 
-			width: 10000px;
+
 			// background-color: #ffffff;
 			right: 100%;
 			width: 1000px;
