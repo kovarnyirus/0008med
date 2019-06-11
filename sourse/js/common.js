@@ -727,5 +727,16 @@ jQuery(document).ready(function ($) {
 		// 	})
 
 		// })
+    $('[data-toggle="tooltip-table"]').tooltip({
+        html: true,
+        placement: 'bottom',
+        template: '<div class="tooltip tooltip-table" role="tooltip"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div>'
+    });
+
+    $('[data-toggle="tooltip-configuration"]').tooltip({
+        html: true,
+        placement: 'right',
+        template: '<div class="tooltip tooltip-configuration" role="tooltip"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div>'
+    });
 
 });

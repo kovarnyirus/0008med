@@ -132,7 +132,24 @@ mixin kart-body()
 											span.text Необходим адаптер TP2DB25F
 										td
 											span.text Необходимы ушные электроды
-						p.text-primary Не нашли свой усилитель?  Свяжитесь, пожалуйста, с нами: +7 499 404-31-41, shop@mcscap.ru или по форме обратной связи
+									tr
+										td(data-toggle="tooltip-table" data-placement="bottom" title="<img src='img/type-prod.png'/>" )
+											span.name Мицар-ЭЭГ-03/35-201
+											| ООО "МКС"
+										td
+											span.compatible
+												+icon('check')
+										td
+											span.not-compatible
+										td
+											span.text Необходим адаптер TP2DB25F
+										td
+											span.text Необходимы ушные электроды
+
+						p.text-gay Не нашли свой усилитель?  Свяжитесь, пожалуйста, с нами: +7 499 404-31-41,
+							a.text-primary(href='mailto:shop@mcscap.ru') shop@mcscap.ru
+							| или
+							a.text-primary.popup-with-move-anim(href='#modal-call-back') по форме обратной связи
 
 
 

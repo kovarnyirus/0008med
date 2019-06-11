@@ -738,4 +738,5 @@ jQuery(document).ready(function ($) {
         placement: 'right',
         template: '<div class="tooltip tooltip-configuration" role="tooltip"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div>'
     });
+
 });

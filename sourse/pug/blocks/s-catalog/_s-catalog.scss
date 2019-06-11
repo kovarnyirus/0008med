@@ -485,6 +485,9 @@
       height: auto;
       min-height: 80px;
     }
+    & .h2{
+      font-size: rem(20);
+    }
   }
 
   &__left-col {
