@@ -472,6 +472,19 @@
     & .s-catalog__slider{
       overflow: hidden;
     }
+    & .s-catalog__slide {
+      padding-left: 4px;
+      padding-right: 4px;
+      position: relative;
+    }
+    & .item-prod__title{
+      font-size: rem(16)
+    }
+    & .item-prod__text{
+      font-size: rem(11);
+      height: auto;
+      min-height: 80px;
+    }
   }
 
   &__left-col {
