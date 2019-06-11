@@ -126,7 +126,10 @@ mixin aside-config()
 							+e.reinforce-title Мицар-ЭЭГ-03/35-201
 							+e.reinforce-description Если нужно, краткое описание для раскрытия информации
 					+e.reinforce-btn-del
-		+e.callback Не нашли свой усилитель?  Свяжитесь, пожалуйста, с нами: +7 499 404-31-41, shop@mcscap.ru или по форме обратной связи
+		+e.callback.text-gay Не нашли свой усилитель?  Свяжитесь, пожалуйста, с нами: +7 499 404-31-41,
+			a.text-primary(href='mailto:shop@mcscap.ru') shop@mcscap.ru
+			| или
+			a.text-primary.popup-with-move-anim(href='#modal-call-back') по форме обратной связи
 
 
 
