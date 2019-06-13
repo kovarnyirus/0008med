@@ -406,6 +406,22 @@ jQuery(document).ready(function ($) {
 		]
 	});
 
+	$('.s-catalog__slider--combined').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		dots: false,
+		speed: 450,
+		infinite: true,
+		// loop: true,
+		arrows: true,
+        variableWidth: true,
+		// mobileFirst: true,
+		//  autoplay: true,
+		// autoplaySpeed: 3000,
+		prevArrow: arrl2,
+		nextArrow: arrr2,
+	});
+
 	$(".prod-head__sliders").each(function () {
 		var th = $(this);
 

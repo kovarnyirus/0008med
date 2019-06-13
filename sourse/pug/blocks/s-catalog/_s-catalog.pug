@@ -1,25 +1,16 @@
 mixin prod-item-sls(x,t,p)
 	+b.item-prod--js
 			+e.inner--js
-				// add wrapper
 				+e.head
 					+e.status-wrap
 						block
 					+e.like
-						// заменил название иконки
-
 						+icon('star')
-
 					+e.compare.active
 						+icon('compare')
-
-
-					// add btn
 					+e.btn-fast.popup-with-move-anim(href="#modal-prod") Быстрый просмотр
-					// /add btn
 					+e.img-wrap(href="#")
 						span: img.res-img(src="img/prod-1.png" data-lazy=`img/prod-${x}.png`, alt="")
-				// /add wrapper
 				+e.caption
 					+e.title--js.h2(href="#")= t
 					+e.text--js.small.text-gray= p
@@ -28,13 +19,9 @@ mixin prod-item-sls(x,t,p)
 							.small Доступные размеры:
 							+e.btn-wrap
 								mixin in-ch( n, t)
-									// переделал
-
 									+b.LABEL.btn-input(data-toggle="popover" data-trigger="hover" data-content='<div class="pb-1"><span class="text-gray">Обхват головы: </span> <strong class="display-inline-block">24-28 см </strong></div><div class="pb-1"><span class="text-gray">Рекомендовано:  </span> <strong class="display-inline-block">новорожденным, недоношенным</strong></div>')
 										+e.INPUT.input(type="radio" name= n)
 										+e.SPAN.text= t
-
-									// /переделал
 								+in-ch("size-prod","XL")
 								+in-ch("size-prod","XL/L")
 								+in-ch("size-prod","L")
@@ -65,6 +52,91 @@ mixin prod-item-sls(x,t,p)
 									+icon("basket")
 										| Корзина
 	// .item-prod
+
+
+mixin prod-item-sls-komb(x,t,p)
+	+b.item-prod--js
+		+e.inner--js
+			+e.head
+				.d-flex
+					.head-img
+						+e.img-wrap(href="#")
+							span: img.res-img(src="img/prod-1.png" data-lazy=`img/prod-${x}.png`, width='192' alt="")
+					.head-img
+						+e.plus
+							+icon('plus')
+						+e.img-wrap(href="#")
+							span: img.res-img(src="img/prod-1.png" data-lazy=`img/prod-${x}.png`, width='192' alt="")
+			+e.caption
+				+e.title--js.h2(href="#")= t
+				+e.text--js.small.text-gray= p
+				.row.cost-row
+					.col-6.col-md-auto
+						.h5.text-primary  15 000 Р
+					.col-6.col-md-auto
+						+e.btn-wrap.d-none.d-sm-block
+							+e.A.btn.popup-with-move-anim(href="#modal-prod")  В корзину
+						+e.btn-wrap.d-sm-none
+							+e.A.btn.popup-with-move-anim.pl-0.pr-0(href="#modal-prod")
+								+icon("basket")
+									| Корзина
+	// .item-prod
+
+
+mixin prod-item-sls-komb1(x,t,p)
+	+b.item-config
+		+e.wrapper
+			.d-flex
+				.element
+					+e.head
+						+e.plus
+						+e.img-wrap(href="#")
+							span: img.res-img(src="img/prod-1.png" data-lazy=`img/prod-${x}.png`, width='163' alt="")
+					+e.caption
+						+e.title(href="#")= t
+						+e.text.small.text-gray= p
+				.element
+					+e.head
+						+e.plus
+						+e.img-wrap(href="#")
+							span: img.res-img(src="img/prod-1.png" data-lazy=`img/prod-${x}.png`, width='163' alt="")
+					+e.caption
+						+e.title(href="#")= t
+						+e.text.small.text-gray= p
+				.element
+					+e.head
+						+e.plus
+						+e.img-wrap(href="#")
+							span: img.res-img(src="img/prod-1.png" data-lazy=`img/prod-${x}.png`, width='163' alt="")
+					+e.caption
+						+e.title(href="#")= t
+						+e.text.small.text-gray= p
+		+e.footer
+			.col-8.col-sm-auto
+				.h5.text-primary  15 000 Р
+			.col-4.col-sm-auto
+				+e.btn-wrap
+					+e.A.btn.popup-with-move-anim.pl-0.pr-0(href="#modal-prod")
+						+icon("basket")
+							| Корзина
+	// .item-prod
+
+mixin s-catalog-config-kombinir(title)
+	// start s-catalog
+	+b.s-catalog.section.s-catalog--config#s-catalog
+		+b.section-title
+			.row
+				.col
+					.h2= title
+				//.col-auto.d-none.d-md-block
+				//	a.small(href="#") Смотреть все
+				+e.subtitle.col-12 Подобрать продукцию MCSсap под Ваш электроэнцефалограф или ЭЭГ-усилитель222.
+		.s-catalog__slider--combined
+			- for (var x = 0; x < 4; x++)
+				+prod-item-sls-komb1("1","CLINIC","Цветной Мq wqeq we qwe qwe qwe qwe qwe qwe qwe qwe qwe qwe qwe qweca sdac szfs  dsfa fsd")
+
+
+
 
 mixin prod-item-sl(x,t,p)
 	+b.item-prod--js
@@ -240,6 +312,34 @@ mixin s-catalog-config(title)
 
 					+e.slide--mobile
 						+prod-item-sls("1","PROFESSIONAL","Цветной текстильный шлем с предустановленными Ag/AgCl электродами MCScap-C и общим разъемом DB25М")
+
+mixin s-catalog-config-komb(title)
+	// start s-catalog
+	+b.s-catalog.section.s-catalog--config#s-catalog
+			+b.section-title
+				.row
+					.col
+						.h2= title
+					//.col-auto.d-none.d-md-block
+					//	a.small(href="#") Смотреть все
+					+e.subtitle.col-12 Подобрать продукцию MCSсap под Ваш электроэнцефалограф или ЭЭГ-усилитель.
+
+			.s-catalog__slider--combined
+				- for (var x = 0; x < 2; x++)
+					+e.slide--mobile
+						+prod-item-sls-komb("1","CLINIC","Цветной текстильный шлем с предустановленными Ag/AgCl электродами MCScap-C и общим разъемом DB25М")
+							+e.status(style=" background-color: #42d76b;")
+							+e.video-yes
+								+icon("video")
+								|Есть  видео
+					+e.slide--mobile
+						+prod-item-sls-komb("1","SLEEP","Текстильный шлем с предустановленными Ag/AgCl ")
+							+e.video-yes
+								+icon("video")
+								|Есть  видео
+
+					+e.slide--mobile
+						+prod-item-sls-komb("1","PROFESSIONAL","Цветной текстильный шлем с предустановленными Ag/AgCl электродами MCScap-C и общим разъемом DB25М")
 
 
 
