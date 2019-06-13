@@ -51,6 +51,18 @@
 
     &--combined {
       overflow: hidden;
+      position: relative;
+
+      & .l.slick-arrow{
+        top: 50%!important;
+        left: 0!important;
+        transform: translateY(-50%);
+      }
+      & .r.slick-arrow{
+        top: 50%!important;
+        right: 0!important;
+        transform: translateY(-50%);
+      }
 
       & .item-config__img-wrap{
         & img{

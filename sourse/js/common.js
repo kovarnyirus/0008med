@@ -412,12 +412,8 @@ jQuery(document).ready(function ($) {
 		dots: false,
 		speed: 450,
 		infinite: true,
-		// loop: true,
 		arrows: true,
         variableWidth: true,
-		// mobileFirst: true,
-		//  autoplay: true,
-		// autoplaySpeed: 3000,
 		prevArrow: arrl2,
 		nextArrow: arrr2,
 	});
