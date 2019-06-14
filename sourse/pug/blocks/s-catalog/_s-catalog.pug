@@ -44,13 +44,15 @@ mixin prod-item-sls(x,t,p)
 							.h5.text-primary  15 000 Р
 						.col-6.col-md-auto
 							// добавил 24.02
-							+e.btn-wrap.d-none.d-sm-block
+							+e.btn-wrap
 								.smallest.text-danger.text-center  Выберите размер
-								+e.A.btn.popup-with-move-anim(href="#modal-prod")  В корзину
-							+e.btn-wrap.d-sm-none
-								+e.A.btn.popup-with-move-anim.pl-0.pr-0(href="#modal-prod")
+								+e.A.btn.popup-with-move-anim(href="#modal-prod")
 									+icon("basket")
 										| Корзина
+									|
+									+e.SPAN.btn-text В корзину
+
+
 	// .item-prod
 
 
@@ -74,12 +76,13 @@ mixin prod-item-sls-komb(x,t,p)
 					.col-6.col-md-auto
 						.h5.text-primary  15 000 Р
 					.col-6.col-md-auto
-						+e.btn-wrap.d-none.d-sm-block
-							+e.A.btn.popup-with-move-anim(href="#modal-prod")  В корзину
-						+e.btn-wrap.d-sm-none
-							+e.A.btn.popup-with-move-anim.pl-0.pr-0(href="#modal-prod")
+						+e.btn-wrap
+							.smallest.text-danger.text-center  Выберите размер
+							+e.A.btn.popup-with-move-anim(href="#modal-prod")
 								+icon("basket")
 									| Корзина
+								|
+								+e.SPAN.btn-text В корзину
 	// .item-prod
 
 
