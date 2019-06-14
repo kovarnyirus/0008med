@@ -42,14 +42,16 @@
     }
 
     &--mobile {
-      @include media-breakpoint-down(sm) {
-        display: flex;
-        flex-wrap: wrap;
+      display: flex;
+      flex-wrap: wrap;
+      @include media-breakpoint-up(sm) {
+        display: block;
+
       }
 
     }
 
-    &--combined {
+    &-combined {
       overflow: hidden;
       position: relative;
 

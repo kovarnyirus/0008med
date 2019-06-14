@@ -406,7 +406,7 @@ jQuery(document).ready(function ($) {
 		]
 	});
 
-	$('.s-catalog__slider--combined').slick({
+	$('.s-catalog__slider-combined').slick({
 		slidesToShow: 1,
 		slidesToScroll: 1,
 		dots: false,
