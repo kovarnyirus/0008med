@@ -218,4 +218,13 @@ mixin modal()
 					+e.INPUT.input.add-file-input(type = 'file')
 
 		+e.BUTTON.btn.btn.btn-block.btn-primary.mb-4(type="submit" ) Отправить
+		.policy-block.mb-0
+			+check("inner")(checked)
+				+e.SPAN.text.small Я ознакомился с
+					|
+					a(href="#") правилами,
+					|
+					a(href="#") политикой конфиденциальности
+					|
+						и принимаю их условия
 	// modal
