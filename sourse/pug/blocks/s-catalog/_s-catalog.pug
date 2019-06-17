@@ -98,6 +98,26 @@ mixin prod-item-sls-komb1(x,t,p)
 					+e.caption
 						+e.title(href="#")= t
 						+e.text.small.text-gray= p
+						+e.toggle-block
+							+b.size-block
+								.small Доступные размеры:
+								+e.btn-wrap
+									mixin in-ch( n, t)
+										+b.LABEL.btn-input(data-toggle="popover" data-trigger="hover" data-content='<div class="pb-1"><span class="text-gray">Обхват головы: </span> <strong class="display-inline-block">24-28 см </strong></div><div class="pb-1"><span class="text-gray">Рекомендовано:  </span> <strong class="display-inline-block">новорожденным, недоношенным</strong></div>')
+											+e.INPUT.input(type="radio" name= n)
+											+e.SPAN.text= t
+									+in-ch("size-prod","XL")
+									+in-ch("size-prod","XL/L")
+									+in-ch("size-prod","L")
+									+in-ch("size-prod","L/M")
+									+in-ch("size-prod","M")
+									+in-ch("size-prod","M/S")
+									+in-ch("size-prod","S")
+									+in-ch("size-prod","S/XS")
+									+in-ch("size-prod","XS")
+									+in-ch("size-prod","Inf I")
+									+in-ch("size-prod","Inf II")
+									+in-ch("size-prod","Inf III")
 				.element
 					+e.head
 						+e.plus
@@ -106,6 +126,26 @@ mixin prod-item-sls-komb1(x,t,p)
 					+e.caption
 						+e.title(href="#")= t
 						+e.text.small.text-gray= p
+						+e.toggle-block
+							+b.size-block
+								.small Доступные размеры:
+								+e.btn-wrap
+									mixin in-ch( n, t)
+										+b.LABEL.btn-input(data-toggle="popover" data-trigger="hover" data-content='<div class="pb-1"><span class="text-gray">Обхват головы: </span> <strong class="display-inline-block">24-28 см </strong></div><div class="pb-1"><span class="text-gray">Рекомендовано:  </span> <strong class="display-inline-block">новорожденным, недоношенным</strong></div>')
+											+e.INPUT.input(type="radio" name= n)
+											+e.SPAN.text= t
+									+in-ch("size-prod","XL")
+									+in-ch("size-prod","XL/L")
+									+in-ch("size-prod","L")
+									+in-ch("size-prod","L/M")
+									+in-ch("size-prod","M")
+									+in-ch("size-prod","M/S")
+									+in-ch("size-prod","S")
+									+in-ch("size-prod","S/XS")
+									+in-ch("size-prod","XS")
+									+in-ch("size-prod","Inf I")
+									+in-ch("size-prod","Inf II")
+									+in-ch("size-prod","Inf III")
 				.element
 					+e.head
 						+e.plus
@@ -114,6 +154,26 @@ mixin prod-item-sls-komb1(x,t,p)
 					+e.caption
 						+e.title(href="#")= t
 						+e.text.small.text-gray= p
+						+e.toggle-block
+							+b.size-block
+								.small Доступные размеры:
+								+e.btn-wrap
+									mixin in-ch( n, t)
+										+b.LABEL.btn-input(data-toggle="popover" data-trigger="hover" data-content='<div class="pb-1"><span class="text-gray">Обхват головы: </span> <strong class="display-inline-block">24-28 см </strong></div><div class="pb-1"><span class="text-gray">Рекомендовано:  </span> <strong class="display-inline-block">новорожденным, недоношенным</strong></div>')
+											+e.INPUT.input(type="radio" name= n)
+											+e.SPAN.text= t
+									+in-ch("size-prod","XL")
+									+in-ch("size-prod","XL/L")
+									+in-ch("size-prod","L")
+									+in-ch("size-prod","L/M")
+									+in-ch("size-prod","M")
+									+in-ch("size-prod","M/S")
+									+in-ch("size-prod","S")
+									+in-ch("size-prod","S/XS")
+									+in-ch("size-prod","XS")
+									+in-ch("size-prod","Inf I")
+									+in-ch("size-prod","Inf II")
+									+in-ch("size-prod","Inf III")
 		+e.footer
 			.col-8.col-sm-auto
 				.h5.text-primary  15 000 Р
@@ -124,10 +184,10 @@ mixin prod-item-sls-komb1(x,t,p)
 							| Корзина
 	// .item-prod
 
-mixin s-catalog-config-kombinir(title)
+mixin s-catalog-config-kombinir(title, scroll)
 	// start s-catalog
 	+b.s-catalog.section.s-catalog--config#s-catalog
-		+b.section-title
+		+b.section-title(id= scroll)
 			.row
 				.col
 					.h2= title
@@ -288,10 +348,10 @@ mixin s-catalog()
 
 		// end s-catalog
 
-mixin s-catalog-config(title)
+mixin s-catalog-config(title, scrol)
 	// start s-catalog
 	+b.s-catalog.section.s-catalog--config#s-catalog
-			+b.section-title
+			+b.section-title(id= scrol)
 				.row
 					.col
 						.h2= title

@@ -252,21 +252,36 @@ jQuery(document).ready(function ($) {
 		}
 	);
 	// показывает скрытый блок в миниатюрах
-	// $(".item-prod").each(function () {
-	// 	var item = $(this).find(".item-prod__toggle-block");
-	// 	$(this).hover(
+	$(".item-prod").each(function () {
+		var item = $(this).find(".item-prod__toggle-block");
+		$(this).hover(
 
-	// 		function () {
-	// 			hovertimer = setTimeout(function () {
-	// 				item.slideDown(100);
-	// 			}, 500);
-	// 		},
-	// 		function () {
-	// 			clearTimeout(hovertimer);
-	// 			item.slideUp(100);
-	// 		}
-	// 	)
-	// })
+			function () {
+				hovertimer = setTimeout(function () {
+					item.slideDown(100);
+				}, 500);
+			},
+			function () {
+				clearTimeout(hovertimer);
+				item.slideUp(100);
+			}
+		)
+	});
+
+    $(".element").each(function () {
+        var item = $(this).find(".item-config__toggle-block");
+        $(this).hover(
+            function () {
+                hovertimer = setTimeout(function () {
+                    item.slideDown(100);
+                }, 500);
+            },
+            function () {
+                clearTimeout(hovertimer);
+                item.slideUp(100);
+            }
+        )
+    });
 
 
 
@@ -749,6 +764,14 @@ jQuery(document).ready(function ($) {
         html: true,
         placement: 'right',
         template: '<div class="tooltip tooltip-configuration" role="tooltip"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div>'
+    });
+
+
+    $(".aside-config__reinforce-item").click(function () {
+        if(screen.width < 768){
+            var elementClick = $(this).attr("scroll");
+            $('html, body').animate({scrollTop: $('#'+ elementClick).offset().top - 55 }, 1100);
+        }
     });
 
 });
