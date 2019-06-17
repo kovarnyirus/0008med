@@ -166,6 +166,13 @@
           margin-right: 10px;
         }
       }
+      textarea{
+        resize: none;
+        border: none;
+        flex-grow: 1;
+        padding-right: 40px;
+        color: #858585
+      }
 
 
       & th {
