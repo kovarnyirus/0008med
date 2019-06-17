@@ -166,12 +166,33 @@
           margin-right: 10px;
         }
       }
-      textarea{
+
+      & textarea {
         resize: none;
         border: none;
         flex-grow: 1;
         padding-right: 40px;
         color: #858585
+      }
+
+      & textarea:focus::-webkit-input-placeholder {
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+
+      & textarea:focus::-moz-placeholder {
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+
+      & textarea:focus:-moz-placeholder {
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+
+      & textarea:focus:-ms-input-placeholder {
+        opacity: 0;
+        transition: opacity 0.3s ease;
       }
 
 
