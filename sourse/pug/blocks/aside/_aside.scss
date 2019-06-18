@@ -404,6 +404,14 @@
   }
   &__reinforce-list{
     margin-bottom: 20px;
+    max-height: 320px;
+  }
+  & .mCSB_scrollTools{
+    left: 0;
+    right: auto;
+  }
+  & .mCSB_container{
+    padding-left: 15px;
   }
 }
 

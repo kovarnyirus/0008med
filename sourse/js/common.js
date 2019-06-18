@@ -268,23 +268,6 @@ jQuery(document).ready(function ($) {
 		)
 	});
 
-    $(".element").each(function () {
-        var item = $(this).find(".item-config__toggle-block");
-        $(this).hover(
-            function () {
-                hovertimer = setTimeout(function () {
-                    item.slideDown(100);
-                }, 500);
-            },
-            function () {
-                clearTimeout(hovertimer);
-                item.slideUp(100);
-            }
-        )
-    });
-
-
-
 	var icon = '<svg width="15" height="24" viewBox="0 0 15 24" fill="none" xmlns="http://www.w3.org/2000/svg">\n' +
 		'<g filter="url(#filter0_d)">\n' +
 		'<path fill-rule="evenodd" clip-rule="evenodd" d="M13.5157 0.460261C14.1614 1.07394 14.1614 2.06892 13.5157 2.6826L4.76369 11L13.5157 19.3174C14.1614 19.9311 14.1614 20.9261 13.5157 21.5397C12.8699 22.1534 11.823 22.1534 11.1772 21.5397L1.64575 12.4816C0.784752 11.6633 0.78475 10.3367 1.64575 9.51844L11.1772 0.460261C11.823 -0.15342 12.8699 -0.15342 13.5157 0.460261Z" fill="white" fill-opacity="0.716"/>\n' +
@@ -772,6 +755,27 @@ jQuery(document).ready(function ($) {
             var elementClick = $(this).attr("scroll");
             $('html, body').animate({scrollTop: $('#'+ elementClick).offset().top - 55 }, 1100);
         }
+    });
+
+    $(".item-config__wrapper").each(function () {
+        var item = $(this).find(".item-config__toggle-block");
+        $(this).hover(
+            function () {
+                hovertimer = setTimeout(function () {
+                    item.slideDown(100);
+                }, 500);
+            },
+            function () {
+                clearTimeout(hovertimer);
+                item.slideUp(100);
+            }
+        )
+    });
+
+    $(window).on("load", function () {
+        $(".aside-config__reinforce-list").mCustomScrollbar({
+            autoHideScrollbar: true,
+        });
     });
 
 });

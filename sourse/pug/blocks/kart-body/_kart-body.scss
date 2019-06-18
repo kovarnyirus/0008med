@@ -172,7 +172,9 @@
         border: none;
         flex-grow: 1;
         padding-right: 40px;
-        color: #858585
+        color: #858585;
+        outline: none;
+        height: 37px;
       }
 
       & textarea:focus::-webkit-input-placeholder {
