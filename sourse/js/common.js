@@ -254,15 +254,18 @@ jQuery(document).ready(function ($) {
 	// показывает скрытый блок в миниатюрах
 	$(".item-prod").each(function () {
 		var item = $(this).find(".item-prod__toggle-block");
+        var container = $(this).closest(".s-catalog");
 		$(this).hover(
-
 			function () {
 				hovertimer = setTimeout(function () {
+                    container.css( "z-index", "100" );
+                    container.css( "position", "relative" );
 					item.slideDown(100);
 				}, 500);
 			},
 			function () {
 				clearTimeout(hovertimer);
+                container.css( "z-index", "20" );
 				item.slideUp(100);
 			}
 		)
@@ -404,17 +407,31 @@ jQuery(document).ready(function ($) {
 		]
 	});
 
+    $('.item-config__wrapper-slider').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: false,
+        speed: 450,
+        infinite: true,
+        arrows: false,
+        centerMode: true,
+        variableWidth: true,
+        // variableWidth: true,
+    });
+
 	$('.s-catalog__slider-combined').slick({
 		slidesToShow: 1,
 		slidesToScroll: 1,
-		dots: false,
+		dots: true,
 		speed: 450,
-		infinite: true,
-		arrows: true,
-        variableWidth: true,
+		infinite: false,
+		arrows: false,
 		prevArrow: arrl2,
 		nextArrow: arrr2,
+        swipe: false,
 	});
+
+
 
 	$(".prod-head__sliders").each(function () {
 		var th = $(this);
@@ -777,5 +794,7 @@ jQuery(document).ready(function ($) {
             autoHideScrollbar: true,
         });
     });
-
+    // $(".tabs__table-wrap--compatibility").mCustomScrollbar({
+    //     axis:"x" // horizontal scrollbar
+    // });
 });

@@ -559,3 +559,13 @@ a{
 			}
 		}
 }
+
+@media (max-width: 375px) {
+  .s-catalog--config .item-prod__btn-wrap .smallest {
+    position: static!important;
+    max-width: 50%;
+  }
+  .s-catalog--config .item-prod__btn-wrap{
+    justify-content: flex-start;
+  }
+}

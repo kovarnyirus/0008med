@@ -89,14 +89,14 @@ mixin prod-item-sls-komb(x,t,p)
 mixin prod-item-sls-komb1(x,t,p)
 	+b.item-config
 		+e.wrapper
-			.d-flex
+			.item-config__wrapper-slider
 				.element
 					+e.head
 						+e.plus
 						+e.img-wrap(href="#")
 							span: img.res-img(src="img/prod-1.png" data-lazy=`img/prod-${x}.png`, width='163' alt="")
 					+e.caption
-						+e.title(href="#")= t
+						+e.title(href="#")= '3' +  t
 						+e.text.small.text-gray= p
 						+e.toggle-block
 							+b.size-block
@@ -124,7 +124,7 @@ mixin prod-item-sls-komb1(x,t,p)
 						+e.img-wrap(href="#")
 							span: img.res-img(src="img/prod-1.png" data-lazy=`img/prod-${x}.png`, width='163' alt="")
 					+e.caption
-						+e.title(href="#")= t
+						+e.title(href="#")= '2' + t
 						+e.text.small.text-gray= p
 						+e.toggle-block
 							+b.size-block
@@ -152,7 +152,35 @@ mixin prod-item-sls-komb1(x,t,p)
 						+e.img-wrap(href="#")
 							span: img.res-img(src="img/prod-1.png" data-lazy=`img/prod-${x}.png`, width='163' alt="")
 					+e.caption
-						+e.title(href="#")= t
+						+e.title(href="#")= '1' + t
+						+e.text.small.text-gray= p
+						+e.toggle-block
+							+b.size-block
+								.small Доступные размеры:
+								+e.btn-wrap
+									mixin in-ch( n, t)
+										+b.LABEL.btn-input(data-toggle="popover" data-trigger="hover" data-content='<div class="pb-1"><span class="text-gray">Обхват головы: </span> <strong class="display-inline-block">24-28 см </strong></div><div class="pb-1"><span class="text-gray">Рекомендовано:  </span> <strong class="display-inline-block">новорожденным, недоношенным</strong></div>')
+											+e.INPUT.input(type="radio" name= n)
+											+e.SPAN.text= t
+									+in-ch("size-prod","XL")
+									+in-ch("size-prod","XL/L")
+									+in-ch("size-prod","L")
+									+in-ch("size-prod","L/M")
+									+in-ch("size-prod","M")
+									+in-ch("size-prod","M/S")
+									+in-ch("size-prod","S")
+									+in-ch("size-prod","S/XS")
+									+in-ch("size-prod","XS")
+									+in-ch("size-prod","Inf I")
+									+in-ch("size-prod","Inf II")
+									+in-ch("size-prod","Inf III")
+				.element
+					+e.head
+						+e.plus
+						+e.img-wrap(href="#")
+							span: img.res-img(src="img/prod-1.png" data-lazy=`img/prod-${x}.png`, width='163' alt="")
+					+e.caption
+						+e.title(href="#")= '4' +  t
 						+e.text.small.text-gray= p
 						+e.toggle-block
 							+b.size-block

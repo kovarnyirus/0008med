@@ -44,6 +44,7 @@
     &--mobile {
       display: flex;
       flex-wrap: wrap;
+      align-items: baseline;
       @include media-breakpoint-up(sm) {
         display: block;
 
@@ -84,6 +85,8 @@
         margin-right: 5px;
         padding: 15px;
         padding-bottom: 0;
+        background-color: #fff;
+        overflow: hidden;
 
         &__head {
           margin-bottom: 16px;
@@ -187,6 +190,11 @@
             display: none;
           }
         }
+      }
+      & .slick-dots{
+        left: 50%;
+        transform: translateX(-50%);
+        width: auto;
       }
     }
   }
@@ -1056,6 +1064,7 @@
     @include mt;
     position: relative;
     z-index: 2;
+    display: inline-block;
 
     &::after {
       content: '';
