@@ -102,6 +102,7 @@
 
     img {
       max-height: 100%;
+      cursor: zoom-in;
     }
 
     &--small {
@@ -631,4 +632,8 @@
 
 .easyzoom-flyout{
   pointer-events: none;
+}
+
+.easyzoom.is-ready img{
+  cursor: zoom-in;
 }

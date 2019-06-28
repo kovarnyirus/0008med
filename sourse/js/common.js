@@ -288,10 +288,27 @@ jQuery(document).ready(function ($) {
 		'</defs>\n' +
 		'</svg>\n';
 
+    var iconRight = '<svg width="15" height="24" viewBox="0 0 15 24" fill="none" xmlns="http://www.w3.org/2000/svg">\n' +
+        '<g filter="url(#filter0_d)">\n' +
+        '<path fill-rule="evenodd" clip-rule="evenodd" d="M1.4843 0.460261C0.838601 1.07394 0.838601 2.06892 1.4843 2.6826L10.2363 11L1.4843 19.3174C0.838601 19.9311 0.838601 20.9261 1.4843 21.5397C2.1301 22.1534 3.177 22.1534 3.8228 21.5397L13.3543 12.4816C14.2152 11.6633 14.2153 10.3367 13.3543 9.51844L3.8228 0.460261C3.177 -0.15342 2.1301 -0.15342 1.4843 0.460261Z" fill="white" fill-opacity="0.716"/>\n' +
+        '</g>\n' +
+        '<defs>\n' +
+        '<filter id="filter0_d" x="0" y="0" width="15" height="24" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">\n' +
+        '<feFlood flood-opacity="0" result="BackgroundImageFix"/>\n' +
+        '<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>\n' +
+        '<feOffset dy="1"/>\n' +
+        '<feGaussianBlur stdDeviation="0.5"/>\n' +
+        '<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.21 0"/>\n' +
+        '<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>\n' +
+        '<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>\n' +
+        '</filter>\n' +
+        '</defs>\n' +
+        '</svg>\n';
+
 	// var icon = '<svg   viewBox="0 0 49 95" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M48 0.5L1 47.5L48 94.5" stroke="rgba(255, 255, 255, 0.716);"/> </svg>';
 
 	var arrl2 = (' <div class="l">' + icon),
-		arrr2 = (' <div class="r">' + icon);
+		arrr2 = (' <div class="r">' + iconRight);
 	// слайдер   одинарныйs-catalog__slider
 	$('.s-slider').slick({
 		slidesToShow: 1,
@@ -626,6 +643,7 @@ jQuery(document).ready(function ($) {
 	$(".trop .dropdown-cat__link--toggle-js").click(function (e) {
 		e.preventDefault;
 		$(this).next().slideToggle();
+		console.log($(this).next())
 	})
 
 	// показать историю заказов
@@ -797,4 +815,8 @@ jQuery(document).ready(function ($) {
     // $(".tabs__table-wrap--compatibility").mCustomScrollbar({
     //     axis:"x" // horizontal scrollbar
     // });
+
+    $(".search-block__btn--close").click(function () {
+        $(".search-block__input").blur();
+    });
 });

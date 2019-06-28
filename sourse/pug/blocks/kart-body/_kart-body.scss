@@ -175,6 +175,7 @@
         color: #858585;
         outline: none;
         height: 37px;
+        overflow-y: hidden;
       }
 
       & textarea:focus::-webkit-input-placeholder {

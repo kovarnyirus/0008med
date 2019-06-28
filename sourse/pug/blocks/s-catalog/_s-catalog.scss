@@ -336,11 +336,11 @@
     }
 
     &.l {
-      left: 1px;
+      left: 15px;
     }
 
     &.r {
-      right: 1px;
+      right: 15px;
 
     }
   }
@@ -650,6 +650,14 @@
       margin-top: 0;
       display: block;
     }
+    & .slick-arrow{
+      &.l{
+        left: 1px;
+      }
+      &.r{
+        right: 1px;
+      }
+    }
   }
 
   &__left-col {
@@ -792,7 +800,7 @@
     border-radius: 50%;
     border-color: #515151;
     right: 20px;
-    top: 20px;
+    top: 70px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -803,6 +811,7 @@
       width: 26px;
       height: 26px;
       //display: none;
+      right: 15px;
     }
 
     z-index: 4;
@@ -825,18 +834,32 @@
 
     }
   }
+  &__like{
+    top: 70px;
+    @include media-breakpoint-down(sm){
+      top: 56px;
+    }
+
+  }
 
   &__compare {
-    top: 70px;
+    right: 20px;
+    top: 20px;
+    //top: 70px;
+    @include media-breakpoint-down(sm){
+      //top: 56px;
+      right: 15px;
+    }
   }
 
   &__status-wrap {
     position: absolute;
     left: 20px;
-    top: 33px;
+    top: 20px;
     z-index: 4;
-    @include media-breakpoint-down(sm) {
+    @include media-breakpoint-down(md) {
       //display: none;
+      left: 15px;
     }
   }
 
@@ -910,6 +933,7 @@
       height: auto;
       max-height: 100%;
       @include a-cent;
+      cursor: zoom-in;
     }
   }
 
@@ -944,6 +968,7 @@
     @include media-breakpoint-down(sm) {
       font-size: 16px;
     }
+    color: #000000;
   }
 
   &__text {
@@ -1007,9 +1032,11 @@
 
   &:not(.item-prod--gorizontal) .row {
     align-items: center;
+    padding-top: 15px;
     @include media-breakpoint-up(sm) {
+      margin-top: 10px;
+      padding-top: 20px;
 
-      margin-top: 30px;
     }
     margin-bottom: 5px;
   }
@@ -1032,6 +1059,18 @@
 
   &:hover &__btn-fast {
     opacity: 1;
+  }
+  &__present-wrapper{
+    position: relative;
+    padding-top: 10px;
+    padding-right: 20px;
+    @include media-breakpoint-down(md){
+      padding-right: 0;
+    }
+  }
+  &__present{
+    position: absolute;
+    top: 0;
   }
 }
 

@@ -313,9 +313,9 @@ body {
 	&.r {
 		right: 0;
 
-		svg {
-			@include transform(rotateY(180deg));
-		}
+		//svg {
+		//	@include transform(rotateY(180deg));
+		//}
 	}
 
 	svg {

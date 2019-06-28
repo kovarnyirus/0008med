@@ -424,7 +424,8 @@
   margin-top: 70px;
 
   & img {
-    max-width: 380px;
+    max-width: 100%;
+    height: auto;
   }
 
   & .tooltip-inner {
@@ -437,6 +438,14 @@
   @include media-breakpoint-down(md){
     display: none!important;
   }
+}
+
+.tooltip-img{
+  width: 380px;
+  height: 380px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .bs-tooltip-bottom .arrow::before, .bs-tooltip-auto[x-placement^="bottom"] .arrow::before {

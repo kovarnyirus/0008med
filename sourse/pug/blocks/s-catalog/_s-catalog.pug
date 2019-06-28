@@ -34,8 +34,8 @@ mixin prod-item-sls(x,t,p)
 								+in-ch("size-prod","Inf I")
 								+in-ch("size-prod","Inf II")
 								+in-ch("size-prod","Inf III")
-					.row
-						.col-12.d-none.d-sm-block
+					+e.present-wrapper.row
+						+e.present.col-12.d-none.d-sm-block
 							// добавил 24.02
 							.small.pb-1.text-primary  В наличии
 							.small.pb-1.text-danger  Под заказ

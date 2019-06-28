@@ -29,6 +29,9 @@
 			img{
 				max-width: 248px;
 				width: auto;
+                display: block;
+                margin-left:auto;
+                margin-right: auto;
 			}
 		}
 	}
@@ -41,7 +44,6 @@
 		font-weight: 900;
 		line-height: 1.16;
 		@include media-breakpoint-up(md) {
-
 			margin-bottom: em(28);
 		}
 	}
