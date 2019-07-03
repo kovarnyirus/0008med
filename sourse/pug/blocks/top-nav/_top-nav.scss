@@ -878,7 +878,9 @@ padding: 3px 10px;
 	&__small{
 		font-size: 11px;
 		margin-bottom: 5px;
-		max-width: 130px;
+        min-height: 50px;
+		//max-width: 230px;
+
 		  //@include ellips();
       &--description{
         max-height: 37px;

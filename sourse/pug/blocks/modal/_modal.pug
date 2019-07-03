@@ -204,7 +204,7 @@ mixin modal()
 		+input("text","ФИО")(required pattern=".{3,}")
 		//- +input("text","E-mail")(required pattern=".{3,}")
 		+input("text","Название компании")(required pattern=".{3,}")
-		+input("textarea","Ваши комментарии")(required pattern=".{3,}")
+		+ta("Ваши комментарии")(required pattern=".{3,}")
 		//- +input("email","Ваше email")(required)
 		//- +text( "Комментарий")
 		.form-group
@@ -216,6 +216,7 @@ mixin modal()
 						+e.dot
 						+e.dot
 					+e.INPUT.input.add-file-input(type = 'file')
+					.add-file__file-name
 
 		+e.BUTTON.btn.btn.btn-block.btn-primary.mb-4(type="submit" ) Отправить
 		.policy-block.mb-0

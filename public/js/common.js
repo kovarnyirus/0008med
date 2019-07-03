@@ -778,14 +778,25 @@ jQuery(document).ready(function ($) {
     //     template: '<div class="tooltip tooltip-table" role="tooltip"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div>'
     // });
 
-    $('[data-toggle="tooltip-configuration"]').tooltip({
+    $('[data-toggle="popover-aside"]').popover({
         html: true,
         placement: 'right',
-        template: '<div class="tooltip tooltip-configuration" role="tooltip"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div>'
+        // trigger: 'focus',
+
+        // template: '<div class="popover tooltip-configuration" role="tooltip"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div>'
+        template: '<div class="popover popover-configuration" role="tooltip"><div class="popover-body"></div></div>'
     });
+
+    // $(".aside-config__reinforce-item").click(function(e) {
+    //     e.preventDefault();
+    //     $(".aside-config__reinforce-item").removeClass('aside-config__reinforce-item--active');
+    //     $(this).addClass('aside-config__reinforce-item--active');
+    // });
 
 
     $(".aside-config__reinforce-item").click(function () {
+        $(".aside-config__reinforce-item").removeClass('aside-config__reinforce-item--active');
+        $(this).addClass('aside-config__reinforce-item--active');
         if(screen.width < 768){
             var elementClick = $(this).attr("scroll");
             $('html, body').animate({scrollTop: $('#'+ elementClick).offset().top - 55 }, 1100);

@@ -569,3 +569,7 @@ a{
     justify-content: flex-start;
   }
 }
+
+.popover{
+  pointer-events: none;
+}

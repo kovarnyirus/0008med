@@ -104,6 +104,13 @@
       justify-content: space-between;
     }
   }
+  &__list{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__item{
+    width: 50%!important;
+  }
 }
 
 @include media-breakpoint-down(sm) {

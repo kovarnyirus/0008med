@@ -23,6 +23,7 @@
     @extend .btn-block;
     margin-left: auto;
     max-width: 234px;
+    margin-bottom: 30px;
     @include media-breakpoint-up(xl) {
       margin-top: 50px;
     }
@@ -177,6 +178,8 @@
   }
 
   &__head-row {
+      //color: #35b7ad;
+      color: #858585;
     // margin-top: 10px	;
     // padding-bottom: 15px;
     a {
@@ -204,6 +207,9 @@
         display: block;
       }
     }
+    @include media-breakpoint-up(lg){
+      min-height: 130px;
+    }
   }
 
   &__artical {
@@ -212,7 +218,7 @@
 
   &__caption {
     @include media-breakpoint-up(lg) {
-
+      min-height: 72px;
       margin-bottom: em(60);
     }
     margin-bottom: em(30);

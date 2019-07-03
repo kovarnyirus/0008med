@@ -91,6 +91,7 @@
 				background: none;
 				cursor: pointer;
 				padding-left: 0;
+                color: #000000;
 				.icon{
 					font-size: 11px;
 					margin-right: 1em;
@@ -305,6 +306,9 @@
 		&--compare{
 			padding-right: 54px;
 			padding-left: 10px;
+          & .item-prod__img-wrap{
+            margin-bottom: 15px;
+          }
 		}
 	}
 	&__slider-wrap{
@@ -354,13 +358,16 @@
 				position: absolute;
 				@include media-breakpoint-up(lg){
 
-					left: 165px;
+					left: 103px;
 				}
 				right: 0;
 				top: 0;
 				.icon{
 					font-size: 11px;
 				}
+              & .icon-close{
+                fill: black;
+              }
 			}
 
 	&--compare {
@@ -401,6 +408,19 @@
 			}
 			// box-shadow: 0 20px     rgba(175, 179, 187, 1);
 		}
+      @include media-breakpoint-up(lg){
+        & .item-prod__title{
+          margin-bottom: 15px;
+        }
+      }
+      & .item-prod__title{
+        margin-bottom: 10px;
+        padding-right: 30px;
+      }
+      & .item-prod__btn-delete{
+        left: auto;
+        right: 42px;
+      }
 	}
 	&--head{
 		padding-bottom: 0;

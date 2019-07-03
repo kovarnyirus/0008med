@@ -160,7 +160,7 @@
 		// 	// }
 
 		// }
-			
+
 
 		// .row {
 		// 	// justify-content: space-between;
@@ -227,7 +227,7 @@
 
 		padding: rem(10) rem(5);
 		@media (min-width: 375px) {
-			
+
 			width: 142px;
 		}
 		width: 295px;
@@ -281,7 +281,7 @@
 			position: relative;
 		}
 
-		
+
 		right: 0;
 	}
 
@@ -337,8 +337,8 @@
 			// padding-right: 8px;
 
 			td {
-				padding-top: 10px;
-				padding-bottom: 10px;
+				//padding-top: 10px;
+				//padding-bottom: 10px;
 			}
 
 			td,
@@ -352,40 +352,63 @@
 				// width: 100%;
 				// width: auto;
 				width: 80px;
+                float: left;
+              padding-left: 0;
+              padding-right: 0;
+              & img{
+                width: 80px;
+                max-height: 80px;
+              }
+              & .s-basket__img-wrap{
+                height: auto;
+              }
 			}
 
 			td:nth-child(2) {
 
-				width: calc(100% - 80px);
+				//width: calc(100% - 80px);
+              padding-bottom: 0;
+              width: 100%;
 			}
 
-			// td:nth-child(3) {
-			// 	// order: 13;
-			// 	// width: 100%;
-			// }
+			 td:nth-child(3) {
+			 	// order: 13;
+			 	// width: 100%;
+               display: inline-block;
+               width: 40%;
+               & .h5{
+                 font-size: 13px;
+               }
+			 }
 
 			td:nth-child(4) {
 				text-align: right;
-				padding-top: 8px;
+				//padding-top: 8px;
+              display: inline-block;
+              float: right;
+              & .h5{
+                font-size: 13px;
+              }
 			}
 
 			tr {
-				display: -webkit-flex;
-				display: -ms-flex;
-				display: flex;
+              display: block;
+				//display: -webkit-flex;
+				//display: -ms-flex;
+				//display: flex;
 				@include roww(5);
-				flex-wrap: wrap;
-				padding-top: 10px;
-				padding-bottom: 10px;
+				//flex-wrap: wrap;
+				//padding-top: 10px;
+				padding-bottom: 8px;
 				// align-items: center;
-
+                margin-bottom: 15px;
 				// padding-right: 10px;
 			}
 		}
 
 		tr {
-			border-bottom: solid 1px #e5e5e5;
-			padding-bottom: 20px;
+			//border-bottom: solid 1px #e5e5e5;
+            background-color: #F5F5F5;
 		}
 
 
@@ -413,7 +436,7 @@
 
 			input {
 				border: none;
-				display: inline; 
+				display: inline;
 				width: 26px;
 				font-size: 14px;
 				text-align: center;
@@ -439,7 +462,9 @@
 			@include ellips();
 			display: block;
 			margin-right: 15px;
-			margin-bottom: 15px;
+			margin-bottom: 5px;
+            padding-left: .3125rem;
+            color: #1C9B91!important;
 		}
 	}
 

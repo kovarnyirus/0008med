@@ -8,11 +8,11 @@ mixin order-head()
 						+e.avatar
 							img(src="img/avatar.png", alt="")
 					.col
-						.small Вы авторизованы как  
-							.d-inline-block.strong.text-body Виктор Боргомодов.  
+						.small Вы авторизованы как
+							.d-inline-block.strong.text-body Виктор Боргомодов.
 							br
 							| Пожалуйста, подтвердите или обновите вашу контактную информацию.
-			.col 
+			.col
 				.small Если вы хотите оформить заказ от имени другого пользователя,
 					a(href="#") выйдите из личного кабинета
 					|    и перейдите к  оформлению заказа заново.
@@ -37,13 +37,13 @@ mixin order-basket()
 							.col
 								+e.small-row.row.align-items-center
 									.col-auto
-										//- +e.price.text-primary 15 000 Р 
+										//- +e.price.text-primary 15 000 Р
 										+e.label Inf II
 									.col-auto
 										+e.label Inf II
 									.col-auto.text-gray 2 шт
 							.col-auto
-								.text-primary 15 000 Р  
+								.text-primary 15 000 Р
 			+e.foot
 				+e.group
 					+e.toggle-link--js(href="#") Развернуть
@@ -51,23 +51,23 @@ mixin order-basket()
 					+e.small-row.row
 						.col.small.text-gray Общий вес:
 						.col-auto 25 кг
-					
+
 					+e.small-row.row
 						.col.small.text-gray Габариты ш * в * г, мм :
 						.col-auto 100 х 2500 х 360
-					
+
 				.text-right
 					.small.text-gay Итого за товар:
-					.h5.mb-0 12 000 000 Р 
+					.h5.mb-0 12 000 000 Р
 					div.mb-2
 						span.strike.text-gray 12 000 000 Р
-						| 
-						| 
+						|
+						|
 						span.smallest 253 000 Р скидка
 					.small.text-gay Доставка:
 
-					.h5 1 200 Р 
-					
+					.h5 1 200 Р
+
 					.small.text-gay Итого с учетом доставки:
 
 					.h5 12 001 200 Р
@@ -78,7 +78,7 @@ mixin foot()
 			+b.form-wrap__btn--prev(href="#") Назад
 		.col-auto
 			+b.form-wrap__btn--next.disabled(href="#" disabled) Далее
-		
+
 	// /добавил
 mixin foot-fin()
 	// добавил
@@ -87,7 +87,7 @@ mixin foot-fin()
 			+b.form-wrap__btn--prev(href="#") Назад
 		.col-auto
 			+b.form-wrap__btn--finish.disabled(href="#" disabled) Перейти к оплате
-		
+
 	// /добавил
 
 mixin foot1()
@@ -95,62 +95,62 @@ mixin foot1()
 	.row.align-items-center.justify-content-between
 		.col-xl-4.col-auto
 			+b.form-wrap__btn--prev(href="#") Назад
-		
+
 		.col-md.order-md-0.order-last
 			+b.policy-block
 				+check("inner")(checked class="mb-0 pb-0")
-					+e.SPAN.text.small Отправляя форму, я даю 
+					+e.SPAN.text.small Отправляя форму, я даю
 						|
 						a(href="#") согласие на обработку персональных данных
 		.col-auto
 			+b.form-wrap__btn--next.disabled(href="#"  disabled) Далее
-		
+
 	// /добавил
 
 mixin s-order()
 	// start s-order
 	+b.s-order.section.pt-2
 		.container
-			+order-head() 
+			+order-head()
 			.row
 				.col-lg-9
 					+b.s-order-nav
 						+e.A.link.active(href="#"): span 1. Контактная информация
 						+e.A.link(href="#"): span 2. Доставка
-						+e.A.link(href="#"): span 3. Оплата 
+						+e.A.link(href="#"): span 3. Оплата
 					+b.form-wrap
 						.border.border-light
 							.row.no-gutters
 								+e.col-white.col-md-6: +e.block
-									+input("text","Фамилия")(required pattern=".{3,}") 
-									+input("text","Имя")(required pattern=".{3,}") 
-									+input("email","E-mail")(required pattern=".{3,}") 
-									+input("tel","Номер телефона")(required pattern=".{3,}") 
+									+input("text","Фамилия")(required pattern=".{3,}")
+									+input("text","Имя")(required pattern=".{3,}")
+									+input("email","E-mail")(required pattern=".{3,}")
+									+input("tel","Номер телефона")(required pattern=".{3,}")
 								.col: +e.block
 									.row.row--md
 										.col-6.my-2
 											+in-rad('face')
 												+e.SPAN.text Юридическое лицо
-										
+
 										.col-6.my-2
 											+in-rad('face')
-												+e.SPAN.text Физическое лицо 
-									+input("text","Название организации")(required pattern=".{3,}") 
+												+e.SPAN.text Физическое лицо
+									+input("text","Название организации")(required pattern=".{3,}")
 									.row.row--md
 										.col-6
-											+input("text","ИНН")(required pattern=".{3,}") 
-										
+											+input("text","ИНН")(required pattern=".{3,}")
+
 										.col-6
-											+input("text","КПП")(required pattern=".{3,}") 
-									+input("text","Юридический адрес компании")(required pattern=".{3,}") 
+											+input("text","КПП")(required pattern=".{3,}")
+									+input("text","Юридический адрес компании")(required pattern=".{3,}")
 									.mb-3  Адрес для доставки
-									+input("text","Улица и номер дома")(required pattern=".{3,}") 
-									+input("text","Город")(required pattern=".{3,}") 
-									+input("text","Индекс")(required pattern=".{3,}") 
-								
+									+input("text","Улица и номер дома")(required pattern=".{3,}")
+									+input("text","Город")(required pattern=".{3,}")
+									+input("text","Индекс")(required pattern=".{3,}")
+
 				+order-basket()
 			+foot1()
-					
+
 
 	// end s-order
 
@@ -164,7 +164,7 @@ mixin s-order-2()
 					+b.s-order-nav
 						+e.A.link(href="#"): span 1. Контактная информация
 						+e.A.link.active(href="#"): span 2. Доставка
-						+e.A.link(href="#"): span 3. Оплата  
+						+e.A.link(href="#"): span 3. Оплата
 					+b.form-wrap.bg-secondary
 						.border.border-light
 							+e.block
@@ -181,7 +181,7 @@ mixin s-order-2()
 												span.d-block 124460, Москва, Зеленоград, проезд 4922, дом 4, стр. 2,  ООО "Медицинские компьютерные системы"
 											span.col-xl-3.col-md-4.text-md-right
 												.h5.text-primary Бесплатно
-												.small.text-gray Режим работы: 
+												.small.text-gray Режим работы:
 												.small с 9 до 18.00, с пн-пт
 
 									+in-rad('addr')
@@ -208,7 +208,7 @@ mixin s-order-2()
 												span.text-gray.d-block.mb-1 Расчет стоимости отправки посылки Почтой России на основе данных сервиса Postcalc.ru Стоимость доставки автоматически будет добавлена в Ваш счет. После передачи товара в службу доставки, ответственность за груз мы не несем, сохранность и срок доставки не гарантируем.
 											span.col-xl-3.col-md-4.text-md-right
 												.small.text-danger Отсутствует или неверно указан индекс (населенный пункт) получателя. Стоимость доставки рассчитать невозможно
- 
+
 				+order-basket()
 			+foot()
 
@@ -218,37 +218,37 @@ mixin s-order-3()
 	+b.s-order.section.pt-2
 		.container
 			+order-head()
-			.row 
+			.row
 				.col-lg-9
 					+b.s-order-nav
 						+e.A.link(href="#"): span 1. Контактная информация
 						+e.A.link(href="#"): span 2. Доставка
-						+e.A.link.active(href="#"): span 3. Оплата 
+						+e.A.link.active(href="#"): span 3. Оплата
 					+b.form-wrap.bg-secondary
 						.border.border-light
 							+e.block
-								 
-								+in-rad('pay-math')
-									span.row.mb-2.justify-content-between
-										span.col-md-11
-											+e.SPAN.text--title.h6.strong
-												// add span
-												span Оплата по счету
+								.row.no-gutters
+									+in-rad('pay-math')
+										span.row.mb-2.justify-content-between
+											span.col-md-11
+												+e.SPAN.text--title.h6.strong
+													// add span
+													span Оплата по счету
 
-												img(src="img/pay-1.svg", alt="")
-											span.text-gray.d-block.mb-1 
-												strong Продажа осуществляется через ООО "Биомедицинские приборы", официальное торговое представительство ООО "МКС"
+													img(src="img/pay-1.svg", alt="")
+												span.text-gray.d-block.mb-1
+													strong Продажа осуществляется через ООО "Биомедицинские приборы", официальное торговое представительство ООО "МКС"
 
-												| Оплата производится безналичным расчетом для юридических и физических лиц (РФ).  Если Вы оплачиваете как юридическое лицо, то заполните поля ниже и нажмите кнопку "Далее".
-								+in-rad('pay-math')
-									span.row.mb-2.justify-content-between
-										span.col-md-11
-											+e.SPAN.text--title.h6.strong
-												// add span
-												span Оплата банковской картой
+													| Оплата производится безналичным расчетом для юридических и физических лиц (РФ).  Если Вы оплачиваете как юридическое лицо, то заполните поля ниже и нажмите кнопку "Далее".
+									+in-rad('pay-math')
+										span.row.mb-2.justify-content-between
+											span.col-md-11
+												+e.SPAN.text--title.h6.strong
+													// add span
+													span Оплата банковской картой
 
-												img(src="img/pay-2.png", alt="")
-											span.text-gray.d-block.mb-1 Прием платежей через ПАО Сбербанк 
+													img(src="img/pay-2.png", alt="")
+												span.text-gray.d-block.mb-1 Прием платежей через ПАО Сбербанк
 				+order-basket()
 			+foot-fin()
 	// end s-order
@@ -265,68 +265,68 @@ mixin s-order-4()
 								+e.avatar
 									img(src="img/avatar.png", alt="")
 							.col
-								.small Вы авторизованы как  
-									.d-inline-block.strong.text-body Виктор Боргомодов.  
+								.small Вы авторизованы как
+									.d-inline-block.strong.text-body Виктор Боргомодов.
 									| Пожалуйста, подтвердите или обновите вашу контактную информацию. Изменения будут автоматически сохранены в вашем профиле
-								.small Если вы хотите оформить заказ от имени другого пользователя, 
-									a(href="#") выйдите    из сеанса 
+								.small Если вы хотите оформить заказ от имени другого пользователя,
+									a(href="#") выйдите    из сеанса
 									|  и перейдите к оформлению заказа заново.
 				.col-lg-9
 					+b.s-order-nav
 						+e.A.link(href="#"): span 1. Контактная информация
 						+e.A.link(href="#"): span 2. Доставка
-						+e.A.link(href="#"): span 3. Оплата 
+						+e.A.link(href="#"): span 3. Оплата
 						+e.A.link.active(href="#"): span 4. Подтверждение
 					+b.form-wrap
 						.border.border-light
 							+e.block
 								.h6.strong Получатель:
 								div Виктор Боргомодов
-								.text-gray 124460, Москва, Зеленоград, проезд 4922, дом 4, стр. 2, 
-								
+								.text-gray 124460, Москва, Зеленоград, проезд 4922, дом 4, стр. 2,
+
 								table.table
 									tr.head
-										td: .small.text-gray 
+										td: .small.text-gray
 										td.text-right: .small.text-gray Цена
 										td.text-right: .small.text-gray Количество
 										td.text-right: .small.text-gray Итого
-									
+
 									tr
-										td MCScap 10-20 c кольцами (XL/L)	
+										td MCScap 10-20 c кольцами (XL/L)
 										td.text-right.adaptive-td 15 000
 										td.text-right.adaptive-td 2
 										td.text-right.adaptive-td 30 000
 									tr
-										td CLINIC (XL/L)	
+										td CLINIC (XL/L)
 										td.text-right.adaptive-td 100 000
 										td.text-right.adaptive-td 1
 										td.text-right.adaptive-td 100 000
 									tr
-										
+
 										td.text-right(colspan="3") Скидка 10%
 										td.text-right - 13 000
 									tr
-										
+
 										td.text-right(colspan="3") Доставка - самовывоз от производителя
 										td.text-right 0
 									tr
-										
+
 										td.text-right(colspan="3"): .small.text-gray Итого:
 										td.text-right: .h5 117 000 руб.
 								+ta('Комментарий к заказу')(required pattern=".{3,}")
 						+e.A.btn--order(href="#") Оформить заказ
-									
+
 
 	// end s-order
 
 mixin s-order-5()
 	// start s-order
 	+b.s-order-thank.section.pt-2.text-center
-		.container 
+		.container
 			+e.block.border.border-light
 				+e.img-wrap
-					img.res-i(src="img/thank.svg", alt="") 
-				+e.title.h2.text-gray.fw-900.ttu СПАСИБО! 
+					img.res-i(src="img/thank.svg", alt="")
+				+e.title.h2.text-gray.fw-900.ttu СПАСИБО!
 				.text-gray Продажа осуществляется через ООО "Биомедицинские приборы", официальное торговое представительство ООО "МКС"
 
 
@@ -336,51 +336,51 @@ mixin s-order-5()
 				.strong Номер вашего заказа #100553
 				div
 					+e.A.btn(href="#") Оплатить на сайте Сбербанка
-				div: +e.A.link(href="#") 
-					+icon("arrow-l") 
+				div: +e.A.link(href="#")
+					+icon("arrow-l")
 					| Вернуться в магазин
 
 	// end s-order
 mixin s-order-5-2()
 	// start s-order
 	+b.s-order-thank.section.pt-2.text-center
-		.container 
+		.container
 			+e.block.border.border-light
 				+e.img-wrap
-					img.res-i(src="img/thank.svg", alt="") 
-				+e.title.h2.text-gray.fw-900.ttu СПАСИБО! 
+					img.res-i(src="img/thank.svg", alt="")
+				+e.title.h2.text-gray.fw-900.ttu СПАСИБО!
 				.text-gray Продажа осуществляется через ООО "Биомедицинские приборы", официальное торговое представительство ООО "МКС"
 
 
 
 				div Ваш заказ успешно оформлен. На почту отправлен счет на оплату. Мы свяжемся с Вами в ближайшее время.
-				.strong Номер вашего заказа #100553 
-				div: +e.A.link(href="#") 
-					+icon("download") 
+				.strong Номер вашего заказа #100553
+				div: +e.A.link(href="#")
+					+icon("download")
 					| Скачать счет на оплату
-				
-				div: +e.A.link(href="#") 
-					+icon("arrow-l") 
+
+				div: +e.A.link(href="#")
+					+icon("arrow-l")
 					| Вернуться в магазин
 
 	// end s-order
 mixin s-order-5-3()
 	// start s-order
 	+b.s-order-thank.section.pt-2.text-center
-		.container 
+		.container
 			+e.block.border.border-light
 				+e.img-wrap
-					img.res-i(src="img/thank.svg", alt="") 
-				+e.title.h2.text-gray.fw-900.ttu СПАСИБО! 
+					img.res-i(src="img/thank.svg", alt="")
+				+e.title.h2.text-gray.fw-900.ttu СПАСИБО!
 				.text-gray Продажа осуществляется через ООО "Биомедицинские приборы", официальное торговое представительство ООО "МКС"
 
 
 
-				div Ваш заказ успешно оплачен. На почту будет отправлен чек. Мы свяжемся с Вами в ближайшее время. 
-				.strong Номер вашего заказа #100553 
-			 
-				div: +e.A.link(href="#") 
-					+icon("arrow-l") 
+				div Ваш заказ успешно оплачен. На почту будет отправлен чек. Мы свяжемся с Вами в ближайшее время.
+				.strong Номер вашего заказа #100553
+
+				div: +e.A.link(href="#")
+					+icon("arrow-l")
 					| Вернуться в магазин
 
 	// end s-order
@@ -388,14 +388,14 @@ mixin s-order-5-3()
 mixin s-order-6()
 	// start s-order
 	+b.s-order-thank--404.section.pt-2.text-center
-		.container 
-			.border-light 
-				img.res-i(src="img/404.jpg", alt="")  
+		.container
+			.border-light
+				img.res-i(src="img/404.jpg", alt="")
 				.strong К сожалению такой страницы не существует
 				div
-					+e.A.btn(href="#") Вернуться на главную 
-				div: +e.A.link(href="#") 
-					+icon("arrow-l") 
+					+e.A.btn(href="#") Вернуться на главную
+				div: +e.A.link(href="#")
+					+icon("arrow-l")
 					| Назад
 
 

@@ -189,7 +189,7 @@
 			border-color: $primary-l;
 		}
 
-		// @include 
+		// @include
 	}
 }
 
@@ -217,37 +217,37 @@
 		@extend .btn-primary;
 		&--finish{
 			@include media-breakpoint-up(sm) {
-				
+
 				width: 170px;
 			}
 		}
 		&--prev,
 		&--next {
 			&::after {
-				content: url(../img/arrow.svg); 
+				content: url(../img/arrow.svg);
 			}
 			@include media-breakpoint-up(sm) {
-				
+
 				width: 170px;
 			}
 		}
-		
+
 		&--next {
 			&::after {
-				
+
 				margin-left: 10px;
 			}
-			
+
 		}
-		&--prev{ 
+		&--prev{
 			margin-left: 0 !important;
 			position: relative;
 			padding-left: calc(.75rem  + 30px );
 			&::after{
 				display: none;
 			}
-			&::before{  
-				content: url(../img/arrow.svg); 
+			&::before{
+				content: url(../img/arrow.svg);
 				position: absolute;
 				@include transform(  rotateY(180deg));
 				@include media-breakpoint-up(sm){
@@ -383,11 +383,11 @@
 
 
 .s-basket-order {
-	border-top: 1px solid #C4C4C4; 
-	font-size: 14px; 
+	border-top: 1px solid #C4C4C4;
+	font-size: 14px;
 	padding-bottom: 0;
 	padding-top: 0;
-	right: 0; 
+	right: 0;
 	@include media-breakpoint-up(lg) {
 		margin-top: 0;
 	}
@@ -426,7 +426,7 @@
 		// @include ellips();
 	}
 
-      
+
 
 	&__btn {
 		@extend .btn-primary-l;
@@ -435,12 +435,12 @@
 		// max-width: 142px;
 	}
 
- 
+
 	&__items {
 		position: relative;
 		overflow-x: hidden;
 		overflow-y: auto;
-		// max-height: 250px;  
+		// max-height: 250px;
 	}
 
 	&__item {
@@ -451,7 +451,7 @@
 	}
 
 	&__delete {
-	 
+
 		padding: 0;
 		// line-height: 20px;
 		color: #858585;
@@ -469,7 +469,7 @@
 	// 	position: relative;
 	// 	overflow: hidden;
 	// 	max-height: 310px;
-	// } 
+	// }
 &__toggle-link{
 	display: inline-block;
 	margin-bottom: 10px;
@@ -486,7 +486,7 @@
 		padding-top: 20px;
 	}
 	&__group{
-		border-bottom: 1px solid #F1F1F1;	
+		border-bottom: 1px solid #F1F1F1;
 		padding-bottom: 10px;
 		margin-bottom: 10px;
 	}
@@ -543,6 +543,22 @@
 				}
 			}
 	}
+}
+.form-wrap{
+  .custom-input{
+    input:checked ~ .row{
+      background-color: #ffffff;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.16);
+    }
+    input:checked ~ .row  .custom-input__text--title{
+      span{
+        &::before{
+
+          width: 100%;
+        }
+      }
+    }
+  }
 }
 
 .s-basket-order-title{

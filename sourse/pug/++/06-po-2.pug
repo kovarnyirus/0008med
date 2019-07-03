@@ -24,12 +24,12 @@ block pagecontent
 	+header()
 		//- +top-line()
 		+top-nav()
-		
+
 	.page-border-top
 	.container
 		+breadcrumb("Личный кабинет", "Главная" )
 		.page-title
-			.h2.text-gray.fw-900.ttu Личный кабинет 
+			.h2.text-gray.fw-900.ttu Личный кабинет
 	//- +prod-head()
 	//- +kart-body()
 
@@ -42,9 +42,9 @@ block pagecontent
 					+e.TABLE.table-history
 						mixin tr-block()
 							tr.tr-history
-								td №659963 
+								td №659963
 								td 19 ноября 2019г.   17:80
-								td 
+								td
 									// убрал span  с  классами
 									|  12 000 466    руб.
 								td.text-lg-right
@@ -56,7 +56,7 @@ block pagecontent
 									.inner-block
 										+e.head
 											.row
-											 
+
 												.col-auto.d-none.d-lg-block
 													.small.text-gray Досставка:
 												.col
@@ -66,11 +66,11 @@ block pagecontent
 													.text-md-right
 														div Оплата по счету
 														// изменил классы
-														+e.link-print.text-gray.tdu(href="#") 
-															+icon("print") 
+														+e.link-print.text-gray.tdu(href="#")
+															+icon("print")
 															| Распечатать счет на оплату
 										// start s-basket
-										+b.s-basket  
+										+b.s-basket
 											table.w-100
 												mixin tr(i)
 													tr
@@ -79,28 +79,27 @@ block pagecontent
 																img.res-i(src=`img/prod-${i}.png`, alt="")
 														td
 															+e.A.title.text-body(href="#") MCScap 10-20 c кольцами XL/L
-															.small.d-md-none Текстильный шлем с предустановленными Ag/AgCl ...
 														td
 															.w-100.text-gray.small.mb-2 Цена:
 															.h5.mb-0 25 х 15 000 Р
-												
+
 														td
 															.w-100.text-gray.small.mb-2 Cумма:
-															.h5.mb-0 1 253 000 Р 
+															.h5.mb-0 1 253 000 Р
 												+tr("1")
-												+tr("2") 
+												+tr("2")
 											.text-right
 												.small.text-gay Итого за товар:
-												.h5 12 000 000 Р 
+												.h5 12 000 000 Р
 												div
 													strike 12 000 000 Р
-													| 
-													| 
+													|
+													|
 													span.smallest 253 000 Р скидка
 												.small.text-gay Доставка:
 
-												.h5 1 200 Р 
-												
+												.h5 1 200 Р
+
 												.small.text-gay Итого с учетом доставки:
 
 												.h5 12 001 200 Р
@@ -108,27 +107,26 @@ block pagecontent
 											+e.A.btn(href="#") Повторить заказ
 										// end s-basket
 						+tr-block()
-							+e.label-status--shipped.--js(data-toggle="popover" data-trigger="hover" data-content='Отправлен')  
-								+icon('shipped') 
-						
-						+tr-block()
-							+e.label-status--pay.--js(data-toggle="popover" data-trigger="hover" data-content='Оплачен')  
-								+icon('pay') 
-						
-						+tr-block()
-							+e.label-status--check.--js(data-toggle="popover" data-trigger="hover" data-content='Завершен')  
-								+icon('check') 
-						
-						+tr-block()
-							+e.label-status--wallet.--js(data-toggle="popover" data-trigger="hover" data-content='Подтвержден, ожидает оплаты')  
-								+icon('wallet') 
-						
-						+tr-block()
-							+e.label-status--close.--js(data-toggle="popover" data-trigger="hover" data-content='Отменен')  
-								+icon('close') 
+							+e.label-status--shipped.--js(data-toggle="popover" data-trigger="hover" data-content='Отправлен')
+								+icon('shipped')
 
-						
-						
+						+tr-block()
+							+e.label-status--pay.--js(data-toggle="popover" data-trigger="hover" data-content='Оплачен')
+								+icon('pay')
+
+						+tr-block()
+							+e.label-status--check.--js(data-toggle="popover" data-trigger="hover" data-content='Завершен')
+								+icon('check')
+
+						+tr-block()
+							+e.label-status--wallet.--js(data-toggle="popover" data-trigger="hover" data-content='Подтвержден, ожидает оплаты')
+								+icon('wallet')
+
+						+tr-block()
+							+e.label-status--close.--js(data-toggle="popover" data-trigger="hover" data-content='Отменен')
+								+icon('close')
+
+
+
 	+footer()
-	
-	
+
