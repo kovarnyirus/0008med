@@ -75,20 +75,10 @@ mixin kart-body()
 											span.title Модель ЭЭГ усилителя
 											span.d-flex
 												+icon('search')
-												textarea(placeholder= 'Введите название производителя или усилителя')
+												textarea(placeholder= 'Поиск')
 										th
-											span.title Стандартное исполнение электродного шлема
-											| разъем D-sub DB25 Male
-										th
-											span.title Стандартное исполнение ELECTRODE SET
-											|	разъем TouchProof
-										th
-											span.title Заказное исполнение электродного шлема
-											|	полная схема для данного усилителя
-										th
-											span.title Комбинированное исполнение электродного шлема
-											|	разъем D-SUB DB25 Male
-								tbody
+											span.title Совместимость с электродным шлемом
+								tbody.table-custom-scroll
 									tr
 										td.tooltip-wrapper(data-toggle="tooltip-table" data-placement="bottom" title="<img src='img/type-prod.png'/>" )
 											span.name NVX24
@@ -96,16 +86,7 @@ mixin kart-body()
 											span.tooltip-table
 												img.tooltip-table-img(src='img/type-prod.png')
 										td
-											span.compatible
-												+icon('check')
-										td
-											span.not-compatible
-										td
-											span.compatible
-												+icon('check')
-										td
-											span.compatible
-												+icon('check')
+											span.text Да, необходим адаптер
 									tr
 										td.tooltip-wrapper(data-toggle="tooltip-table" data-placement="bottom" title="<img src='img/type-prod.png'/>" )
 											span.name Мицар-ЭЭГ-03/35-201
@@ -113,14 +94,8 @@ mixin kart-body()
 											.tooltip-table
 												img.tooltip-table-img(src='img/type-prod.png')
 										td
-											span.compatible
-												+icon('check')
-										td
-											span.not-compatible
-										td
-											span.text Под заказ
-										td
-											span.text Необходим адаптер TP2DB25F
+											span.text Да
+
 									tr
 										td.tooltip-wrapper(data-toggle="tooltip-table" data-placement="bottom" title="<img src='img/type-prod.png'/>" )
 											span.name Мицар-ЭЭГ-03/35-201
@@ -128,14 +103,7 @@ mixin kart-body()
 											.tooltip-table
 												img.tooltip-table-img(src='img/type-prod.png')
 										td
-											span.compatible
-												+icon('check')
-										td
-											span.not-compatible
-										td
-											span.text Необходим адаптер TP2DB25F
-										td
-											span.text Необходимы ушные электроды
+											span.text Да
 									tr
 										td.tooltip-wrapper(data-toggle="tooltip-table" data-placement="bottom" title="<img src='img/type-prod.png'/>" )
 											span.name Мицар-ЭЭГ-03/35-201
@@ -143,14 +111,40 @@ mixin kart-body()
 											.tooltip-table
 												img.tooltip-table-img(src='img/type-prod.png')
 										td
-											span.compatible
-												+icon('check')
+											span.text Да
+									tr
+										td.tooltip-wrapper(data-toggle="tooltip-table" data-placement="bottom" title="<img src='img/type-prod.png'/>" )
+											span.name Мицар-ЭЭГ-03/35-201
+											| ООО "МКС"
+											.tooltip-table
+												img.tooltip-table-img(src='img/type-prod.png')
 										td
-											span.not-compatible
+											span.text Да
+									tr
+										td.tooltip-wrapper(data-toggle="tooltip-table" data-placement="bottom" title="<img src='img/type-prod.png'/>" )
+											span.name Мицар-ЭЭГ-03/35-201
+											| ООО "МКС"
+											.tooltip-table
+												img.tooltip-table-img(src='img/type-prod.png')
 										td
-											span.text Необходим адаптер TP2DB25F
+											span.text Да
+									tr
+										td.tooltip-wrapper(data-toggle="tooltip-table" data-placement="bottom" title="<img src='img/type-prod.png'/>" )
+											span.name Мицар-ЭЭГ-03/35-201
+											| ООО "МКС"
+											.tooltip-table
+												img.tooltip-table-img(src='img/type-prod.png')
 										td
-											span.text Необходимы ушные электроды
+											span.text Да
+									tr
+										td.tooltip-wrapper(data-toggle="tooltip-table" data-placement="bottom" title="<img src='img/type-prod.png'/>" )
+											span.name Мицар-ЭЭГ-03/35-201
+											| ООО "МКС"
+											.tooltip-table
+												img.tooltip-table-img(src='img/type-prod.png')
+										td
+											span.text Да
+
 
 						p.text-gay Не нашли свой усилитель?  Свяжитесь, пожалуйста, с нами: +7 499 404-31-41,
 							a.text-primary(href='mailto:shop@mcscap.ru') shop@mcscap.ru
