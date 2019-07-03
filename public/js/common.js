@@ -823,14 +823,14 @@ jQuery(document).ready(function ($) {
             autoHideScrollbar: true,
         });
     });
-    // $(window).on("load", function () {
-    //     $(".tabs__table--compatibility").mCustomScrollbar({
-    //         autoHideScrollbar: true,
-    //     });
-    // });
+    
     // $(".tabs__table-wrap--compatibility").mCustomScrollbar({
     //     axis:"x" // horizontal scrollbar
     // });
+
+    $(".table-compatibility-body").mCustomScrollbar({
+        autoHideScrollbar: true,
+    });
 
     $(".search-block__btn--close").click(function () {
         $(".search-block__input").blur();

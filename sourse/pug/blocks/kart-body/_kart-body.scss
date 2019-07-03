@@ -14,7 +14,7 @@
     @include media-breakpoint-up(md) {
       position: relative;
       //border-bottom: 1px solid $gray;
-      &:before{
+      &:before {
         position: absolute;
         content: '';
         display: block;
@@ -53,7 +53,7 @@
     display: flex;
     height: 70px;
     line-height: 70px;
-    @include media-breakpoint-up(md){
+    @include media-breakpoint-up(md) {
       padding-bottom: 5px;
     }
 
@@ -277,7 +277,8 @@
           height: 1px;
           background-color: black;
         }
-        & td{
+
+        & td {
           background: #F1F1F1;
         }
       }
@@ -361,6 +362,7 @@
 
 .tooltip-wrapper {
   position: relative;
+
   &:hover {
     & .tooltip-table {
       display: block;
@@ -390,3 +392,82 @@
 //.tabs__table-wrap--compatibility{
 //  overflow-x: scroll;
 //}
+
+.table-compatibility {
+  margin-bottom: 40px;
+}
+
+.table-compatibility-head {
+  font-size: 15px;
+  color: #000;
+  font-weight: 700;
+  margin-bottom: 5px;
+
+  & textarea {
+    resize: none;
+    border: none;
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    padding-right: 40px;
+    color: #858585;
+    outline: 0;
+    height: 37px;
+    overflow-y: hidden;
+  }
+
+  & .icon {
+    font-size: 20px;
+    color: #000;
+    margin-right: 10px;
+  }
+
+  & .title {
+    margin-bottom: 5px;
+  }
+}
+.table-compatibility-body{
+  height: 300px;
+}
+
+.table-compatibility-item {
+  width: 50%;
+  background-color: #F1F1F1;
+  margin-bottom: 3px;
+  margin-right: 3px;
+  padding-left: 10px;
+  padding-bottom: 6px;
+  padding-top: 7px;
+  padding-right: 10px;
+  min-height: 47px;
+  color: #858585;
+  font-size: 12px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  & .name {
+    display: block;
+    color: #1C9B91;
+    font-size: 15px;
+  }
+
+  & .text {
+    color: #000000;
+    font-size: 13px;
+  }
+
+  &:nth-child(2) {
+    padding-left: 20px;
+    padding-top: 16px;
+    padding-bottom: 11px;
+    padding-right: 20px;
+  }
+}
+
+.table-compatibility-row {
+  display: flex;
+}
+
