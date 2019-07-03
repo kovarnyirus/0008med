@@ -823,7 +823,7 @@ jQuery(document).ready(function ($) {
             autoHideScrollbar: true,
         });
     });
-    
+
     // $(".tabs__table-wrap--compatibility").mCustomScrollbar({
     //     axis:"x" // horizontal scrollbar
     // });
