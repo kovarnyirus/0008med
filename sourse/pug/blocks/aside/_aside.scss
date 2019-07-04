@@ -301,6 +301,9 @@
 }
 
 .aside-config {
+  @include media-breakpoint-up(md){
+    height: 1470px;
+  }
   &__reinforce-item {
     position: relative;
     padding-top: 17px;
@@ -439,7 +442,7 @@
 
   &__reinforce-list {
     margin-bottom: 20px;
-    height: 1410px;
+    max-height: 1280px;
     @include media-breakpoint-down(md){
       height: 320px;
     }

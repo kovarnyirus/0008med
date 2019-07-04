@@ -918,6 +918,8 @@
     box-sizing: border-box;
     border-radius: 5px;
     padding: 3px 5px;
+    min-width: 30px;
+    text-align: center;
   }
 
   &__img-wrap {

@@ -124,6 +124,20 @@ jQuery(document).ready(function ($) {
 			'close'
 		]
 	});
+
+	// галерея asside
+
+	$('[data-fancybox-img]').fancybox({
+		// protect    : true,
+		toolbar: false,
+		smallBtn: true,
+		buttons: [
+			'zoom',
+			// 'thumbs',
+			'close'
+		]
+	});
+
 	// закрыть/открыть мобильное меню
 	var toggMnu = $(".toggle-mnu-1").click(function () {
 
@@ -778,21 +792,12 @@ jQuery(document).ready(function ($) {
     //     template: '<div class="tooltip tooltip-table" role="tooltip"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div>'
     // });
 
-    $('[data-toggle="popover-aside"]').popover({
-        html: true,
-        placement: 'right',
-        // trigger: 'focus',
-
-        // template: '<div class="popover tooltip-configuration" role="tooltip"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div>'
-        template: '<div class="popover popover-configuration" role="tooltip"><div class="popover-body"></div></div>'
-    });
-
-    // $(".aside-config__reinforce-item").click(function(e) {
-    //     e.preventDefault();
-    //     $(".aside-config__reinforce-item").removeClass('aside-config__reinforce-item--active');
-    //     $(this).addClass('aside-config__reinforce-item--active');
+    // $('[data-toggle="popover-aside"]').popover({
+    //     html: true,
+    //     placement: 'right',
+    //     template: '<div class="popover popover-configuration" role="tooltip"><div class="popover-body"></div></div>'
     // });
-
+    //
 
     $(".aside-config__reinforce-item").click(function () {
         $(".aside-config__reinforce-item").removeClass('aside-config__reinforce-item--active');
