@@ -194,6 +194,9 @@
 			white-space: nowrap;
 			text-overflow: ellipsis;
 		}
+      @include media-breakpoint-down(md){
+        min-height: 78px;
+      }
 	}
 	// &__slide:first-child &__group{
 	// 	&::before{

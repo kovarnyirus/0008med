@@ -51,6 +51,7 @@ mixin footer()
 						+e.item.mb-2:  .text-white
 							+icon("house")
 							| 124460, Москва, Зеленоград, проезд 4922, дом&nbsp;4, стр2
+					+e.version.text-gray.mt-3.d-none.d-md-block Версия сайта 1.0
 			+e.row.row.d-md-none
 				.col-auto
 					+e.A.logo(href="#")
@@ -62,6 +63,8 @@ mixin footer()
 				.col-auto
 					+e.A.youtube-link(href="#")
 						img(src="img/youtube.svg", alt="")
+				+e.version.col-12.text-center.text-gray.mt-4 Версия сайта 1.0
+
 		+e.A.btn.btn.btn-danger.popup-with-move-anim(href="#modal-reg") регистрация
 		//- +e.A.btn.btn.btn-danger.popup-with-move-anim(href="#modal-password-recovery") Забыли пароль?
 		//- +e.A.btn.btn.btn-danger.popup-with-move-anim(href="#modal-password-recovery-2") Забыли пароль?   2
