@@ -554,6 +554,23 @@
       position: relative;
       top: rem(-2);
     }
+    @include media-breakpoint-down(md){
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 3px;
+      padding-bottom: 2px;
+      padding-left: 7px;
+      padding-right: 7px;
+      & .icon{
+        font-size: 10px;
+        margin-bottom: 2px;
+      }
+
+      & span{
+        font-size: 13px;
+      }
+    }
   }
 
 
@@ -608,6 +625,9 @@
 
     & .section-title {
       padding-bottom: em(5);
+      @include media-breakpoint-down(md){
+        margin-top: 15px;
+      }
     }
 
     & .s-catalog__slide {
@@ -685,6 +705,7 @@
     background-color: #F9F9F9;
     @include media-breakpoint-down(md){
       padding-bottom: 20px;
+      margin-bottom: 0;
     }
   }
 
@@ -696,6 +717,9 @@
     }
     @include media-breakpoint-up(sm){
       overflow: hidden;
+    }
+    @include media-breakpoint-down(md){
+      margin-bottom: 0;
     }
 
     p {
