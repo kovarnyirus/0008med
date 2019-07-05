@@ -1,7 +1,7 @@
 mixin s-basket()
 	// start s-basket
 	+b.s-basket.px-0
-		.container 
+		.container
 			table.w-100
 				mixin tr(i)
 					tr
@@ -14,16 +14,16 @@ mixin s-basket()
 							+e.text.small.text-gray Цветной текстильный шлем с предустановленными Ag/AgCl электродами MCScap-C и общим разъемом DB25М
 							.row
 								.col-auto
-									span.text-gray Размер: 
-									| 
+									span.text-gray Размер:
+									|
 									strong  Inf I
-								
+
 								.col-auto
 									span.text-gray Артикул:
-									| 
+									|
 									strong  569665963
 							// / добавил
-								
+
 						td
 							.w-100.text-gray.small.mb-2.d-none.d-lg-block Цена:
 							.h5.text-primary.mb-0 15 000 Р
@@ -36,7 +36,7 @@ mixin s-basket()
 								input.form-control(type="text" value="25")
 								+e.btn--plus
 									span.d-lg-none +
-				 
+
 						td
 							.w-100.text-gray.small.mb-2.d-none.d-lg-block Cумма:
 							.h5.text-primary.mb-0 1 253 000 Р
@@ -62,27 +62,62 @@ mixin s-basket()
 								.row.no-gutters.align-items-center
 									.col-sm-12.col-auto.small.text-gray.mb-1.mr-2 Скидка:
 									.col-sm-12.col-auto.mb-1  153 000 Р
-							
+
 							.col-sm-auto
 								.row.no-gutters.align-items-center
 									.col-sm-12.col-auto.small.text-gray.mb-1.mr-2 Итого:
 									+e.resalt.text-primary.col-sm-12.col-auto.mb-1 153 000 Р
-					
+
 					.col-auto
 						+e.BUTTON.btn(type="button") Оформить заказ
 	// end s-basket
 
-mixin s-basket-not()
+
+mixin s-basket()
 	// start s-basket
-	+b.s-basket.px-0
-		.container 
-			.small.text-gray К сожалению, Ваша корзина пуста!
-				br
-				| Перейти к 
-				|
-				a(href="#") покупкам
-				|.
-			
+	+b.s-basket--div.px-0
+		.container
+			+e.item.row.mb-4
+				.col-3.col-md-2
+					+e.img-wrap.text-center(href="#")
+						img.res-i(src=`img/prod-1.png`, alt="")
+				+e.right-col.col-9.col-md-10
+					.row
+						+e.content-wrap.col-8.col-md-4
+							+e.A.title(href="#") MCScap 10-20 c кольцами XL/L
+							+e.text.small.text-gray Цветной текстильный шлем с предустановленными Ag/AgCl
+							.row
+								.col-12
+									span.text-gray.d-none.d-md-inline Размер:
+									|
+									strong.size  Inf I
+
+								.col-12.d-none.d-md-block
+									span.text-gray Артикул:
+									|
+									strong  569665963
+						+e.cost-wrap.col-8.col-md-auto
+							.w-100.text-gray.small.mb-2
+								span.d-none.d-md-inline Цена:
+								.h5.text-primary.mb-0 15 000 Р
+						+e.num-wrap.col-4.col-md-auto
+							.w-100.text-gray.small.mb-2
+								span.d-none.d-md-block Количество
+								+b.block-add
+									+e.btn--minus
+									input.form-control(type="text" value="25")
+									+e.btn--plus
+						+e.summ-wrap.col-auto.d-none.d-md-block
+							.w-100.text-gray.small.mb-2 Cумма:
+								.h5.text-primary.mb-0 1 253 000 Р
+						+e.btn-wrap
+							+e.delete.col-auto
+								span.d-none.d-md-inline-block
+									+icon("close")
+								span.d-md-none
+									+icon("delete-basket")
+								small.d-md-inline Удалить
+
 			+e.foot
 				.row.justify-content-between
 					.col-lg
@@ -92,6 +127,42 @@ mixin s-basket-not()
 									+input("text","Код купона")(required pattern=".{3,}" value="adsdja j;j")
 								.col-auto
 									+e.BUTTON.btn(type="button") Применить
-				 
+					.col-sm-auto.col
+						.row
+							+e.col.col-sm-auto
+								.row.no-gutters.align-items-center
+									.col-sm-12.col-auto.small.text-gray.mb-1.mr-2 Скидка:
+									.col-sm-12.col-auto.mb-1  153 000 Р
+
+							.col-sm-auto
+								.row.no-gutters.align-items-center
+									.col-sm-12.col-auto.small.text-gray.mb-1.mr-2 Итого:
+									+e.resalt.text-primary.col-sm-12.col-auto.mb-1 153 000 Р
+
+					.col-auto
+						+e.BUTTON.btn(type="button") Оформить заказ
+	// end s-basket
+
+mixin s-basket-not()
+	// start s-basket
+	+b.s-basket.px-0
+		.container
+			.small.text-gray К сожалению, Ваша корзина пуста!
+				br
+				| Перейти к
+				|
+				a(href="#") покупкам
+				|.
+
+			+e.foot
+				.row.justify-content-between
+					.col-lg
+						+b.form-wrap
+							.row
+								.col
+									+input("text","Код купона")(required pattern=".{3,}" value="adsdja j;j")
+								.col-auto
+									+e.BUTTON.btn(type="button") Применить
+
 	// end s-basket
 

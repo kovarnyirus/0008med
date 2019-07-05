@@ -1,17 +1,17 @@
 extends layout/main.pug
 
 
-include ../blocks/s-content/_s-content.pug
-include ../blocks/s-contact/_s-contact.pug
+include ../blocks/s-content/_s-content
+include ../blocks/s-contact/_s-contact
 
 //- include ../blocks/s-slider/_s-slider.pug
 //- include ../blocks/s-catalog/_s-catalog.pug
 //- include ../blocks/s-pick-up/_s-pick-up.pug
-include ../blocks/s-download/_s-download.pug
+include ../blocks/s-download/_s-download
 //- include ../blocks/s-about/_s-about.pug
 //- include ../blocks/prod-head/_prod-head.pug
 //- include ../blocks/kart-body/_kart-body.pug
-include ../blocks/s-basket/_s-basket.pug
+include ../blocks/s-basket/_s-basket
 
 block title
 	title КОРЗИНА
@@ -21,7 +21,7 @@ block pagecontent
 	+header()
 		//- +top-line()
 		+top-nav()
-		
+
 	.page-border-top
 	.container
 		+breadcrumb("Корзина", "Главная" )
@@ -38,5 +38,4 @@ block pagecontent
 	//- +s-form()
 	//- +s-contact()
 	+footer()
-	
-	
+
