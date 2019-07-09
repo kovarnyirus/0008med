@@ -840,4 +840,42 @@ jQuery(document).ready(function ($) {
     $(".search-block__btn--close").click(function () {
         $(".search-block__input").blur();
     });
+
+
+    function throttle(func, ms) {
+
+        var isThrottled = false,
+            savedArgs,
+            savedThis;
+
+        function wrapper() {
+
+            if (isThrottled) {
+                savedArgs = arguments;
+                savedThis = this;
+                return;
+            }
+
+            func.apply(this, arguments);
+
+            isThrottled = true;
+
+            setTimeout(function() {
+                isThrottled = false;
+                if (savedArgs) {
+                    wrapper.apply(savedThis, savedArgs);
+                    savedArgs = savedThis = null;
+                }
+            }, ms);
+        }
+
+        return wrapper;
+    }
+
+
+   var reintSlick = function(){
+        $('.s-catalog__slider').slick('unslick').slick('reinit');
+    };
+
+   $(window).resize(throttle(reintSlick, 500));
 });
