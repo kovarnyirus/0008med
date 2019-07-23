@@ -62,6 +62,22 @@ a {
 
 .modal-form {
 	position: relative;
+    &--logout{
+      & .btn-primary{
+        background-color: #35B7AD;
+        border-color: #35B7AD;
+        &:hover{
+          color: #fff;
+          background-color: #167b73;
+          border-color: #147069;
+        }
+      }
+      & .btn-outline{
+        background-color: white;
+        color: #1C9B91;
+        border-color: #35B7AD;
+      }
+    }
 }
 
 #foot-dialog {

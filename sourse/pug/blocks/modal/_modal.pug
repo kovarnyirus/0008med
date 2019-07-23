@@ -32,11 +32,11 @@ mixin modal()
 				a.popup-with-move-anim(href="#modal-reg")    Регистрация
 	// #modal-password-recovery
 
-	+form-wrap()(id="modal-logout" class="zoom-anim-dialog mfp-hide modal-win modal-form" )
+	+form-wrap()(id="modal-logout" class="zoom-anim-dialog mfp-hide modal-win modal-form modal-form--logout" )
 		+e.title.text-center Вы уверены что хотите выйти?
 		.row
 			.col-6
-				+e.BUTTON.btn.btn.btn-block.btn-primary Да
+				+e.BUTTON.btn.btn.btn-block.btn-primary.btn-outline Да
 			.col-6
 				+e.BUTTON.btn.btn.btn-block.btn-primary Нет
 
