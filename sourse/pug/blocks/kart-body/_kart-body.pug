@@ -67,13 +67,21 @@ mixin kart-body()
 					+tab()
 					+tab()
 					+e.content.active
+						.tabs__text.mb-5
+							.p
+								span.font-weight-bold Обратите внимание!
+								br/ Стандартное исполнение данного электродного шлема соответствует международной системе 10 — 20, 19 каналов (20 электродов).
+								br/ Ваш усилитель может быть совместим со стандартным исполнением электродного шлема, но иметь большее количество каналов.
+								br/ Если Вам необходима полная схема с максимальным количеством каналов, Вы можете заказать данный электродный шлем через электронную форму или связаться с нами
+								a(href='#')  +7 (499) 404-31-41,
+								a(href='mailto:shop@mcscap.ru')  shop@mcscap.ru
 						.table-compatibility
 							.row.table-compatibility-head
 								.col-6
 									span.title Модель ЭЭГ усилителя
-										span.d-flex
+										span.d-flex.mt-1
 											+icon('search')
-											textarea(placeholder= 'Поиск')
+											textarea(placeholder= 'Производитель или модель усилителя')
 								.col-6
 									span.title Совместимость с электродным шлемом
 							.table-compatibility-body
@@ -157,10 +165,14 @@ mixin kart-body()
 										span.text Да
 
 
-						p.text-gay Не нашли свой усилитель?  Свяжитесь, пожалуйста, с нами: +7 499 404-31-41,
-							a.text-primary(href='mailto:shop@mcscap.ru') shop@mcscap.ru
-							| или
-							a.text-primary.popup-with-move-anim(href='#modal-call-back') по форме обратной связи
+						.tabs__text.pb-4.mb-5
+							.p
+								span.font-weight-bold Обратите внимание!
+								br/ Не нашли свой усилитель? Свяжитесь, пожалуйста, с нами:
+								a.p(href='#')  +7 (499) 404-31-41,
+								a.text-primary(href='mailto:shop@mcscap.ru')  shop@mcscap.ru
+								|  или
+								a.text-primary.popup-with-move-anim(href='#modal-call-back')  по форме обратной связи
 
 
 
