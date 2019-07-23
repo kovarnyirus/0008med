@@ -150,7 +150,9 @@
 			align-items: center;
 			display: flex;
 		}
-		min-height: 58px;
+        font-size: 14px;
+		min-height: 120px;
+		//min-height: 58px;
 		&::before{
 			content: '';
 			position: absolute;
