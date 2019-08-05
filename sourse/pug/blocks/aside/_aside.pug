@@ -111,11 +111,6 @@ mixin aside-config()
 							+e.reinforce-title Мицар-ЭЭГ-03/35-201
 							+e.reinforce-description Если нужно, краткое описание для раскрытия информации
 					+e.reinforce-btn-del
-
-
-
-
-
 		+e.callback.text-gay Не нашли свой усилитель?  Свяжитесь, пожалуйста, с нами: +7 499 404-31-41,
 			a.text-primary(href='mailto:shop@mcscap.ru') shop@mcscap.ru
 			| или
@@ -123,3 +118,42 @@ mixin aside-config()
 
 
 
+
+mixin aside-config-prod()
+	+b.aside-config
+		+e.search-wrapper--select
+			+e.SELECT.select
+				option(selected).d-none Выберите усилитель
+				option() усилитель
+				option() усилитель
+				option() усилитель
+		+e.reinforce-list
+			+e.reinforce-item
+				.row
+					.col-4
+						a(href='img/reinforce-img.png' data-fancybox-img="images" tabindex="-1")
+							+e.reinforce-img(src='img/reinforce-img.png' width='112')
+					.col-8
+						+e.reinforce-title Мицар-ЭЭГ-03/35-201
+						+e.reinforce-description Если нужно, краткое описание для раскрытия информации
+				+e.reinforce-btn-del
+
+mixin aside-config-prod-2()
+	+b.aside-config
+		+e.search-wrapper--select
+			+e.SELECT.select
+				option(selected).d-none Выберите усилитель
+				option() усилитель
+				option() усилитель
+				option() усилитель
+		+e.no-result Не нашли свой усилитель?
+			+e.A.no-result-link(href='#') Добавить
+
+mixin aside-config-prod-3()
+	+b.aside-config
+		+e.search-wrapper--select
+			+e.SELECT.select
+				option(selected).d-none Выберите усилитель
+				option() усилитель
+				option() усилитель
+				option() усилитель

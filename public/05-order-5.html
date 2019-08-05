@@ -754,7 +754,7 @@
             <div class="footer__version col-12 text-center text-gray mt-4">Версия сайта 1.0
             </div>
           </div>
-        </div><a class="footer__btn btn btn-danger popup-with-move-anim" href="#modal-reg">регистрация</a><a class="footer__btn btn btn-danger popup-with-move-anim" href="#modal-logout">выйти</a><a class="footer__btn btn btn-danger popup-with-move-anim" href="#modal-hello">#modal-hello</a>
+        </div><a class="footer__btn btn btn-danger popup-with-move-anim" href="#modal-reg">регистрация</a><a class="footer__btn btn btn-danger popup-with-move-anim" href="#modal-logout">выйти</a><a class="footer__btn btn btn-danger popup-with-move-anim" href="#modal-hello">#modal-hello</a><a class="footer__btn btn btn-danger popup-with-move-anim" href="#modal-prod-no-result">Нет результата</a><a class="footer__btn btn btn-danger popup-with-move-anim" href="#modal-prod-order">Заказать</a>
       </footer>
     </div>
     <div class="form-wrap zoom-anim-dialog mfp-hide modal-win modal-form" id="modal-inner">
@@ -901,11 +901,107 @@
       </form>
     </div>
     <!-- #modal-thanks-->
+    <!---->
+    <!--div(id="modal-prod" class="zoom-anim-dialog mfp-hide modal-win modal-win--lg modal-form" )-->
+    <!--	// start prod-head-->
+    <!--	+b.prod-head.pt-0-->
+    <!--		// add .arrow-->
+    <!--		+e.arrow--prev(href="#")-->
+    <!--			<svg viewBox="0 0 49 95" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M48 0.5L1 47.5L48 94.5" stroke="black"></path> </svg>-->
+    <!--		+e.arrow--next(href="#")-->
+    <!--			<svg viewBox="0 0 49 95" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M48 0.5L1 47.5L48 94.5" stroke="black"></path> </svg>-->
+    <!--		// /add .arrow-->
+    <!--		.container-->
+    <!--			.d-lg-none-->
+    <!--				+e.head-row.row.align-items-center.text-gray-->
+    <!--					.col-->
+    <!--						.h2.fw-900.ttu SLEEP-->
+    <!--					.col-auto-->
+    <!--						+b.availability-->
+    <!--							+e.circle(style="background-color: #42d76b;")-->
+    <!--							| В наличии-->
+    <!--			.row-->
+    <!--				.col-lg-6-->
+    <!--					+e.sliders-->
+    <!--						mixin sliders(...items)-->
+    <!--							+e.slider-big-->
+    <!--								each item in items-->
+    <!--									+e.slide--big-->
+    <!--										+e.A.img-wrap(href=`img/${item}.png` data-fancybox="images" )-->
+    <!--											img.res-i(src="#" data-lazy=`img/${item}.png`, alt="")-->
+    <!--							+e.slider-small--modal-->
+    <!--								each item in items-->
+    <!--									+e.DIV.slide--small-->
+    <!--										+e.img-wrap--small( )-->
+    <!--											img.res-i(src="#" data-lazy=`img/${item}.png`, alt="")-->
+    <!--						+sliders("prod-1","prod-1","prod-1","prod-1","prod-1","prod-1","prod-1","prod-1","prod-1")-->
+    <!--				.col-->
+    <!--					.d-none.d-lg-block-->
+    <!--						+e.head-row.row.align-items-center.text-gray-->
+    <!--							.col-->
+    <!--								.h2.fw-900.ttu SLEEP-->
+    <!--					.row-->
+    <!--						.col-->
+    <!--							+e.artical-->
+    <!--								small.text-gray Артикул:-->
+    <!--								| m4568 988-65-->
+    <!--						.col-auto-->
+    <!--							+b.availability-->
+    <!--								+e.circle(style="background-color: #42d76b;")-->
+    <!--								| В наличии-->
+    <!--					+e.caption.text-gray Текстильный шлем с предустановленными Ag/AgCl sintered электродами MCScap-T и общим разъемом DB25М-->
+    <!--					+b.size-block-->
+    <!--						.small.text-gray Размер:-->
+    <!--						+e.btn-wrap-->
+    <!--							mixin in-ch( n, t)-->
+    <!--								+b.LABEL.btn-input-->
+    <!--									+e.INPUT.input(type="radio" name= n)-->
+    <!--									+e.SPAN.text= t-->
+    <!---->
+    <!---->
+    <!--									//- block-->
+    <!--							+in-ch("size-prod","XL")-->
+    <!--							+in-ch("size-prod","XL/L")-->
+    <!--							+in-ch("size-prod","L")-->
+    <!--							+in-ch("size-prod","L/M")-->
+    <!--							+in-ch("size-prod","M")-->
+    <!--							+in-ch("size-prod","M/S")-->
+    <!--							+in-ch("size-prod","S")-->
+    <!--							+in-ch("size-prod","S/XS")-->
+    <!--							+in-ch("size-prod","XS")-->
+    <!--							+in-ch("size-prod","Inf I")-->
+    <!--							+in-ch("size-prod","Inf II")-->
+    <!--							+in-ch("size-prod","Inf III")-->
+    <!--					+e.price-block-->
+    <!--						.small.text-gray Цена:-->
+    <!--						+e.price-->
+    <!--							span.h2.text-primary.fw-900 12 415-->
+    <!--							span.text-gray.ttu.small руб-->
+    <!--						.small.text-gray.mb-2 Количество-->
+    <!--						.row.row--small-->
+    <!--							.col-auto-->
+    <!--								+b.block-add-->
+    <!--									+e.btn--minus-->
+    <!--									input.form-control(type="text" value="25")-->
+    <!--									+e.btn--plus.btn-->
+    <!--							.col-->
+    <!--								+e.A.btn.btn.w-100(href="#")-->
+    <!--									+icon("basket")-->
+    <!--									| В корзину-->
+    <!--								// внизу вид кнопки при добавлении товара в корзину-->
+    <!---->
+    <!--								// +e.A.btn.btn.active.btn-primary(href="#")-->
+    <!--										+icon("basket")-->
+    <!--										| В корзине-->
+    <!---->
+    <!--					// +e.price-block-->
+    <!--					+e.foot.text-right-->
+    <!--						+e.A.btn-more.btn.btn-outline-primary-l(href="#") Подробнее о товаре// end prod-head
+    -->
+    <!-- #modal-prod-->
     <div class="zoom-anim-dialog mfp-hide modal-win modal-win--lg modal-form" id="modal-prod">
       <!-- start prod-head-->
-      <div class="prod-head pt-0">
-        <!-- add .arrow--><a class="prod-head__arrow prod-head__arrow--prev" href="#"><svg viewBox="0 0 49 95" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M48 0.5L1 47.5L48 94.5" stroke="black"></path> </svg></a><a class="prod-head__arrow prod-head__arrow--next" href="#"><svg viewBox="0 0 49 95" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M48 0.5L1 47.5L48 94.5" stroke="black"></path> </svg></a>
-        <!-- /add .arrow-->
+      <div class="prod-head prod-head--preview pt-0">
         <div class="container">
           <div class="d-lg-none">
             <div class="prod-head__head-row row align-items-center text-gray">
@@ -921,67 +1017,7 @@
             </div>
           </div>
           <div class="row">
-            <div class="col-lg-6">
-              <div class="prod-head__sliders">
-                <div class="prod-head__slider-big">
-                  <div class="prod-head__slide prod-head__slide--big"><a class="prod-head__img-wrap" href="img/prod-1.png" data-fancybox="images"><img class="res-i" src="#" data-lazy="img/prod-1.png" alt=""/></a>
-                  </div>
-                  <div class="prod-head__slide prod-head__slide--big"><a class="prod-head__img-wrap" href="img/prod-1.png" data-fancybox="images"><img class="res-i" src="#" data-lazy="img/prod-1.png" alt=""/></a>
-                  </div>
-                  <div class="prod-head__slide prod-head__slide--big"><a class="prod-head__img-wrap" href="img/prod-1.png" data-fancybox="images"><img class="res-i" src="#" data-lazy="img/prod-1.png" alt=""/></a>
-                  </div>
-                  <div class="prod-head__slide prod-head__slide--big"><a class="prod-head__img-wrap" href="img/prod-1.png" data-fancybox="images"><img class="res-i" src="#" data-lazy="img/prod-1.png" alt=""/></a>
-                  </div>
-                  <div class="prod-head__slide prod-head__slide--big"><a class="prod-head__img-wrap" href="img/prod-1.png" data-fancybox="images"><img class="res-i" src="#" data-lazy="img/prod-1.png" alt=""/></a>
-                  </div>
-                  <div class="prod-head__slide prod-head__slide--big"><a class="prod-head__img-wrap" href="img/prod-1.png" data-fancybox="images"><img class="res-i" src="#" data-lazy="img/prod-1.png" alt=""/></a>
-                  </div>
-                  <div class="prod-head__slide prod-head__slide--big"><a class="prod-head__img-wrap" href="img/prod-1.png" data-fancybox="images"><img class="res-i" src="#" data-lazy="img/prod-1.png" alt=""/></a>
-                  </div>
-                  <div class="prod-head__slide prod-head__slide--big"><a class="prod-head__img-wrap" href="img/prod-1.png" data-fancybox="images"><img class="res-i" src="#" data-lazy="img/prod-1.png" alt=""/></a>
-                  </div>
-                  <div class="prod-head__slide prod-head__slide--big"><a class="prod-head__img-wrap" href="img/prod-1.png" data-fancybox="images"><img class="res-i" src="#" data-lazy="img/prod-1.png" alt=""/></a>
-                  </div>
-                </div>
-                <div class="prod-head__slider-small prod-head__slider-small--modal">
-                  <div class="prod-head__slide prod-head__slide--small">
-                    <div class="prod-head__img-wrap prod-head__img-wrap--small"><img class="res-i" src="#" data-lazy="img/prod-1.png" alt=""/>
-                    </div>
-                  </div>
-                  <div class="prod-head__slide prod-head__slide--small">
-                    <div class="prod-head__img-wrap prod-head__img-wrap--small"><img class="res-i" src="#" data-lazy="img/prod-1.png" alt=""/>
-                    </div>
-                  </div>
-                  <div class="prod-head__slide prod-head__slide--small">
-                    <div class="prod-head__img-wrap prod-head__img-wrap--small"><img class="res-i" src="#" data-lazy="img/prod-1.png" alt=""/>
-                    </div>
-                  </div>
-                  <div class="prod-head__slide prod-head__slide--small">
-                    <div class="prod-head__img-wrap prod-head__img-wrap--small"><img class="res-i" src="#" data-lazy="img/prod-1.png" alt=""/>
-                    </div>
-                  </div>
-                  <div class="prod-head__slide prod-head__slide--small">
-                    <div class="prod-head__img-wrap prod-head__img-wrap--small"><img class="res-i" src="#" data-lazy="img/prod-1.png" alt=""/>
-                    </div>
-                  </div>
-                  <div class="prod-head__slide prod-head__slide--small">
-                    <div class="prod-head__img-wrap prod-head__img-wrap--small"><img class="res-i" src="#" data-lazy="img/prod-1.png" alt=""/>
-                    </div>
-                  </div>
-                  <div class="prod-head__slide prod-head__slide--small">
-                    <div class="prod-head__img-wrap prod-head__img-wrap--small"><img class="res-i" src="#" data-lazy="img/prod-1.png" alt=""/>
-                    </div>
-                  </div>
-                  <div class="prod-head__slide prod-head__slide--small">
-                    <div class="prod-head__img-wrap prod-head__img-wrap--small"><img class="res-i" src="#" data-lazy="img/prod-1.png" alt=""/>
-                    </div>
-                  </div>
-                  <div class="prod-head__slide prod-head__slide--small">
-                    <div class="prod-head__img-wrap prod-head__img-wrap--small"><img class="res-i" src="#" data-lazy="img/prod-1.png" alt=""/>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <div class="col-lg-2"><img class="prod-head__img" src="img/prod-1.png" alt="img" title=""/>
             </div>
             <div class="col">
               <div class="d-none d-lg-block">
@@ -992,19 +1028,46 @@
                 </div>
               </div>
               <div class="row">
+                <div class="col-12">
+                  <div class="prod-head__caption text-gray">Текстильный шлем с предустановленными Ag/AgCl sintered электродами MCScap-T и общим разъемом DB25М
+                  </div>
+                </div>
                 <div class="col">
                   <div class="prod-head__artical"><small class="text-gray">Артикул:</small>m4568 988-65
                   </div>
                 </div>
-                <div class="col-auto">
-                  <div class="availability">
-                    <div class="availability__circle" style="background-color: #42d76b;">
-                    </div>В наличии
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-5">
+              <div class="aside-config">
+                <div class="aside-config__search-wrapper aside-config__search-wrapper--select">
+                  <select class="aside-config__select">
+                    <option class="d-none" selected="selected">Выберите усилитель</option>
+                    <option>усилитель</option>
+                    <option>усилитель</option>
+                    <option>усилитель</option>
+                  </select>
+                </div>
+                <div class="aside-config__reinforce-list">
+                  <div class="aside-config__reinforce-item">
+                    <div class="row">
+                      <div class="col-4"><a href="img/reinforce-img.png" data-fancybox-img="images" tabindex="-1"><img class="aside-config__reinforce-img" src="img/reinforce-img.png" width="112" alt="" role="presentation"/></a></div>
+                      <div class="col-8">
+                        <div class="aside-config__reinforce-title">Мицар-ЭЭГ-03/35-201
+                        </div>
+                        <div class="aside-config__reinforce-description">Если нужно, краткое описание для раскрытия информации
+                        </div>
+                      </div>
+                    </div>
+                    <div class="aside-config__reinforce-btn-del">
+                    </div>
                   </div>
                 </div>
               </div>
-              <div class="prod-head__caption text-gray">Текстильный шлем с предустановленными Ag/AgCl sintered электродами MCScap-T и общим разъемом DB25М
-              </div>
+            </div>
+            <div class="col-lg-7">
               <div class="size-block">
                 <div class="small text-gray">Размер:</div>
                 <div class="size-block__btn-wrap">
@@ -1034,37 +1097,38 @@
                   </label>
                 </div>
               </div>
-              <div class="prod-head__price-block">
-                <div class="small text-gray">Цена:</div>
+            </div>
+          </div>
+          <div class="row align-items-end">
+            <div class="col-lg-5">
+              <div class="small text-gray">Цена:
                 <div class="prod-head__price"><span class="h2 text-primary fw-900">12 415</span><span class="text-gray ttu small">руб</span>
                 </div>
-                <div class="small text-gray mb-2">Количество</div>
-                <div class="row row--small">
-                  <div class="col-auto">
-                    <div class="block-add">
-                      <div class="block-add__btn block-add__btn--minus">
-                      </div>
-                      <input class="form-control" type="text" value="25"/>
-                      <div class="block-add__btn block-add__btn--plus btn">
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col"><a class="prod-head__btn btn w-100" href="#">
-                    <svg class="icon icon-basket ">
-                      <use xlink:href="img/svg/sprite.svg#basket"></use>
-                    </svg>В корзину</a>
-                    <!-- внизу вид кнопки при добавлении товара в корзину-->
-                    <!-- +e.A.btn.btn.active.btn-primary(href="#")
-                    +icon("basket")
-                    | В корзине
-                    
-                    -->
-                  </div>
+              </div>
+            </div>
+            <div class="col-auto pr-0">
+              <div class="small text-gray">Количество</div>
+              <div class="block-add">
+                <div class="block-add__btn block-add__btn--minus">
+                </div>
+                <input class="form-control" type="text" value="25"/>
+                <div class="block-add__btn block-add__btn--plus btn">
                 </div>
               </div>
-              <!-- +e.price-block-->
-              <div class="prod-head__foot text-right"><a class="prod-head__btn-more btn btn-outline-primary-l" href="#">Подробнее о товаре</a>
-              </div>
+            </div>
+            <div class="col"><a class="prod-head__btn btn w-100" href="#">
+              <svg class="icon icon-basket ">
+                <use xlink:href="img/svg/sprite.svg#basket"></use>
+              </svg>В корзину</a>
+              <!-- внизу вид кнопки при добавлении товара в корзину-->
+              <!-- +e.A.btn.btn.active.btn-primary(href="#")
+              +icon("basket")
+              | В корзине
+              
+              
+              
+              
+              -->
             </div>
           </div>
         </div>
@@ -1072,6 +1136,263 @@
       <!-- end prod-head-->
     </div>
     <!-- #modal-prod-->
+    <div class="zoom-anim-dialog mfp-hide modal-win modal-win--lg modal-form" id="modal-prod-no-result">
+      <!-- start prod-head-->
+      <div class="prod-head prod-head--preview pt-0">
+        <div class="container">
+          <div class="d-lg-none">
+            <div class="prod-head__head-row row align-items-center text-gray">
+              <div class="col">
+                <div class="h2 fw-900 ttu">SLEEP</div>
+              </div>
+              <div class="col-auto">
+                <div class="availability">
+                  <div class="availability__circle" style="background-color: #42d76b;">
+                  </div>В наличии
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-2"><img class="prod-head__img" src="img/prod-1.png" alt="img" title=""/>
+            </div>
+            <div class="col">
+              <div class="d-none d-lg-block">
+                <div class="prod-head__head-row row align-items-center text-gray">
+                  <div class="col">
+                    <div class="h2 fw-900 ttu">SLEEP</div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12">
+                  <div class="prod-head__caption text-gray">Текстильный шлем с предустановленными Ag/AgCl sintered электродами MCScap-T и общим разъемом DB25М
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="prod-head__artical"><small class="text-gray">Артикул:</small>m4568 988-65
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-5">
+              <div class="aside-config">
+                <div class="aside-config__search-wrapper aside-config__search-wrapper--select">
+                  <select class="aside-config__select">
+                    <option class="d-none" selected="selected">Выберите усилитель</option>
+                    <option>усилитель</option>
+                    <option>усилитель</option>
+                    <option>усилитель</option>
+                  </select>
+                </div>
+                <div class="aside-config__no-result">Не нашли свой усилитель?<a class="aside-config__no-result-link" href="#">Добавить</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-7">
+              <div class="size-block">
+                <div class="small text-gray">Размер:</div>
+                <div class="size-block__btn-wrap">
+                  <label class="btn-input"><input class="btn-input__input" type="radio" name="size-prod"/><span class="btn-input__text">XL</span>
+                  </label>
+                  <label class="btn-input"><input class="btn-input__input" type="radio" name="size-prod"/><span class="btn-input__text">XL/L</span>
+                  </label>
+                  <label class="btn-input"><input class="btn-input__input" type="radio" name="size-prod"/><span class="btn-input__text">L</span>
+                  </label>
+                  <label class="btn-input"><input class="btn-input__input" type="radio" name="size-prod"/><span class="btn-input__text">L/M</span>
+                  </label>
+                  <label class="btn-input"><input class="btn-input__input" type="radio" name="size-prod"/><span class="btn-input__text">M</span>
+                  </label>
+                  <label class="btn-input"><input class="btn-input__input" type="radio" name="size-prod"/><span class="btn-input__text">M/S</span>
+                  </label>
+                  <label class="btn-input"><input class="btn-input__input" type="radio" name="size-prod"/><span class="btn-input__text">S</span>
+                  </label>
+                  <label class="btn-input"><input class="btn-input__input" type="radio" name="size-prod"/><span class="btn-input__text">S/XS</span>
+                  </label>
+                  <label class="btn-input"><input class="btn-input__input" type="radio" name="size-prod"/><span class="btn-input__text">XS</span>
+                  </label>
+                  <label class="btn-input"><input class="btn-input__input" type="radio" name="size-prod"/><span class="btn-input__text">Inf I</span>
+                  </label>
+                  <label class="btn-input"><input class="btn-input__input" type="radio" name="size-prod"/><span class="btn-input__text">Inf II</span>
+                  </label>
+                  <label class="btn-input"><input class="btn-input__input" type="radio" name="size-prod"/><span class="btn-input__text">Inf III</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row align-items-end">
+            <div class="col-lg-5"></div>
+            <div class="col-auto pr-0">
+              <div class="small text-gray">Количество</div>
+              <div class="block-add">
+                <div class="block-add__btn block-add__btn--minus">
+                </div>
+                <input class="form-control" type="text" value="25"/>
+                <div class="block-add__btn block-add__btn--plus btn">
+                </div>
+              </div>
+            </div>
+            <div class="col"><a class="prod-head__btn btn w-100" href="#">
+              <svg class="icon icon-basket ">
+                <use xlink:href="img/svg/sprite.svg#basket"></use>
+              </svg>В корзину</a>
+              <!-- внизу вид кнопки при добавлении товара в корзину-->
+              <!-- +e.A.btn.btn.active.btn-primary(href="#")
+              +icon("basket")
+              | В корзине
+              
+              
+              
+              -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end prod-head-->
+    </div>
+    <!-- #modal-prod-->
+    <div class="zoom-anim-dialog mfp-hide modal-win modal-win--lg modal-form--preview" id="modal-prod-order">
+      <!-- start prod-head-->
+      <div class="prod-head prod-head--preview pt-0">
+        <div class="container">
+          <div class="d-lg-none">
+            <div class="prod-head__head-row row align-items-center text-gray">
+              <div class="col">
+                <div class="h2 fw-900 ttu">SLEEP</div>
+              </div>
+              <div class="col-auto">
+                <div class="availability">
+                  <div class="availability__circle" style="background-color: #42d76b;">
+                  </div>В наличии
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-2"><img class="prod-head__img" src="img/prod-1.png" alt="img" title=""/>
+            </div>
+            <div class="col">
+              <div class="d-none d-lg-block">
+                <div class="prod-head__head-row row align-items-center text-gray">
+                  <div class="col">
+                    <div class="h2 fw-900 ttu">SLEEP</div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12">
+                  <div class="prod-head__caption text-gray">Текстильный шлем с предустановленными Ag/AgCl sintered электродами MCScap-T и общим разъемом DB25М
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="prod-head__artical"><small class="text-gray">Артикул:</small>m4568 988-65
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-5">
+              <div class="aside-config">
+                <div class="aside-config__search-wrapper aside-config__search-wrapper--select">
+                  <select class="aside-config__select">
+                    <option class="d-none" selected="selected">Выберите усилитель</option>
+                    <option>усилитель</option>
+                    <option>усилитель</option>
+                    <option>усилитель</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-7">
+              <div class="size-block">
+                <div class="small text-gray">Размер:</div>
+                <div class="size-block__btn-wrap">
+                  <label class="btn-input"><input class="btn-input__input" type="radio" name="size-prod"/><span class="btn-input__text">XL</span>
+                  </label>
+                  <label class="btn-input"><input class="btn-input__input" type="radio" name="size-prod"/><span class="btn-input__text">XL/L</span>
+                  </label>
+                  <label class="btn-input"><input class="btn-input__input" type="radio" name="size-prod"/><span class="btn-input__text">L</span>
+                  </label>
+                  <label class="btn-input"><input class="btn-input__input" type="radio" name="size-prod"/><span class="btn-input__text">L/M</span>
+                  </label>
+                  <label class="btn-input"><input class="btn-input__input" type="radio" name="size-prod"/><span class="btn-input__text">M</span>
+                  </label>
+                  <label class="btn-input"><input class="btn-input__input" type="radio" name="size-prod"/><span class="btn-input__text">M/S</span>
+                  </label>
+                  <label class="btn-input"><input class="btn-input__input" type="radio" name="size-prod"/><span class="btn-input__text">S</span>
+                  </label>
+                  <label class="btn-input"><input class="btn-input__input" type="radio" name="size-prod"/><span class="btn-input__text">S/XS</span>
+                  </label>
+                  <label class="btn-input"><input class="btn-input__input" type="radio" name="size-prod"/><span class="btn-input__text">XS</span>
+                  </label>
+                  <label class="btn-input"><input class="btn-input__input" type="radio" name="size-prod"/><span class="btn-input__text">Inf I</span>
+                  </label>
+                  <label class="btn-input"><input class="btn-input__input" type="radio" name="size-prod"/><span class="btn-input__text">Inf II</span>
+                  </label>
+                  <label class="btn-input"><input class="btn-input__input" type="radio" name="size-prod"/><span class="btn-input__text">Inf III</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <form class="prod-head-form">
+        <div class="prod-head-form__wrapper">
+          <div class="row">
+            <div class="col-lg-5">
+              <div class="form-wrap">
+                <div class="form-wrap__input-wrap form-group">
+                  <label><input class="form-wrap__input form-control" type="tel" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">Телефон</span>
+                  </label>
+                </div>
+                <!-- +e.input-wrap-->
+                <div class="form-wrap__input-wrap form-group">
+                  <label><input class="form-wrap__input form-control" type="email" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">E-mail</span>
+                  </label>
+                </div>
+                <!-- +e.input-wrap-->
+                <div class="form-wrap__input-wrap form-group">
+                  <label><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">ФИО</span>
+                  </label>
+                </div>
+                <!-- +e.input-wrap-->
+              </div>
+            </div>
+            <div class="col-lg-7">
+              <div class="prod-head-form__input-wrap prod-head-form__input-wrap--textarea form-group">
+                <label class="mb-0"><textarea class="prod-head-form__input prod-head-form__input--textarea form-control" placeholder="Укажите модель Вашего усилителя"></textarea>
+                </label>
+              </div>
+              <div class="form-group">
+                <label class="prod-head-form__add-file">
+                  <div class="add-file-wrap"><span class="add-file-btn">Загрузить фото</span><input class="prod-head-form__input add-file-input" type="file"/>
+                    <div class="add-file__file-name"></div>
+                  </div>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="prod-head-form__footer row align-items-center">
+          <div class="col-lg-5">
+            <div class="policy-block mb-0 mt-0">
+              <label class="custom-input"><input class="custom-input__input" type="checkbox" name="inner" checked="checked"/><span class="custom-input__lab"></span><span class="custom-input__text small">
+                Отправляя форму, я даю<a href="#">  согласие на обработку персональных данных</a></span>
+              </label>
+            </div>
+          </div>
+          <div class="col-lg-7">
+            <button class="prod-head-form__btn btn btn-block btn-primary ml-auto" type="submit">Отправить
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
     <div class="form-wrap zoom-anim-dialog mfp-hide modal-win modal-form" id="modal-hello">
       <form>
         <div class="text-center">

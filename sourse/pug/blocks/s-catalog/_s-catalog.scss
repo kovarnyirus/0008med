@@ -730,6 +730,7 @@
     overflow: visible;
     @include media-breakpoint-up(md) {
       border: 1px solid #E1E1E1;
+      border-left: none;
     }
     @include media-breakpoint-up(sm) {
       overflow: hidden;
@@ -748,6 +749,10 @@
 
   &__right-col,
   &__left-col {
+    margin-bottom: 24px;
+  }
+  &__left-col {
+    border-right: 1px solid #E1E1E1;
     margin-bottom: 24px;
   }
 }
