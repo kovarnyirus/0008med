@@ -121,12 +121,10 @@ mixin aside-config()
 
 mixin aside-config-prod()
 	+b.aside-config
-		+e.search-wrapper--select
-			+e.SELECT.select
-				option(selected).d-none Выберите усилитель
-				option() усилитель
-				option() усилитель
-				option() усилитель
+		+e.search-wrapper
+			+e.INPUT.search(type='text' placeholder='Производитель или модель усилителя')
+			+e.A.search-link(href='#')
+				+icon('search')
 		+e.reinforce-list
 			+e.reinforce-item
 				.row
@@ -140,20 +138,16 @@ mixin aside-config-prod()
 
 mixin aside-config-prod-2()
 	+b.aside-config
-		+e.search-wrapper--select
-			+e.SELECT.select
-				option(selected).d-none Выберите усилитель
-				option() усилитель
-				option() усилитель
-				option() усилитель
+		+e.search-wrapper
+			+e.INPUT.search(type='text' placeholder='Производитель или модель усилителя')
+			+e.A.search-link(href='#')
+				+icon('search')
 		+e.no-result Не нашли свой усилитель?
 			+e.A.no-result-link(href='#') Добавить
 
 mixin aside-config-prod-3()
 	+b.aside-config
-		+e.search-wrapper--select
-			+e.SELECT.select
-				option(selected).d-none Выберите усилитель
-				option() усилитель
-				option() усилитель
-				option() усилитель
+		+e.search-wrapper
+			+e.INPUT.search(type='text' placeholder='Производитель или модель усилителя')
+			+e.A.search-link(href='#')
+				+icon('search')
