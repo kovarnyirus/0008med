@@ -20,6 +20,12 @@ mixin modal()
 				a.popup-with-move-anim(href="#modal-reg")    Регистрация
 	// #modal-inner
 
+	+form-wrap()(id="modal-thanks" class="zoom-anim-dialog mfp-hide modal-win modal-form modal-form--thanks" )
+		+e.img-wrap-done
+			img.res-i(src="img/thank.svg", alt="")
+		p.text-center  Ваша заявка принята!
+			br/ Мы свяжемся с Вами в ближайшее время
+
 	+form-wrap()(id="modal-password-recovery" class="zoom-anim-dialog mfp-hide modal-win modal-form" )
 		+e.title.h6 Востановления пароля
 		+input("email","Введите Ваш e-mail")(required pattern=".{3,}")
@@ -352,7 +358,7 @@ mixin modal()
 		// end prod-head
 	// #modal-prod
 
-	div(id="modal-prod-order" class="zoom-anim-dialog mfp-hide modal-win modal-win--lg modal-form--preview" )
+	div(id="modal-prod-order" class="zoom-anim-dialog mfp-hide modal-win modal-win--lg modal-form modal-form--preview" )
 		// start prod-head
 		+b.prod-head--preview.pt-0
 			.container

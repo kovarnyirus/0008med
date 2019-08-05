@@ -81,6 +81,11 @@ a {
   &--preview{
     padding-bottom: 10px!important;
   }
+  &--thanks{
+    & p{
+      font-size: 15px;
+    }
+  }
 }
 
 #foot-dialog {
