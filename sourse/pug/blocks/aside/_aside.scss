@@ -500,7 +500,7 @@
     border-radius: 5px;
     font-style: normal;
     font-weight: normal;
-    font-size: 16px;
+    font-size: 13px;
     color: #858585;
     padding-left: 18px;
     padding-right: 18px;
@@ -508,6 +508,9 @@
     padding-bottom: 12px;
     margin-bottom: 35px;
     margin-top: 20px;
+    @include media-breakpoint-up(md){
+      font-size: 16px;
+    }
   }
   &__no-result-link{
     font-size: 16px;
