@@ -423,36 +423,131 @@
 
       & .h2 {
         margin-bottom: 0;
+        color: black;
+      }
+    }
+
+    & .aside-config__search {
+      font-size: 11px;
+      @include media-breakpoint-up(lg) {
+        font-size: 13px;
+      }
+    }
+
+    & .prod-head__img-wrapper {
+      position: relative;
+      width: 105px;
+      height: 105px;
+      display: block;
+      @include media-breakpoint-up(lg) {
+        width: 135px;
+        height: 135px;
+      }
+      &:after {
+        position: absolute;
+        display: block;
+        content: '';
+        width: 18px;
+        height: 18px;
+        bottom: 10px;
+        right: 10px;
+        background-image: url("data:image/svg+xml,%3Csvg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M12.2623 12.2623C14.8961 9.62856 14.8961 5.35842 12.2623 2.72466C9.62856 0.0908937 5.35842 0.0908935 2.72466 2.72466C0.0908935 5.35842 0.0908937 9.62856 2.72466 12.2623C5.35842 14.8961 9.62856 14.8961 12.2623 12.2623ZM12.7922 12.7922C15.7186 9.86581 15.7186 5.12117 12.7922 2.19479C9.86581 -0.731596 5.12117 -0.731596 2.19479 2.19479C-0.731596 5.12117 -0.731596 9.86581 2.19479 12.7922C5.12117 15.7186 9.86581 15.7186 12.7922 12.7922ZM14.3818 12.2623L17.561 15.4415C18.1463 16.0269 18.1463 16.9758 17.561 17.561C16.9758 18.1463 16.0269 18.1463 15.4415 17.561L12.2623 14.3818L14.3818 12.2623ZM11.0898 7.11294H8.20214V3.99299H7.4134V7.11294H4.58437V7.8628H7.4134V11.0899H8.20214V7.8628H11.0898V7.11294Z' fill='black'/%3E%3C/svg%3E%0A");
+        background-repeat: no-repeat;
+        background-size: cover;
+        @include media-breakpoint-up(lg) {
+          width: 11px;
+          height: 11px;
+        }
       }
     }
 
     & .prod-head__img {
-      max-width: 135px;
+      max-width: 105px;
       cursor: zoom-in;
+      position: relative;
+      @include media-breakpoint-up(lg) {
+        max-width: 135px;
+      }
+
+
+    }
+
+    & .form-control {
+      color: black;
     }
 
     & .prod-head__caption {
       margin-bottom: 15px !important;
     }
 
-    & .prod-head__caption {
-      min-height: 56px;
+    & .prod-head__btn {
+      margin-top: 15px;
+      @include media-breakpoint-up(lg) {
+        margin-top: 0;
+        max-width: 234px;
+        margin-left: auto;
+        margin-right: 15px;
+      }
     }
 
-    & .aside-config__search-wrapper {
-      margin-top: 0;
+    & .prod-head__caption {
+      min-height: 56px;
+      font-size: 14px;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: normal;
+      -webkit-line-clamp: 3;
+      display: -webkit-box;
+      @include media-breakpoint-up(lg) {
+        font-size: 16px;
+      }
     }
+
 
     & .aside-config__search-wrapper {
       padding-right: 0;
+      @include media-breakpoint-up(lg) {
+        margin-top: 0;
+      }
+    }
+
+    & .aside-config__reinforce-list {
+      margin-bottom: 16px;
+      @include media-breakpoint-up(lg) {
+        margin-bottom: 20px;
+      }
+    }
+
+    & .aside-config__reinforce-title {
+      margin-bottom: 5px;
+      @include media-breakpoint-up(lg) {
+        margin-bottom: 11px;
+      }
+    }
+
+    .prod-head__price-wrapper {
+      line-height: 1;
     }
 
     & .aside-config__reinforce-item {
       background: #F4F4F4;
-      padding-bottom: 1px;
-      padding-top: 1px;
+      //padding-bottom: 1px;
+      //padding-top: 1px;
       border-radius: 5px;
-      padding-left: 1px;
+      //padding-left: 1px;
+      border: 1px solid #F4F4F4;
+    }
+
+    & .size-block {
+      margin-bottom: 8px;
+      @include media-breakpoint-up(lg) {
+        margin-bottom: 0;
+      }
+    }
+
+    & .aside-config .mCSB_container {
+      padding-left: 0;
     }
 
     & .aside-config__reinforce-description {
@@ -469,24 +564,34 @@
     }
 
     &.prod-head .block-add {
-      width: 140px;
+      width: 137px;
+      @include media-breakpoint-up(lg) {
+        width: 140px;
+      }
     }
   }
 
   &-form {
-    &__wrapper{
+    &__wrapper {
+      position: relative;
       padding-top: 35px;
       background: #F4F4F4;
       margin-left: -15px;
       margin-right: -15px;
-      padding-left: 75px;
-      padding-right: 38px;
-      margin-top: 30px;
-      padding-bottom: 31px;
-      margin-bottom: 11px;
-      @include media-breakpoint-up(sm){
+      padding-left: 15px;
+      padding-right: 15px;
+      padding-bottom: 20px;
+      margin-bottom: 20px;
+      @include media-breakpoint-up(sm) {
         margin-left: -25px;
         margin-right: -25px;
+      }
+      @include media-breakpoint-up(lg) {
+        padding-left: 75px;
+        padding-right: 38px;
+        margin-top: 30px;
+        margin-bottom: 11px;
+        padding-bottom: 31px;
       }
     }
 
@@ -512,6 +617,10 @@
       padding-top: 10px;
       padding-bottom: 10px;
       border: 1px solid #1C9B91;
+      margin-top: 20px;
+      @include media-breakpoint-up(lg) {
+        margin-top: 15px;
+      }
     }
 
     &__add-file {
@@ -523,16 +632,62 @@
       padding-top: 12px;
       padding-bottom: 12px;
       margin-top: 15px;
-      @include media-breakpoint-up(lg){
+      @include media-breakpoint-up(lg) {
         margin-top: 0;
       }
     }
-    &__footer{
-      padding-left: 10px;
-      padding-right: 10px;
+
+    &__footer {
+      @include media-breakpoint-up(lg) {
+        padding-right: 10px;
+        padding-left: 50px;
+      }
+
+      & .prod-head-form__btn {
+        max-width: 100%;
+        @include media-breakpoint-up(lg) {
+          max-width: 234px;
+        }
+      }
     }
-    & .custom-input{
+
+    & .custom-input {
       margin-bottom: 0;
+    }
+
+    &__btn-del {
+      position: absolute;
+      right: 15px;
+      top: 15px;
+      width: 10px;
+      height: 10px;
+      border: none;
+      cursor: pointer;
+
+      &:before,
+      &:after {
+        position: absolute;
+        display: block;
+        content: "";
+        width: 100%;
+        height: 1px;
+        top: 0;
+        right: 0;
+        background-color: #000;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+      }
+
+      &:after {
+        transform: rotate(-45deg);
+      }
+
+      @include media-breakpoint-up(lg) {
+        right: 25px;
+        top: 15px;
+        right: 15px;
+      }
     }
   }
 }

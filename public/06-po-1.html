@@ -1,4 +1,191 @@
-<!DOCTYPE html>
+
+<div class="zoom-anim-dialog mfp-hide modal-win modal-win--lg modal-form" id="modal-prod-order">
+  <!-- start prod-head-->
+  <div class="prod-head prod-head--preview pt-0">
+    <div class="container">
+      <div class="row">
+        <div class="col-5 col-lg-2"><a href="img/prod-1.png" data-fancybox-img="images"><span class="prod-head__img-wrapper"><img class="prod-head__img" src="img/prod-1.png" alt="img" title=""/></span></a></div>
+        <div class="col-7 col-lg">
+          <div class="prod-head__head-row row align-items-center text-gray">
+            <div class="col">
+              <div class="h2 fw-900 ttu">SLEEP</div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <div class="prod-head__caption text-gray">Текстильный шлем с предустановленными Ag/AgCl sintered электродами MCScap-T и общим разъемом DB25М
+              </div>
+            </div>
+            <div class="col d-none d-lg-block">
+              <div class="prod-head__artical"><small class="text-gray">Артикул:</small>m4568 988-65
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-5">
+          <div class="aside-config">
+            <div class="aside-config__search-wrapper"><input class="aside-config__search" type="text" placeholder="Производитель или модель усилителя"/><a class="aside-config__search-link" href="#">
+              <svg class="icon icon-search ">
+                <use xlink:href="img/svg/sprite.svg#search"></use>
+              </svg></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-7">
+          <div class="size-block">
+            <div class="small text-gray">Размер:</div>
+            <div class="size-block__btn-wrap">
+              <label class="btn-input"><input class="btn-input__input" type="radio" name="size-prod"/><span class="btn-input__text">XL</span>
+              </label>
+              <label class="btn-input"><input class="btn-input__input" type="radio" name="size-prod"/><span class="btn-input__text">XL/L</span>
+              </label>
+              <label class="btn-input"><input class="btn-input__input" type="radio" name="size-prod"/><span class="btn-input__text">L</span>
+              </label>
+              <label class="btn-input"><input class="btn-input__input" type="radio" name="size-prod"/><span class="btn-input__text">L/M</span>
+              </label>
+              <label class="btn-input"><input class="btn-input__input" type="radio" name="size-prod"/><span class="btn-input__text">M</span>
+              </label>
+              <label class="btn-input"><input class="btn-input__input" type="radio" name="size-prod"/><span class="btn-input__text">M/S</span>
+              </label>
+              <label class="btn-input"><input class="btn-input__input" type="radio" name="size-prod"/><span class="btn-input__text">S</span>
+              </label>
+              <label class="btn-input"><input class="btn-input__input" type="radio" name="size-prod"/><span class="btn-input__text">S/XS</span>
+              </label>
+              <label class="btn-input"><input class="btn-input__input" type="radio" name="size-prod"/><span class="btn-input__text">XS</span>
+              </label>
+              <label class="btn-input"><input class="btn-input__input" type="radio" name="size-prod"/><span class="btn-input__text">Inf I</span>
+              </label>
+              <label class="btn-input"><input class="btn-input__input" type="radio" name="size-prod"/><span class="btn-input__text">Inf II</span>
+              </label>
+              <label class="btn-input"><input class="btn-input__input" type="radio" name="size-prod"/><span class="btn-input__text">Inf III</span>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <form class="prod-head-form">
+      <div class="prod-head-form__wrapper">
+        <button class="prod-head-form__btn-del">
+        </button>
+        <div class="row">
+          <div class="col-lg-5">
+            <div class="form-wrap">
+              <div class="form-wrap__input-wrap form-group">
+                <label><input class="form-wrap__input form-control" type="tel" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">Телефон</span>
+                </label>
+              </div>
+              <!-- +e.input-wrap-->
+              <div class="form-wrap__input-wrap form-group">
+                <label><input class="form-wrap__input form-control" type="email" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">E-mail</span>
+                </label>
+              </div>
+              <!-- +e.input-wrap-->
+              <div class="form-wrap__input-wrap form-group">
+                <label><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">ФИО</span>
+                </label>
+              </div>
+              <!-- +e.input-wrap-->
+            </div>
+          </div>
+          <div class="col-lg-7">
+            <div class="prod-head-form__input-wrap prod-head-form__input-wrap--textarea form-group">
+              <label class="mb-0"><textarea class="prod-head-form__input prod-head-form__input--textarea form-control" placeholder="Укажите модель Вашего усилителя"></textarea>
+              </label>
+            </div>
+            <div class="form-group">
+              <label class="prod-head-form__add-file">
+                <div class="add-file-wrap"><span class="add-file-btn">Загрузить фото</span><input class="prod-head-form__input add-file-input" type="file"/>
+                  <div class="add-file__file-name"></div>
+                </div>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="prod-head-form__footer row align-items-center">
+        <div class="col-lg-5">
+          <div class="policy-block mb-0 mt-0">
+            <label class="custom-input"><input class="custom-input__input" type="checkbox" name="inner" checked="checked"/><span class="custom-input__lab"></span><span class="custom-input__text">
+              Отправляя форму, я даю<a href="#">  согласие на обработку персональных данных</a></span>
+            </label>
+          </div>
+        </div>
+        <div class="col-lg-7">
+          <button class="prod-head-form__btn btn btn-block btn-primary ml-auto" type="submit">Отправить
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="form-wrap zoom-anim-dialog mfp-hide modal-win modal-form" id="modal-hello">
+    <form>
+      <div class="text-center">
+        <div class="form-wrap__img-wrap mb-3"><img src="img/logo.png" alt=""/>
+        </div>
+        <div class="h4 pb-3">Добро пожаловать!</div>
+        <p class="pb-3">Вы успешно зарегистрировали<br/>Ваш личный кабинет</p>
+      </div><a class="form-wrap__btn btn btn-block btn-primary popup-with-move-anim" href="#modal-inner">Войти в личный кабинет</a>
+    </form>
+  </div>
+  <!-- #modal-hello-->
+  <div class="form-wrap zoom-anim-dialog mfp-hide modal-win modal-form" id="modal-call-back">
+    <form>
+      <div class="form-wrap__title h6">Заполните данные
+      </div>
+      <div class="form-wrap__input-wrap form-group">
+        <label><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">Телефон</span>
+        </label>
+      </div>
+      <!-- +e.input-wrap-->
+      <div class="form-wrap__input-wrap form-group">
+        <label><input class="form-wrap__input form-control" type="email" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">E-mail</span>
+        </label>
+      </div>
+      <!-- +e.input-wrap-->
+      <div class="form-wrap__input-wrap form-group">
+        <label><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">ФИО</span>
+        </label>
+      </div>
+      <!-- +e.input-wrap-->
+      <div class="form-wrap__input-wrap form-group">
+        <label><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">Название компании</span>
+        </label>
+      </div>
+      <!-- +e.input-wrap-->
+      <div class="form-wrap__input-wrap form-group">
+        <label><textarea class="form-wrap__input form-control" required="required" pattern=".{3,}"></textarea><span class="form-wrap__title-label">Ваши комментарии</span>
+        </label>
+      </div>
+      <!-- +e.input-wrap-->
+      <div class="form-group">
+        <label>
+          <div class="add-file-wrap"><span class="add-file-title">Прикрепите изображение</span>
+            <div class="add-file-btn">
+              <div class="add-file-btn__dot">
+              </div>
+              <div class="add-file-btn__dot">
+              </div>
+              <div class="add-file-btn__dot">
+              </div>
+            </div><input class="form-wrap__input add-file-input" type="file"/>
+            <div class="add-file__file-name"></div>
+          </div>
+        </label>
+      </div>
+      <button class="form-wrap__btn btn btn-block btn-primary mb-4" type="submit">Отправить
+      </button>
+      <div class="policy-block mb-0">
+        <label class="custom-input"><input class="custom-input__input" type="checkbox" name="inner" checked="checked"/><span class="custom-input__lab"></span><span class="custom-input__text small">
+          Я ознакомился с<a href="#">правилами,</a><a href="#">политикой конфиденциальности</a>и принимаю их условия</span>
+        </label>
+      </div>
+    </form>
+  </div>
+  <!-- modal-->
+</div><!DOCTYPE html>
 <html lang="ru">
   <head>
     <meta charset="utf-8">
@@ -1102,21 +1289,12 @@
       <!-- start prod-head-->
       <div class="prod-head prod-head--preview pt-0">
         <div class="container">
-          <div class="d-lg-none">
-            <div class="prod-head__head-row row align-items-center text-gray">
-              <div class="col">
-                <div class="h2 fw-900 ttu">SLEEP</div>
-              </div>
-            </div>
-          </div>
           <div class="row">
-            <div class="col-lg-2"><a href="img/prod-1.png" data-fancybox-img="images"><img class="prod-head__img" src="img/prod-1.png" alt="img" title=""/></a></div>
-            <div class="col">
-              <div class="d-none d-lg-block">
-                <div class="prod-head__head-row row align-items-center text-gray">
-                  <div class="col">
-                    <div class="h2 fw-900 ttu">SLEEP</div>
-                  </div>
+            <div class="col-5 col-lg-2"><a href="img/prod-1.png" data-fancybox-img="images"><span class="prod-head__img-wrapper"><img class="prod-head__img" src="img/prod-1.png" alt="img" title=""/></span></a></div>
+            <div class="col-7 col-lg">
+              <div class="prod-head__head-row row align-items-center text-gray">
+                <div class="col">
+                  <div class="h2 fw-900 ttu">SLEEP</div>
                 </div>
               </div>
               <div class="row">
@@ -1124,7 +1302,7 @@
                   <div class="prod-head__caption text-gray">Текстильный шлем с предустановленными Ag/AgCl sintered электродами MCScap-T и общим разъемом DB25М
                   </div>
                 </div>
-                <div class="col">
+                <div class="col d-none d-lg-block">
                   <div class="prod-head__artical"><small class="text-gray">Артикул:</small>m4568 988-65
                   </div>
                 </div>
@@ -1189,14 +1367,14 @@
             </div>
           </div>
           <div class="row align-items-end">
-            <div class="col-lg-5">
-              <div class="small text-gray">Цена:
-                <div class="prod-head__price"><span class="h2 text-primary fw-900">12 415</span><span class="text-gray ttu small">руб</span>
+            <div class="col-6 col-lg-5">
+              <div class="prod-head__price-wrapper small text-gray">Цена:
+                <div class="prod-head__price"><span class="h2 text-black fw-900">12 415</span><span class="text-gray ttu small">    руб</span>
                 </div>
               </div>
             </div>
-            <div class="col-auto pr-0">
-              <div class="small text-gray">Количество</div>
+            <div class="col-6 col-lg-auto pr-lg-0 pl-0 pl-lg-3">
+              <div class="small text-gray d-none d-lg-block">Количество</div>
               <div class="block-add">
                 <div class="block-add__btn block-add__btn--minus">
                 </div>
@@ -1205,46 +1383,25 @@
                 </div>
               </div>
             </div>
-            <div class="col"><a class="prod-head__btn btn w-100" href="#">
+            <div class="col-12 col-lg"><a class="prod-head__btn btn w-100" href="#">
               <svg class="icon icon-basket ">
                 <use xlink:href="img/svg/sprite.svg#basket"></use>
               </svg>В корзину</a>
-              <!-- внизу вид кнопки при добавлении товара в корзину-->
-              <!-- +e.A.btn.btn.active.btn-primary(href="#")
-              +icon("basket")
-              | В корзине
-              
-              
-              
-              
-              -->
             </div>
           </div>
         </div>
       </div>
-      <!-- end prod-head-->
     </div>
-    <!-- #modal-prod-->
     <div class="zoom-anim-dialog mfp-hide modal-win modal-win--lg modal-form" id="modal-prod-no-result">
       <!-- start prod-head-->
       <div class="prod-head prod-head--preview pt-0">
         <div class="container">
-          <div class="d-lg-none">
-            <div class="prod-head__head-row row align-items-center text-gray">
-              <div class="col">
-                <div class="h2 fw-900 ttu">SLEEP</div>
-              </div>
-            </div>
-          </div>
           <div class="row">
-            <div class="col-lg-2"><img class="prod-head__img" src="img/prod-1.png" alt="img" title=""/>
-            </div>
-            <div class="col">
-              <div class="d-none d-lg-block">
-                <div class="prod-head__head-row row align-items-center text-gray">
-                  <div class="col">
-                    <div class="h2 fw-900 ttu">SLEEP</div>
-                  </div>
+            <div class="col-5 col-lg-2"><a href="img/prod-1.png" data-fancybox-img="images"><span class="prod-head__img-wrapper"><img class="prod-head__img" src="img/prod-1.png" alt="img" title=""/></span></a></div>
+            <div class="col-7 col-lg">
+              <div class="prod-head__head-row row align-items-center text-gray">
+                <div class="col">
+                  <div class="h2 fw-900 ttu">SLEEP</div>
                 </div>
               </div>
               <div class="row">
@@ -1252,7 +1409,7 @@
                   <div class="prod-head__caption text-gray">Текстильный шлем с предустановленными Ag/AgCl sintered электродами MCScap-T и общим разъемом DB25М
                   </div>
                 </div>
-                <div class="col">
+                <div class="col d-none d-lg-block">
                   <div class="prod-head__artical"><small class="text-gray">Артикул:</small>m4568 988-65
                   </div>
                 </div>
@@ -1304,9 +1461,9 @@
             </div>
           </div>
           <div class="row align-items-end">
-            <div class="col-lg-5"></div>
-            <div class="col-auto pr-0">
-              <div class="small text-gray">Количество</div>
+            <div class="col-6 col-lg-5"></div>
+            <div class="col-6 col-lg-auto pr-lg-0 pl-0 pl-lg-3">
+              <div class="small text-gray d-none d-lg-block">Количество</div>
               <div class="block-add">
                 <div class="block-add__btn block-add__btn--minus">
                 </div>
@@ -1315,220 +1472,15 @@
                 </div>
               </div>
             </div>
-            <div class="col"><a class="prod-head__btn btn w-100" href="#">
+            <div class="col-12 col-lg"><a class="prod-head__btn btn w-100 disabled" href="#">
               <svg class="icon icon-basket ">
                 <use xlink:href="img/svg/sprite.svg#basket"></use>
               </svg>В корзину</a>
-              <!-- внизу вид кнопки при добавлении товара в корзину-->
-              <!-- +e.A.btn.btn.active.btn-primary(href="#")
-              +icon("basket")
-              | В корзине
-              
-              
-              
-              -->
             </div>
           </div>
         </div>
       </div>
-      <!-- end prod-head-->
     </div>
-    <!-- #modal-prod-->
-    <div class="zoom-anim-dialog mfp-hide modal-win modal-win--lg modal-form modal-form--preview" id="modal-prod-order">
-      <!-- start prod-head-->
-      <div class="prod-head prod-head--preview pt-0">
-        <div class="container">
-          <div class="d-lg-none">
-            <div class="prod-head__head-row row align-items-center text-gray">
-              <div class="col">
-                <div class="h2 fw-900 ttu">SLEEP</div>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-lg-2"><img class="prod-head__img" src="img/prod-1.png" alt="img" title=""/>
-            </div>
-            <div class="col">
-              <div class="d-none d-lg-block">
-                <div class="prod-head__head-row row align-items-center text-gray">
-                  <div class="col">
-                    <div class="h2 fw-900 ttu">SLEEP</div>
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-12">
-                  <div class="prod-head__caption text-gray">Текстильный шлем с предустановленными Ag/AgCl sintered электродами MCScap-T и общим разъемом DB25М
-                  </div>
-                </div>
-                <div class="col">
-                  <div class="prod-head__artical"><small class="text-gray">Артикул:</small>m4568 988-65
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-lg-5">
-              <div class="aside-config">
-                <div class="aside-config__search-wrapper"><input class="aside-config__search" type="text" placeholder="Производитель или модель усилителя"/><a class="aside-config__search-link" href="#">
-                  <svg class="icon icon-search ">
-                    <use xlink:href="img/svg/sprite.svg#search"></use>
-                  </svg></a>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-7">
-              <div class="size-block">
-                <div class="small text-gray">Размер:</div>
-                <div class="size-block__btn-wrap">
-                  <label class="btn-input"><input class="btn-input__input" type="radio" name="size-prod"/><span class="btn-input__text">XL</span>
-                  </label>
-                  <label class="btn-input"><input class="btn-input__input" type="radio" name="size-prod"/><span class="btn-input__text">XL/L</span>
-                  </label>
-                  <label class="btn-input"><input class="btn-input__input" type="radio" name="size-prod"/><span class="btn-input__text">L</span>
-                  </label>
-                  <label class="btn-input"><input class="btn-input__input" type="radio" name="size-prod"/><span class="btn-input__text">L/M</span>
-                  </label>
-                  <label class="btn-input"><input class="btn-input__input" type="radio" name="size-prod"/><span class="btn-input__text">M</span>
-                  </label>
-                  <label class="btn-input"><input class="btn-input__input" type="radio" name="size-prod"/><span class="btn-input__text">M/S</span>
-                  </label>
-                  <label class="btn-input"><input class="btn-input__input" type="radio" name="size-prod"/><span class="btn-input__text">S</span>
-                  </label>
-                  <label class="btn-input"><input class="btn-input__input" type="radio" name="size-prod"/><span class="btn-input__text">S/XS</span>
-                  </label>
-                  <label class="btn-input"><input class="btn-input__input" type="radio" name="size-prod"/><span class="btn-input__text">XS</span>
-                  </label>
-                  <label class="btn-input"><input class="btn-input__input" type="radio" name="size-prod"/><span class="btn-input__text">Inf I</span>
-                  </label>
-                  <label class="btn-input"><input class="btn-input__input" type="radio" name="size-prod"/><span class="btn-input__text">Inf II</span>
-                  </label>
-                  <label class="btn-input"><input class="btn-input__input" type="radio" name="size-prod"/><span class="btn-input__text">Inf III</span>
-                  </label>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <form class="prod-head-form">
-        <div class="prod-head-form__wrapper">
-          <div class="row">
-            <div class="col-lg-5">
-              <div class="form-wrap">
-                <div class="form-wrap__input-wrap form-group">
-                  <label><input class="form-wrap__input form-control" type="tel" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">Телефон</span>
-                  </label>
-                </div>
-                <!-- +e.input-wrap-->
-                <div class="form-wrap__input-wrap form-group">
-                  <label><input class="form-wrap__input form-control" type="email" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">E-mail</span>
-                  </label>
-                </div>
-                <!-- +e.input-wrap-->
-                <div class="form-wrap__input-wrap form-group">
-                  <label><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">ФИО</span>
-                  </label>
-                </div>
-                <!-- +e.input-wrap-->
-              </div>
-            </div>
-            <div class="col-lg-7">
-              <div class="prod-head-form__input-wrap prod-head-form__input-wrap--textarea form-group">
-                <label class="mb-0"><textarea class="prod-head-form__input prod-head-form__input--textarea form-control" placeholder="Укажите модель Вашего усилителя"></textarea>
-                </label>
-              </div>
-              <div class="form-group">
-                <label class="prod-head-form__add-file">
-                  <div class="add-file-wrap"><span class="add-file-btn">Загрузить фото</span><input class="prod-head-form__input add-file-input" type="file"/>
-                    <div class="add-file__file-name"></div>
-                  </div>
-                </label>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="prod-head-form__footer row align-items-center">
-          <div class="col-lg-5">
-            <div class="policy-block mb-0 mt-0">
-              <label class="custom-input"><input class="custom-input__input" type="checkbox" name="inner" checked="checked"/><span class="custom-input__lab"></span><span class="custom-input__text small">
-                Отправляя форму, я даю<a href="#">  согласие на обработку персональных данных</a></span>
-              </label>
-            </div>
-          </div>
-          <div class="col-lg-7">
-            <button class="prod-head-form__btn btn btn-block btn-primary ml-auto" type="submit">Отправить
-            </button>
-          </div>
-        </div>
-      </form>
-    </div>
-    <div class="form-wrap zoom-anim-dialog mfp-hide modal-win modal-form" id="modal-hello">
-      <form>
-        <div class="text-center">
-          <div class="form-wrap__img-wrap mb-3"><img src="img/logo.png" alt=""/>
-          </div>
-          <div class="h4 pb-3">Добро пожаловать!</div>
-          <p class="pb-3">Вы успешно зарегистрировали<br/>Ваш личный кабинет</p>
-        </div><a class="form-wrap__btn btn btn-block btn-primary popup-with-move-anim" href="#modal-inner">Войти в личный кабинет</a>
-      </form>
-    </div>
-    <!-- #modal-hello-->
-    <div class="form-wrap zoom-anim-dialog mfp-hide modal-win modal-form" id="modal-call-back">
-      <form>
-        <div class="form-wrap__title h6">Заполните данные
-        </div>
-        <div class="form-wrap__input-wrap form-group">
-          <label><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">Телефон</span>
-          </label>
-        </div>
-        <!-- +e.input-wrap-->
-        <div class="form-wrap__input-wrap form-group">
-          <label><input class="form-wrap__input form-control" type="email" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">E-mail</span>
-          </label>
-        </div>
-        <!-- +e.input-wrap-->
-        <div class="form-wrap__input-wrap form-group">
-          <label><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">ФИО</span>
-          </label>
-        </div>
-        <!-- +e.input-wrap-->
-        <div class="form-wrap__input-wrap form-group">
-          <label><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">Название компании</span>
-          </label>
-        </div>
-        <!-- +e.input-wrap-->
-        <div class="form-wrap__input-wrap form-group">
-          <label><textarea class="form-wrap__input form-control" required="required" pattern=".{3,}"></textarea><span class="form-wrap__title-label">Ваши комментарии</span>
-          </label>
-        </div>
-        <!-- +e.input-wrap-->
-        <div class="form-group">
-          <label>
-            <div class="add-file-wrap"><span class="add-file-title">Прикрепите изображение</span>
-              <div class="add-file-btn">
-                <div class="add-file-btn__dot">
-                </div>
-                <div class="add-file-btn__dot">
-                </div>
-                <div class="add-file-btn__dot">
-                </div>
-              </div><input class="form-wrap__input add-file-input" type="file"/>
-              <div class="add-file__file-name"></div>
-            </div>
-          </label>
-        </div>
-        <button class="form-wrap__btn btn btn-block btn-primary mb-4" type="submit">Отправить
-        </button>
-        <div class="policy-block mb-0">
-          <label class="custom-input"><input class="custom-input__input" type="checkbox" name="inner" checked="checked"/><span class="custom-input__lab"></span><span class="custom-input__text small">
-            Я ознакомился с<a href="#">правилами,</a><a href="#">политикой конфиденциальности</a>и принимаю их условия</span>
-          </label>
-        </div>
-      </form>
-    </div>
-    <!-- modal-->
     <script src="js/jquery.min.js"></script>
     <script src="libs/popper.min.js"></script>
     <script src="libs/bootstrap/util.js"></script>

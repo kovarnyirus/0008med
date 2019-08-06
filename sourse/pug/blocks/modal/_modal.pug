@@ -204,23 +204,19 @@ mixin modal()
 		// start prod-head
 		+b.prod-head--preview.pt-0
 			.container
-				.d-lg-none
-					+e.head-row.row.align-items-center.text-gray
-						.col
-							.h2.fw-900.ttu SLEEP
 				.row
-					.col-lg-2
+					.col-5.col-lg-2
 						a(href='img/prod-1.png' data-fancybox-img="images")
-							+e.IMG.img(src='img/prod-1.png' alt='img')
-					.col
-						.d-none.d-lg-block
-							+e.head-row.row.align-items-center.text-gray
-								.col
-									.h2.fw-900.ttu SLEEP
+							+e.SPAN.img-wrapper
+								+e.IMG.img(src='img/prod-1.png' alt='img')
+					.col-7.col-lg
+						+e.head-row.row.align-items-center.text-gray
+							.col
+								.h2.fw-900.ttu SLEEP
 						.row
 							.col-12
 								+e.caption.text-gray Текстильный шлем с предустановленными Ag/AgCl sintered электродами MCScap-T и общим разъемом DB25М
-							.col
+							.col.d-none.d-lg-block
 								+e.artical
 									small.text-gray Артикул:
 									| m4568 988-65
@@ -251,54 +247,43 @@ mixin modal()
 								+in-ch("size-prod","Inf II")
 								+in-ch("size-prod","Inf III")
 				.row.align-items-end
-					.col-lg-5
-						.small.text-gray Цена:
+					.col-6.col-lg-5
+						+e.price-wrapper.small.text-gray Цена:
 							+e.price
-								span.h2.text-primary.fw-900 12 415
-								span.text-gray.ttu.small руб
+								span.h2.text-black.fw-900 12 415
+								span.text-gray.ttu.small     руб
 
-					.col-auto.pr-0
-						.small.text-gray Количество
+					.col-6.col-lg-auto.pr-lg-0.pl-0.pl-lg-3
+						.small.text-gray.d-none.d-lg-block Количество
 						+b.block-add
 							+e.btn--minus
 							input.form-control(type="text" value="25")
 							+e.btn--plus.btn
-					.col
+					.col-12.col-lg
 						+e.A.btn.btn.w-100(href="#")
 							+icon("basket")
 							| В корзину
-						// внизу вид кнопки при добавлении товара в корзину
-
-						// +e.A.btn.btn.active.btn-primary(href="#")
-								+icon("basket")
-								| В корзине
 
 
 
-
-		// end prod-head
-	// #modal-prod
 
 	div(id="modal-prod-no-result" class="zoom-anim-dialog mfp-hide modal-win modal-win--lg modal-form" )
 		// start prod-head
 		+b.prod-head--preview.pt-0
 			.container
-				.d-lg-none
-					+e.head-row.row.align-items-center.text-gray
-						.col
-							.h2.fw-900.ttu SLEEP
 				.row
-					.col-lg-2
-						+e.IMG.img(src='img/prod-1.png' alt='img')
-					.col
-						.d-none.d-lg-block
-							+e.head-row.row.align-items-center.text-gray
-								.col
-									.h2.fw-900.ttu SLEEP
+					.col-5.col-lg-2
+						a(href='img/prod-1.png' data-fancybox-img="images")
+							+e.SPAN.img-wrapper
+								+e.IMG.img(src='img/prod-1.png' alt='img')
+					.col-7.col-lg
+						+e.head-row.row.align-items-center.text-gray
+							.col
+								.h2.fw-900.ttu SLEEP
 						.row
 							.col-12
 								+e.caption.text-gray Текстильный шлем с предустановленными Ag/AgCl sintered электродами MCScap-T и общим разъемом DB25М
-							.col
+							.col.d-none.d-lg-block
 								+e.artical
 									small.text-gray Артикул:
 									| m4568 988-65
@@ -329,79 +314,68 @@ mixin modal()
 								+in-ch("size-prod","Inf II")
 								+in-ch("size-prod","Inf III")
 				.row.align-items-end
-					.col-lg-5
-					.col-auto.pr-0
-						.small.text-gray Количество
+					.col-6.col-lg-5
+					.col-6.col-lg-auto.pr-lg-0.pl-0.pl-lg-3
+						.small.text-gray.d-none.d-lg-block Количество
 						+b.block-add
 							+e.btn--minus
 							input.form-control(type="text" value="25")
 							+e.btn--plus.btn
-					.col
-						+e.A.btn.btn.w-100(href="#")
+					.col-12.col-lg
+						+e.A.btn.btn.w-100.disabled(href="#")
 							+icon("basket")
 							| В корзину
-						// внизу вид кнопки при добавлении товара в корзину
-
-						// +e.A.btn.btn.active.btn-primary(href="#")
-								+icon("basket")
-								| В корзине
 
 
-
-		// end prod-head
-	// #modal-prod
-
-	div(id="modal-prod-order" class="zoom-anim-dialog mfp-hide modal-win modal-win--lg modal-form modal-form--preview" )
-		// start prod-head
-		+b.prod-head--preview.pt-0
-			.container
-				.d-lg-none
+div(id="modal-prod-order" class="zoom-anim-dialog mfp-hide modal-win modal-win--lg modal-form" )
+	// start prod-head
+	+b.prod-head--preview.pt-0
+		.container
+			.row
+				.col-5.col-lg-2
+					a(href='img/prod-1.png' data-fancybox-img="images")
+						+e.SPAN.img-wrapper
+							+e.IMG.img(src='img/prod-1.png' alt='img')
+				.col-7.col-lg
 					+e.head-row.row.align-items-center.text-gray
 						.col
 							.h2.fw-900.ttu SLEEP
-				.row
-					.col-lg-2
-						+e.IMG.img(src='img/prod-1.png' alt='img')
-					.col
-						.d-none.d-lg-block
-							+e.head-row.row.align-items-center.text-gray
-								.col
-									.h2.fw-900.ttu SLEEP
-						.row
-							.col-12
-								+e.caption.text-gray Текстильный шлем с предустановленными Ag/AgCl sintered электродами MCScap-T и общим разъемом DB25М
-							.col
-								+e.artical
-									small.text-gray Артикул:
-									| m4568 988-65
-				.row
-					.col-lg-5
-						+aside-config-prod-3()
-					.col-lg-7
-						+b.size-block
-							.small.text-gray Размер:
-							+e.btn-wrap
-								mixin in-ch( n, t)
-									+b.LABEL.btn-input
-										+e.INPUT.input(type="radio" name= n)
-										+e.SPAN.text= t
+					.row
+						.col-12
+							+e.caption.text-gray Текстильный шлем с предустановленными Ag/AgCl sintered электродами MCScap-T и общим разъемом DB25М
+						.col.d-none.d-lg-block
+							+e.artical
+								small.text-gray Артикул:
+								| m4568 988-65
+			.row
+				.col-lg-5
+					+aside-config-prod-3()
+				.col-lg-7
+					+b.size-block
+						.small.text-gray Размер:
+						+e.btn-wrap
+							mixin in-ch( n, t)
+								+b.LABEL.btn-input
+									+e.INPUT.input(type="radio" name= n)
+									+e.SPAN.text= t
 
 
-										//- block
-								+in-ch("size-prod","XL")
-								+in-ch("size-prod","XL/L")
-								+in-ch("size-prod","L")
-								+in-ch("size-prod","L/M")
-								+in-ch("size-prod","M")
-								+in-ch("size-prod","M/S")
-								+in-ch("size-prod","S")
-								+in-ch("size-prod","S/XS")
-								+in-ch("size-prod","XS")
-								+in-ch("size-prod","Inf I")
-								+in-ch("size-prod","Inf II")
-								+in-ch("size-prod","Inf III")
+									//- block
+							+in-ch("size-prod","XL")
+							+in-ch("size-prod","XL/L")
+							+in-ch("size-prod","L")
+							+in-ch("size-prod","L/M")
+							+in-ch("size-prod","M")
+							+in-ch("size-prod","M/S")
+							+in-ch("size-prod","S")
+							+in-ch("size-prod","S/XS")
+							+in-ch("size-prod","XS")
+							+in-ch("size-prod","Inf I")
+							+in-ch("size-prod","Inf II")
+							+in-ch("size-prod","Inf III")
 		+b.FORM.prod-head-form
 			+e.wrapper
+				+e.BUTTON.btn-del
 				.row
 					.col-lg-5
 						+b.form-wrap
@@ -422,7 +396,7 @@ mixin modal()
 				.col-lg-5
 					.policy-block.mb-0.mt-0
 						+check("inner")(checked)
-							+e.SPAN.text.small Отправляя форму, я даю
+							+e.SPAN.text Отправляя форму, я даю
 								|
 								a(href="#")   согласие на обработку персональных данных
 				.col-lg-7

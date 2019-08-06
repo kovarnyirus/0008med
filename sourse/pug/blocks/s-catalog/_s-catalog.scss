@@ -1137,9 +1137,6 @@
     font-size: 13px;
     width: 170px;
     opacity: 0;
-    @include media-breakpoint-down(md) {
-      display: none;
-    }
   }
 
   &:hover &__btn-fast {
