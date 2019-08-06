@@ -6,7 +6,7 @@ mixin prod-item-sls(x,t,p)
 						block
 					+e.like
 						+icon('star')
-					+e.compare.active
+					+e.compare.active(data-toggle="tooltip-catalog" data-placement="top" title="Сравнение")
 						+icon('compare')
 					+e.btn-fast.popup-with-move-anim(href="#modal-prod") Быстрый просмотр
 					+e.img-wrap(href="#")
@@ -239,7 +239,7 @@ mixin prod-item-sl(x,t,p)
 
 						+icon('star')
 
-				+e.compare.active
+				+e.compare.active(data-toggle="tooltip" data-placement="top" title="Tooltip on top")
 					+icon('compare')
 				+e.img-wrap(href="#")
 					span: img.res-img(src=`img/prod-${x}.png`, alt="")

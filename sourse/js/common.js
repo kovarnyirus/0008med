@@ -799,6 +799,10 @@ jQuery(document).ready(function ($) {
     // });
     //
 
+
+    $('[data-toggle="tooltip-catalog"]').tooltip({
+    });
+
     $(".aside-config__reinforce-item").click(function () {
         $(".aside-config__reinforce-item").removeClass('aside-config__reinforce-item--active');
         $(this).addClass('aside-config__reinforce-item--active');
