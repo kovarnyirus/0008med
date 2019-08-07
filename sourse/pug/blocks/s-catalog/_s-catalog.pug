@@ -295,16 +295,50 @@ mixin prod-item-gor(x,t,p)
 									+e.title.h2(href="#")= t
 								.col-md-auto
 									.h5.text-primary  15 000 Р
-							.text-md-right
-								a.compare-link(href="#")
-									+icon('compare')
-									| Убрать из сравнения
+
 							.row.my-0
 
 								.col
 									+e.text.small.text-gray= p
-								.col-md-auto
-									+e.A.btn.popup-with-move-anim(href="#modal-prod")  В корзину
+
+							.row
+								.col-lg-5
+									+b.size-block
+										+e.btn-wrap
+											mixin in-ch( n, t)
+												+b.LABEL.btn-input(data-toggle="popover" data-trigger="hover" data-content='<div class="pb-1"><span class="text-gray">Обхват головы: </span> <strong class="display-inline-block">24-28 см </strong></div><div class="pb-1"><span class="text-gray">Рекомендовано:  </span> <strong class="display-inline-block">новорожденным, недоношенным</strong></div>')
+													+e.INPUT.input(type="radio" name= n)
+													+e.SPAN.text= t
+											+in-ch("size-prod","XL")
+											+in-ch("size-prod","XL/L")
+											+in-ch("size-prod","L")
+											+in-ch("size-prod","L/M")
+											+in-ch("size-prod","M")
+											+in-ch("size-prod","M/S")
+											+in-ch("size-prod","S")
+											+in-ch("size-prod","S/XS")
+											+in-ch("size-prod","XS")
+											+in-ch("size-prod","Inf I")
+											+in-ch("size-prod","Inf II")
+											+in-ch("size-prod","Inf III")
+								.col-auto.d-flex.flex-column.justify-content-end
+									.small.text-gray.d-none.d-lg-block.mb-2 Количество
+									+b.block-add
+										+e.btn--minus
+										input.form-control(type="text" value="25")
+										+e.btn--plus.btn
+								.col-md-auto.d-flex.flex-md-column.justify-content-md-end.justify-content-between.mt-3.mt-md-0
+									.text-md-right.mb-2
+										a.compare-link(href="#")
+											+icon('compare')
+											| К сравнению
+									+e.btn-wrap
+										//.smallest.text-danger.text-center  Выберите размер
+										+e.A.btn.popup-with-move-anim(href="#modal-prod")
+											+icon("basket")
+												| Корзина
+											|
+											+e.SPAN.btn-text В корзину
 	// .item-prod
 mixin prod-item-gor-sm(x,t,p)
 	+b.item-prod--gorizontal
