@@ -200,7 +200,7 @@ mixin modal()
 		// end prod-head
 	// #modal-prod
 
-	div(id="modal-prod" class="zoom-anim-dialog mfp-hide modal-win modal-win--lg modal-form" )
+	div(id="modal-prod" class="zoom-anim-dialog mfp-hide modal-win modal-win--lg modal-form modal-form--preview" )
 		// start prod-head
 		+b.prod-head--preview.pt-0
 			.container
@@ -254,7 +254,7 @@ mixin modal()
 								span.text-gray.ttu.small     руб
 
 					.col-6.col-lg-auto.pr-lg-0.pl-0.pl-lg-3
-						.small.text-gray.d-none.d-lg-block Количество
+						.small.text-gray.d-none.d-lg-block.mb-1 Количество
 						+b.block-add
 							+e.btn--minus
 							input.form-control(type="text" value="25")
@@ -267,7 +267,7 @@ mixin modal()
 
 
 
-	div(id="modal-prod-no-result" class="zoom-anim-dialog mfp-hide modal-win modal-win--lg modal-form" )
+	div(id="modal-prod-no-result" class="zoom-anim-dialog mfp-hide modal-win modal-win--lg modal-form modal-form--preview" )
 		// start prod-head
 		+b.prod-head--preview.pt-0
 			.container
@@ -316,7 +316,7 @@ mixin modal()
 				.row.align-items-end
 					.col-6.col-lg-5
 					.col-6.col-lg-auto.pr-lg-0.pl-0.pl-lg-3
-						.small.text-gray.d-none.d-lg-block Количество
+						.small.text-gray.d-none.d-lg-block.mb-1 Количество
 						+b.block-add
 							+e.btn--minus
 							input.form-control(type="text" value="25")
@@ -327,7 +327,7 @@ mixin modal()
 							| В корзину
 
 
-div(id="modal-prod-order" class="zoom-anim-dialog mfp-hide modal-win modal-win--lg modal-form" )
+div(id="modal-prod-order" class="zoom-anim-dialog mfp-hide modal-win modal-win--lg modal-form modal-form--preview" )
 	// start prod-head
 	+b.prod-head--preview.pt-0
 		.container

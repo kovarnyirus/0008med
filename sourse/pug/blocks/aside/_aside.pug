@@ -122,10 +122,8 @@ mixin aside-config()
 mixin aside-config-prod()
 	+b.aside-config
 		+e.search-wrapper
-			+e.TEXTAREA.search--prod(placeholder='Выберите из списка или введите название усилителя' rows='1')
-			+e.A.search-link(href='#')
-				+icon('search')
-		+e.reinforce-list
+			+e.TEXTAREA.search--prod.empty-input(placeholder='Выберите из списка или введите название усилителя' rows='1')
+		+e.reinforce-list--visable
 			+e.reinforce-item
 				.row
 					.col-4
@@ -140,8 +138,9 @@ mixin aside-config-prod()
 			+e.reinforce-item
 				.row
 					.col-4
-						a(href='img/reinforce-img.png' data-fancybox-img="images" tabindex="-1")
-							+e.reinforce-img(src='img/reinforce-img.png' width='112')
+						+e.img-wrapper
+							a(href='img/reinforce-img.png' data-fancybox-img="images" tabindex="-1")
+								+e.reinforce-img(src='img/reinforce-img.png' width='112')
 					.col-8
 						+e.reinforce-title Мицар-ЭЭГ-03/35-201
 						+e.reinforce-description Если нужно, краткое описание для раскрытия информации
@@ -149,8 +148,9 @@ mixin aside-config-prod()
 			+e.reinforce-item
 				.row
 					.col-4
-						a(href='img/reinforce-img.png' data-fancybox-img="images" tabindex="-1")
-							+e.reinforce-img(src='img/reinforce-img.png' width='112')
+						+e.img-wrapper
+							a(href='img/reinforce-img.png' data-fancybox-img="images" tabindex="-1")
+								+e.reinforce-img(src='img/reinforce-img.png' width='112')
 					.col-8
 						+e.reinforce-title Мицар-ЭЭГ-03/35-201
 						+e.reinforce-description Если нужно, краткое описание для раскрытия информации
@@ -158,8 +158,9 @@ mixin aside-config-prod()
 			+e.reinforce-item
 				.row
 					.col-4
-						a(href='img/reinforce-img.png' data-fancybox-img="images" tabindex="-1")
-							+e.reinforce-img(src='img/reinforce-img.png' width='112')
+						+e.img-wrapper
+							a(href='img/reinforce-img.png' data-fancybox-img="images" tabindex="-1")
+								+e.reinforce-img(src='img/reinforce-img.png' width='112')
 					.col-8
 						+e.reinforce-title Мицар-ЭЭГ-03/35-201
 						+e.reinforce-description Если нужно, краткое описание для раскрытия информации
@@ -168,15 +169,11 @@ mixin aside-config-prod()
 mixin aside-config-prod-2()
 	+b.aside-config
 		+e.search-wrapper
-			+e.TEXTAREA.search(placeholder='Выберите из списка или введите название усилителяэ' rows='1')
-			+e.A.search-link(href='#')
-				+icon('search')
+			+e.TEXTAREA.search(placeholder='Выберите из списка или введите название усилителя' rows='1')
 		+e.no-result Не нашли свой усилитель?
-			+e.A.no-result-link(href='#') Добавить
+			+e.A.no-result-link(href='#')  Добавить
 
 mixin aside-config-prod-3()
 	+b.aside-config
 		+e.search-wrapper
-			+e.TEXTAREA.search(placeholder='Выберите из списка или введите название усилителяэ' rows='1')
-			+e.A.search-link(href='#')
-				+icon('search')
+			+e.TEXTAREA.search(placeholder='Выберите из списка или введите название усилителя' rows='1')

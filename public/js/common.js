@@ -833,15 +833,17 @@ jQuery(document).ready(function ($) {
         });
     });
 
-    // $(".tabs__table-wrap--compatibility").mCustomScrollbar({
-    //     axis:"x" // horizontal scrollbar
-    // });
     $('.aside-config__search--prod').focus(function () {
         $('.aside-config__reinforce-list').toggleClass('aside-config__reinforce-list--visable');
+        $(".aside-config__search").removeClass('empty-input')
     });
 
     $('.aside-config__search--prod').focusout(function(){
         $('.aside-config__reinforce-list').toggleClass('aside-config__reinforce-list--visable');
+        var searchInput = $('.aside-config__search');
+        if (searchInput.val() === '') {
+            searchInput.addClass('empty-input')
+        }
     });
 
     $(".table-compatibility-body").mCustomScrollbar({

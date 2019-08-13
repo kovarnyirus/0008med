@@ -79,7 +79,11 @@ a {
       }
     }
   &--preview{
-    padding-bottom: 10px!important;
+    //padding-bottom: 10px!important;
+
+    @include media-breakpoint-up(lg){
+      padding-left: 0!important;
+    }
 
   }
   &--thanks{
