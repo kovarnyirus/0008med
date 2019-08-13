@@ -427,6 +427,7 @@ select.form-control {
   padding-right: rem(23px);
   appearance: none !important;
 
+
   &:not([size]):not([multiple]) {
     height: $input-height;
   }
