@@ -436,6 +436,7 @@
       height: 45px;
       padding-left: 15px;
       padding-top: 12px;
+      overflow-y: hidden;
       @include media-breakpoint-up(lg) {;
         font-size: 15px;
         line-height: 1;
