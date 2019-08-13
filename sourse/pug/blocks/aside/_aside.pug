@@ -169,11 +169,11 @@ mixin aside-config-prod()
 mixin aside-config-prod-2()
 	+b.aside-config
 		+e.search-wrapper
-			+e.TEXTAREA.search(placeholder='Выберите из списка или введите название усилителя' rows='1')
+			+e.TEXTAREA.search--prod.empty-input(placeholder='Выберите из списка или введите название усилителя' rows='1')
 		+e.no-result Не нашли свой усилитель?
 			+e.A.no-result-link(href='#')  Добавить
 
 mixin aside-config-prod-3()
 	+b.aside-config
 		+e.search-wrapper
-			+e.TEXTAREA.search(placeholder='Выберите из списка или введите название усилителя' rows='1')
+			+e.TEXTAREA.search--prod.empty-input(placeholder='Выберите из списка или введите название усилителя' rows='1')

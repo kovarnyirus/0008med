@@ -334,6 +334,7 @@ body {
 
 input,
 textarea {
+  outline: none;
   @include input-placeholder {
     // color: #B9B9B9;
   }
