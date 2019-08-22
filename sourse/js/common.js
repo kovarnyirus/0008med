@@ -837,10 +837,12 @@ jQuery(document).ready(function ($) {
     $('.aside-config__search--prod').focus(function () {
         $('.aside-config__reinforce-list').toggleClass('aside-config__reinforce-list--visable');
         $(".aside-config__search").removeClass('empty-input')
+        $(this).closest(".aside-config__search-wrapper").toggleClass('aside-config__search-wrapper--no-arrow');
     });
 
     $('.aside-config__search--prod').focusout(function(){
         $('.aside-config__reinforce-list').toggleClass('aside-config__reinforce-list--visable');
+        $(this).closest(".aside-config__search-wrapper").toggleClass('aside-config__search-wrapper--no-arrow');
         var searchInput = $('.aside-config__search');
         if (searchInput.val() === '') {
             searchInput.addClass('empty-input')
